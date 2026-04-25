@@ -275,9 +275,8 @@ export default function Page() {
 
             <div className="grid lg:grid-cols-3 gap-8">
               <div className="group">
-                <div className="relative h-[350px] rounded-[2rem] overflow-hidden mb-6 shadow-soft group-hover:shadow-elevated transition-all">
-                  <Image src="/images/_O1A9861.jpg" alt="Bound to Travel" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-brand-pink)]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="relative h-[350px] rounded-[2rem] overflow-hidden mb-6 shadow-soft group-hover:shadow-elevated transition-all bg-white flex items-center justify-center">
+                  <Image src="/images/project-bound-travel.png" alt="Bound to Travel" width={500} height={300} className="object-contain p-8 group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[var(--color-brand-pink)] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <span className="text-white text-sm">→</span>
                   </div>
@@ -288,10 +287,11 @@ export default function Page() {
               </div>
 
               <div className="group">
-                <div className="relative h-[350px] rounded-[2rem] overflow-hidden mb-6 shadow-soft group-hover:shadow-elevated transition-all bg-gradient-to-br from-[var(--color-brand-purple)] to-[var(--color-brand-pink)] flex items-center justify-center">
-                  <div className="absolute top-6 left-6 w-20 h-20 rounded-full border border-white/20" />
-                  <div className="absolute bottom-8 right-8 w-12 h-12 rounded-full bg-white/10" />
-                  <p className="font-heading italic text-7xl text-white/30 group-hover:text-white/50 transition-colors">MC</p>
+                <div className="relative h-[350px] rounded-[2rem] overflow-hidden mb-6 shadow-soft group-hover:shadow-elevated transition-all">
+                  <Image src="/images/project-mango-creative.png" alt="Mango Creative Studio" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[var(--color-brand-purple)] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span className="text-white text-sm">→</span>
+                  </div>
                 </div>
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-brand-purple)] mb-2">Gestión Digital</p>
                 <h3 className="font-heading italic text-2xl mb-2">Mango Creative Studio</h3>
@@ -299,14 +299,15 @@ export default function Page() {
               </div>
 
               <div className="group">
-                <div className="relative h-[350px] rounded-[2rem] overflow-hidden mb-6 shadow-soft group-hover:shadow-elevated transition-all bg-[var(--color-brand-cream)] border-2 border-gray-100 flex items-center justify-center">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-brand-pink)]/5 rounded-bl-full" />
-                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-[var(--color-brand-purple)]/5 rounded-tr-full" />
-                  <p className="font-heading italic text-7xl text-gray-200 group-hover:gradient-text transition-colors">KPJ</p>
+                <div className="relative h-[350px] rounded-[2rem] overflow-hidden mb-6 shadow-soft group-hover:shadow-elevated transition-all">
+                  <Image src="/images/project-biochange.png" alt="BioChange" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[var(--color-brand-pink)] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span className="text-white text-sm">→</span>
+                  </div>
                 </div>
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2">E-commerce & Supply Chain</p>
-                <h3 className="font-heading italic text-2xl mb-2">Katherine Piercing Jewelry</h3>
-                <p className="text-gray-500 font-light text-sm">Cadena de suministro internacional USA–Colombia.</p>
+                <h3 className="font-heading italic text-2xl mb-2">BioChange</h3>
+                <p className="text-gray-500 font-light text-sm">Cadena de suministro internacional USA–Colombia. Gestión digital completa.</p>
               </div>
             </div>
           </div>
