@@ -8,15 +8,15 @@ import { motion } from "framer-motion";
 
 /* ───── Floating Hearts Component ───── */
 function FloatingHearts() {
-  const hearts = Array.from({ length: 18 });
+  const hearts = Array.from({ length: 30 });
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
       {hearts.map((_, i) => {
-        const size = 12 + Math.random() * 24;
+        const size = 14 + Math.random() * 30;
         const left = Math.random() * 100;
-        const delay = Math.random() * 8;
-        const duration = 10 + Math.random() * 12;
-        const opacity = 0.08 + Math.random() * 0.12;
+        const delay = Math.random() * 10;
+        const duration = 8 + Math.random() * 14;
+        const opacity = 0.1 + Math.random() * 0.18;
         return (
           <motion.div
             key={i}
@@ -45,7 +45,7 @@ function FloatingHearts() {
 
 /* ───── Sparkle Component ───── */
 function Sparkles() {
-  const sparkles = Array.from({ length: 12 });
+  const sparkles = Array.from({ length: 20 });
   return (
     <>
       {sparkles.map((_, i) => {
@@ -113,10 +113,7 @@ export default function SobreMi() {
         >
           <p className="text-xs uppercase tracking-[0.3em] font-bold text-[var(--color-brand-pink)] mb-8">Katherine & Idan</p>
           <h1 className="font-heading italic text-6xl md:text-8xl lg:text-9xl leading-[0.95] mb-8 relative">
-            <span className="block">&ldquo;Te amo,</span>
-            <span className="block mt-2">
-              creo en <span className="not-italic font-black gradient-text">ti</span>&rdquo;
-            </span>
+            Te amo, creo en <span className="not-italic font-black gradient-text">ti</span>
           </h1>
           <motion.div
             className="flex items-center justify-center gap-4 mt-6"
@@ -133,7 +130,54 @@ export default function SobreMi() {
 
       {/* ═══ FULL-WIDTH PHOTO — _O1A9704 ═══ */}
       <ScrollReveal>
-        <div className="px-6 md:px-16 max-w-7xl mx-auto">
+        <div className="px-6 md:px-16 max-w-7xl mx-auto relative">
+
+          {/* Left-side floating hearts */}
+          <motion.div
+            className="absolute -left-4 md:-left-8 top-1/4 text-[var(--color-brand-pink)] text-5xl pointer-events-none z-20"
+            animate={{ y: [-10, 10, -10], scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          >
+            ♥
+          </motion.div>
+          <motion.div
+            className="absolute -left-2 md:left-4 top-2/3 text-[var(--color-brand-pink)] text-3xl pointer-events-none z-20"
+            animate={{ y: [5, -15, 5], rotate: [0, 20, 0], opacity: [0.2, 0.5, 0.2] }}
+            transition={{ duration: 4, delay: 1, repeat: Infinity, ease: "easeInOut" }}
+          >
+            ♥
+          </motion.div>
+          <motion.div
+            className="absolute left-8 md:left-16 -top-6 text-[var(--color-brand-pink)] text-2xl pointer-events-none z-20"
+            animate={{ y: [-5, 8, -5], scale: [0.8, 1.3, 0.8], opacity: [0.15, 0.4, 0.15] }}
+            transition={{ duration: 3.5, delay: 0.5, repeat: Infinity, ease: "easeInOut" }}
+          >
+            ✦
+          </motion.div>
+
+          {/* Right-side floating hearts */}
+          <motion.div
+            className="absolute -right-4 md:-right-8 top-1/3 text-[var(--color-brand-pink)] text-5xl pointer-events-none z-20"
+            animate={{ y: [8, -12, 8], scale: [1, 1.15, 1], opacity: [0.3, 0.6, 0.3] }}
+            transition={{ duration: 3.5, delay: 0.8, repeat: Infinity, ease: "easeInOut" }}
+          >
+            ♥
+          </motion.div>
+          <motion.div
+            className="absolute -right-2 md:right-4 top-3/4 text-[var(--color-brand-pink)] text-3xl pointer-events-none z-20"
+            animate={{ y: [-8, 12, -8], rotate: [0, -20, 0], opacity: [0.2, 0.5, 0.2] }}
+            transition={{ duration: 4.5, delay: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          >
+            ♥
+          </motion.div>
+          <motion.div
+            className="absolute right-8 md:right-16 -bottom-6 text-[var(--color-brand-purple)] text-2xl pointer-events-none z-20"
+            animate={{ y: [5, -10, 5], scale: [0.8, 1.3, 0.8], opacity: [0.15, 0.4, 0.15] }}
+            transition={{ duration: 3, delay: 2, repeat: Infinity, ease: "easeInOut" }}
+          >
+            ✦
+          </motion.div>
+
           <div className="relative aspect-[3/2] w-full rounded-[2.5rem] overflow-hidden shadow-elevated">
             <Image
               src="/images/_O1A9704.jpg"
@@ -143,11 +187,18 @@ export default function SobreMi() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-brand-pink)]/15 to-transparent" />
 
-            {/* Floating heart overlay */}
+            {/* Floating heart overlays inside the photo */}
             <motion.div
               className="absolute bottom-8 right-8 text-white/40 text-6xl z-10"
               animate={{ scale: [1, 1.15, 1], opacity: [0.4, 0.7, 0.4] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            >
+              ♥
+            </motion.div>
+            <motion.div
+              className="absolute top-8 left-8 text-white/30 text-4xl z-10"
+              animate={{ scale: [1, 1.2, 1], opacity: [0.25, 0.5, 0.25] }}
+              transition={{ duration: 2.5, delay: 0.5, repeat: Infinity, ease: "easeInOut" }}
             >
               ♥
             </motion.div>
