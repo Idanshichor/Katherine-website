@@ -95,8 +95,8 @@ export default function Page() {
       <Marquee />
 
       {/* CLIENT LOGOS */}
-      <section className="py-12 px-6 md:px-16 bg-white border-y border-gray-100">
-        <div className="max-w-6xl mx-auto flex items-center justify-center gap-8 md:gap-14">
+      <section className="py-24 px-6 md:px-16 bg-white border-y border-gray-100">
+        <div className="max-w-6xl mx-auto flex items-center justify-center gap-10 md:gap-16">
           <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400 shrink-0 hidden md:block">Confían en Katherine</p>
           <div className="w-[1px] h-10 bg-gray-200 hidden md:block" />
           {[
