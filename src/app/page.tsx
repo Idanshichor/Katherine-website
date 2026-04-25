@@ -97,20 +97,20 @@ export default function Page() {
 
       <Marquee />
 
-      {/* CLIENT LOGOS — thin bar with individual logos */}
-      <section className="py-4 px-6 md:px-16 bg-white border-y border-gray-100">
-        <div className="max-w-6xl mx-auto flex items-center justify-center gap-6 md:gap-10">
-          <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-gray-400 shrink-0 hidden md:block">Confían en Katherine</p>
-          <div className="w-[1px] h-5 bg-gray-200 hidden md:block" />
+      {/* CLIENT LOGOS */}
+      <section className="py-12 px-6 md:px-16 bg-white border-y border-gray-100">
+        <div className="max-w-6xl mx-auto flex items-center justify-center gap-8 md:gap-14">
+          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400 shrink-0 hidden md:block">Confían en Katherine</p>
+          <div className="w-[1px] h-10 bg-gray-200 hidden md:block" />
           {[
             { src: "/images/logo-bound-travel.png", alt: "Bound to Travel" },
             { src: "/images/logo-mango-creative.png", alt: "Mango Creative" },
             { src: "/images/logo-roma-studio.png", alt: "ROMA STUDIO" },
             { src: "/images/logo-lightu.png", alt: "LightU" },
           ].map((logo) => (
-            <Image key={logo.alt} src={logo.src} alt={logo.alt} width={80} height={40} className="object-contain grayscale opacity-40 hover:opacity-90 hover:grayscale-0 transition-all h-8 w-auto" />
+            <Image key={logo.alt} src={logo.src} alt={logo.alt} width={120} height={60} className="object-contain grayscale opacity-40 hover:opacity-90 hover:grayscale-0 transition-all h-14 w-auto" />
           ))}
-          <span className="font-heading italic text-sm text-gray-300 tracking-wide">BioChange</span>
+          <span className="font-heading italic text-lg text-gray-300 tracking-wide">BioChange</span>
         </div>
       </section>
 
