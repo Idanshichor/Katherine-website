@@ -96,18 +96,18 @@ export default function Page() {
 
       {/* CLIENT LOGOS */}
       <section className="py-24 px-6 md:px-16 bg-white border-y border-gray-100">
-        <div className="max-w-6xl mx-auto flex items-center justify-center gap-10 md:gap-16">
-          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400 shrink-0 hidden md:block">Confían en Katherine</p>
-          <div className="w-[1px] h-10 bg-gray-200 hidden md:block" />
+        <div className="max-w-7xl mx-auto flex items-center justify-center gap-12 md:gap-20">
+          <p className="text-sm font-bold uppercase tracking-[0.3em] text-gray-400 shrink-0 hidden md:block">Confían en Katherine</p>
+          <div className="w-[1px] h-14 bg-gray-200 hidden md:block" />
           {[
             { src: "/images/logo-bound-travel.png", alt: "Bound to Travel" },
             { src: "/images/logo-mango-creative.png", alt: "Mango Creative" },
             { src: "/images/logo-roma-studio.png", alt: "ROMA STUDIO" },
             { src: "/images/logo-lightu.png", alt: "LightU" },
           ].map((logo) => (
-            <Image key={logo.alt} src={logo.src} alt={logo.alt} width={120} height={60} className="object-contain grayscale opacity-40 hover:opacity-90 hover:grayscale-0 transition-all h-14 w-auto" />
+            <Image key={logo.alt} src={logo.src} alt={logo.alt} width={200} height={100} className="object-contain grayscale opacity-40 hover:opacity-90 hover:grayscale-0 transition-all h-20 w-auto" />
           ))}
-          <span className="font-heading italic text-lg text-gray-300 tracking-wide">BioChange</span>
+          <span className="font-heading italic text-2xl text-gray-300 tracking-wide">BioChange</span>
         </div>
       </section>
 
@@ -197,12 +197,7 @@ export default function Page() {
                   <p className="text-sm text-gray-400 italic">Systems Architecture · Supply Chain · Scaling · Project Management</p>
                 </div>
                 <div className="lg:col-span-5 relative h-[400px] rounded-[2.5rem] overflow-hidden shadow-elevated">
-                  <Image src="/images/_O1A9885.jpg" alt="Katherine" fill className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-brand-purple)]/40 to-transparent" />
-                  <div className="absolute bottom-6 left-6">
-                    <p className="font-heading italic text-2xl text-white">Katherine V.</p>
-                    <p className="text-[10px] uppercase tracking-widest text-white/60 mt-1">360° Strategy</p>
-                  </div>
+                  <Image src="/images/card-01-operaciones.jpeg" alt="Operaciones & Sistemas — Global Supply Chain" fill className="object-cover" />
                 </div>
               </div>
 
@@ -215,15 +210,8 @@ export default function Page() {
 
               {/* Row 2: Digital Marketing — reversed */}
               <div className="grid lg:grid-cols-12 gap-12 items-center">
-                <div className="lg:col-span-5 relative h-[350px] rounded-[2.5rem] overflow-hidden lg:order-1 order-2">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-brand-pink)] to-[var(--color-brand-purple)] flex items-center justify-center">
-                    <div className="text-center">
-                      <p className="font-heading font-black text-8xl text-white/20">86%</p>
-                      <p className="text-white/60 text-sm mt-2 tracking-widest uppercase">GA4 Certified</p>
-                    </div>
-                    <div className="absolute top-8 left-8 w-20 h-20 rounded-full border border-white/15" />
-                    <div className="absolute bottom-6 right-6 w-12 h-12 rounded-full bg-white/10" />
-                  </div>
+                <div className="lg:col-span-5 relative h-[350px] rounded-[2.5rem] overflow-hidden shadow-elevated lg:order-1 order-2">
+                  <Image src="/images/card-02-marketing.jpeg" alt="Digital Marketing — Full Funnel Strategy" fill className="object-cover" />
                 </div>
                 <div className="lg:col-span-7 lg:order-2 order-1">
                   <div className="flex items-center gap-4 mb-6">
@@ -261,17 +249,8 @@ export default function Page() {
                   </p>
                   <p className="text-sm text-gray-400 italic">Civil Engineering · Team Leadership · UX Supervision · Multicultural Adaptability</p>
                 </div>
-                <div className="lg:col-span-5 relative h-[350px] rounded-[2.5rem] overflow-hidden shadow-soft border-2 border-gray-100 bg-[var(--color-brand-cream)] flex items-center justify-center">
-                  <div className="text-center relative z-10">
-                    <p className="font-heading italic text-6xl text-gray-200">PMP</p>
-                    <p className="text-[10px] tracking-[0.3em] uppercase font-bold text-gray-400 mt-3">Candidata Oficial</p>
-                    <div className="mt-6 flex gap-3 justify-center">
-                      <span className="px-4 py-1.5 text-xs rounded-full bg-[var(--color-brand-pink-light)] text-[var(--color-brand-pink)] font-semibold">Español — Nativo</span>
-                      <span className="px-4 py-1.5 text-xs rounded-full bg-[var(--color-brand-purple-light)] text-[var(--color-brand-purple)] font-semibold">English — Pro</span>
-                    </div>
-                  </div>
-                  <div className="absolute top-6 right-6 w-16 h-16 rounded-full bg-[var(--color-brand-pink)]/5" />
-                  <div className="absolute bottom-8 left-8 w-20 h-20 rounded-full border border-[var(--color-brand-purple)]/10" />
+                <div className="lg:col-span-5 relative h-[350px] rounded-[2.5rem] overflow-hidden shadow-elevated">
+                  <Image src="/images/card-03-liderazgo.jpeg" alt="Habilidades Técnicas & Liderazgo" fill className="object-cover" />
                 </div>
               </div>
 
