@@ -74,17 +74,14 @@ export default function Page() {
             </div>
             {/* Bottom-left badge */}
             <div className="absolute -bottom-6 -left-10 bg-white p-5 rounded-2xl shadow-elevated z-20 border border-gray-50">
-              <p className="font-heading italic text-lg text-[var(--color-brand-purple)]">Project Manager</p>
-              <p className="text-[10px] uppercase tracking-[0.25em] font-bold text-gray-400 mt-1">PMP Candidate</p>
+              <p className="font-heading italic text-lg text-[var(--color-brand-black)]">Estrategia Digital & Operaciones</p>
+              <p className="text-[10px] uppercase tracking-[0.25em] font-bold text-[var(--color-brand-pink)] mt-1">Consultoría 360° Global</p>
             </div>
             {/* Top-right pink circle */}
             <div className="absolute top-6 -right-5 w-16 h-16 rounded-full bg-[var(--color-brand-pink)] z-20 flex items-center justify-center shadow-elevated">
               <span className="text-white font-bold text-lg">✦</span>
             </div>
-            {/* Small purple circle accent */}
-            <div className="absolute top-1/3 -left-8 w-10 h-10 rounded-full bg-[var(--color-brand-purple)] z-20 flex items-center justify-center">
-              <span className="text-white text-xs font-bold">KT</span>
-            </div>
+
             {/* Dots below photo */}
             <div className="absolute -bottom-14 right-12 flex gap-2 z-20">
               <div className="w-2 h-2 rounded-full bg-[var(--color-brand-pink)]" />
