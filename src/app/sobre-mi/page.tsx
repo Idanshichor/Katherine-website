@@ -85,7 +85,7 @@ export default function SobreMi() {
       <Navbar />
 
       {/* ═══ HERO — "Te amo, creo en ti" ═══ */}
-      <section className="py-24 px-6 md:px-16 max-w-6xl mx-auto text-center relative overflow-hidden">
+      <section className="pt-16 pb-10 px-6 md:px-16 max-w-6xl mx-auto text-center relative overflow-hidden">
         <Sparkles />
 
         {/* Decorative rings */}
@@ -206,7 +206,7 @@ export default function SobreMi() {
         </div>
       </ScrollReveal>
 
-
+      <div className="py-20" />
 
       <Footer />
     </div>
