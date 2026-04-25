@@ -97,12 +97,20 @@ export default function Page() {
 
       <Marquee />
 
-      {/* CLIENT LOGOS — compact bar */}
-      <section className="py-5 px-6 md:px-16 bg-white border-y border-gray-100">
-        <div className="max-w-6xl mx-auto flex items-center justify-center gap-8 flex-wrap">
-          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400 shrink-0">Confían en Katherine</p>
-          <div className="w-[1px] h-6 bg-gray-200 hidden md:block" />
-          <Image src="/images/client-logos.png" alt="Logos de clientes" width={600} height={50} className="object-contain opacity-40 hover:opacity-80 transition-opacity grayscale hover:grayscale-0" />
+      {/* CLIENT LOGOS — thin bar with individual logos */}
+      <section className="py-4 px-6 md:px-16 bg-white border-y border-gray-100">
+        <div className="max-w-6xl mx-auto flex items-center justify-center gap-6 md:gap-10">
+          <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-gray-400 shrink-0 hidden md:block">Confían en Katherine</p>
+          <div className="w-[1px] h-5 bg-gray-200 hidden md:block" />
+          {[
+            { src: "/images/logo-bound-travel.png", alt: "Bound to Travel" },
+            { src: "/images/logo-mango-creative.png", alt: "Mango Creative" },
+            { src: "/images/logo-roma-studio.png", alt: "ROMA STUDIO" },
+            { src: "/images/logo-lightu.png", alt: "LightU" },
+          ].map((logo) => (
+            <Image key={logo.alt} src={logo.src} alt={logo.alt} width={80} height={40} className="object-contain grayscale opacity-40 hover:opacity-90 hover:grayscale-0 transition-all h-8 w-auto" />
+          ))}
+          <span className="font-heading italic text-sm text-gray-300 tracking-wide">BioChange</span>
         </div>
       </section>
 
@@ -134,113 +142,142 @@ export default function Page() {
                 Katherine combina pensamiento analítico con creatividad estratégica para impulsar empresas
                 hacia el crecimiento internacional.
               </p>
-              {/* Stats with colored backgrounds instead of plain text */}
-              <div className="grid grid-cols-3 gap-4 mt-4">
-                <div className="bg-[var(--color-brand-pink-light)] p-6 rounded-2xl text-center relative overflow-hidden">
-                  <div className="absolute -top-2 -right-2 w-10 h-10 rounded-full bg-[var(--color-brand-pink)]/10" />
-                  <p className="font-heading text-4xl font-bold text-[var(--color-brand-pink)]">5+</p>
-                  <p className="text-[10px] uppercase tracking-widest text-gray-500 mt-2 font-bold">Años</p>
+              {/* Stats — editorial inline style */}
+              <div className="flex items-baseline gap-8 mt-6 flex-wrap">
+                <div className="flex items-baseline gap-2">
+                  <span className="font-heading text-5xl font-black gradient-text">5+</span>
+                  <span className="text-gray-400 text-sm font-light">años de experiencia</span>
                 </div>
-                <div className="bg-[var(--color-brand-purple-light)] p-6 rounded-2xl text-center relative overflow-hidden">
-                  <div className="absolute -top-2 -right-2 w-10 h-10 rounded-full bg-[var(--color-brand-purple)]/10" />
-                  <p className="font-heading text-4xl font-bold text-[var(--color-brand-purple)]">4</p>
-                  <p className="text-[10px] uppercase tracking-widest text-gray-500 mt-2 font-bold">Continentes</p>
+                <div className="w-[1px] h-8 bg-gray-200 hidden md:block" />
+                <div className="flex items-baseline gap-2">
+                  <span className="font-heading text-5xl font-black text-[var(--color-brand-purple)]">4</span>
+                  <span className="text-gray-400 text-sm font-light">continentes</span>
                 </div>
-                <div className="bg-[var(--color-brand-pink-light)] p-6 rounded-2xl text-center relative overflow-hidden">
-                  <div className="absolute -top-2 -right-2 w-10 h-10 rounded-full bg-[var(--color-brand-pink)]/10" />
-                  <p className="font-heading text-4xl font-bold text-[var(--color-brand-pink)]">86%</p>
-                  <p className="text-[10px] uppercase tracking-widest text-gray-500 mt-2 font-bold">GA4</p>
+                <div className="w-[1px] h-8 bg-gray-200 hidden md:block" />
+                <div className="flex items-baseline gap-2">
+                  <span className="font-heading text-5xl font-black text-[var(--color-brand-pink)]">86%</span>
+                  <span className="text-gray-400 text-sm font-light">GA4</span>
                 </div>
               </div>
-              <Button variant="secondary" className="w-max mt-4">Leer Mi Historia</Button>
+              <Button variant="secondary" className="w-max mt-6">Leer Mi Historia</Button>
             </div>
           </div>
         </section>
       </ScrollReveal>
 
-      {/* COMPETENCY — Creative colored cards, NOT dark SaaS */}
+      {/* COMPETENCY — Editorial magazine layout */}
       <ScrollReveal>
         <section className="py-32 px-6 md:px-16 relative overflow-hidden">
-          {/* Big decorative shapes */}
           <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-[var(--color-brand-pink)]/5 hidden lg:block" />
-          <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-[var(--color-brand-purple)]/5 hidden lg:block" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-gray-200/50 hidden lg:block" />
+          <div className="absolute bottom-10 right-10 w-48 h-48 rounded-full border border-[var(--color-brand-purple)]/10 hidden lg:block" />
 
           <div className="max-w-7xl mx-auto relative z-10">
-            <div className="text-center mb-20">
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[var(--color-brand-purple)] mb-6">Servicios</p>
-              <h2 className="font-heading italic text-5xl md:text-7xl">Matriz de <span className="not-italic font-black gradient-text">Competencias</span></h2>
+            <div className="mb-20">
+              <h2 className="font-heading italic text-5xl md:text-7xl leading-tight">
+                Matriz de <span className="not-italic font-black gradient-text">Competencias</span>
+              </h2>
+              <div className="flex items-center gap-4 mt-6">
+                <div className="w-16 h-[2px] bg-[var(--color-brand-pink)]" />
+                <p className="text-gray-400 font-light text-lg">Lo que Katherine aporta a cada proyecto</p>
+              </div>
             </div>
 
-            <div className="grid md:grid-cols-12 gap-6">
-              {/* Card 1: Operations — pink accent */}
-              <div className="md:col-span-7 bg-[var(--color-brand-pink)] text-white p-10 rounded-[2rem] relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-48 h-48 rounded-full bg-white/10 -translate-y-1/2 translate-x-1/4" />
-                <div className="absolute bottom-0 left-0 w-32 h-32 rounded-full bg-white/5 translate-y-1/3 -translate-x-1/4" />
-                <div className="relative z-10">
-                  <p className="text-sm font-bold tracking-[0.2em] uppercase text-white/60 mb-3">01</p>
-                  <h3 className="font-heading italic text-4xl mb-4">Operaciones & Sistemas</h3>
-                  <p className="text-white/80 font-light leading-relaxed mb-8 max-w-md">
-                    Implementación de BOS. Logística internacional USA–Colombia. Estrategia de expansión global a 4 continentes.
+            {/* Editorial layout — alternating text + image rows */}
+            <div className="space-y-24">
+
+              {/* Row 1: Operations */}
+              <div className="grid lg:grid-cols-12 gap-12 items-center">
+                <div className="lg:col-span-7">
+                  <div className="flex items-center gap-4 mb-6">
+                    <span className="font-heading text-8xl font-black text-[var(--color-brand-pink)]/10">01</span>
+                    <div className="w-12 h-[2px] bg-[var(--color-brand-pink)]" />
+                  </div>
+                  <h3 className="font-heading italic text-4xl md:text-5xl mb-6">Operaciones & Sistemas</h3>
+                  <p className="text-gray-500 font-light text-lg leading-relaxed mb-6 max-w-xl">
+                    Implementación de Business Operating Systems (BOS). Logística internacional USA–Colombia. 
+                    Control de inventario. Estrategia de expansión a Norteamérica, LATAM, Europa y Medio Oriente.
                   </p>
-                  <div className="flex flex-wrap gap-2">
-                    {["Systems Architecture", "Supply Chain", "Scaling", "PMP"].map(t => (
-                      <span key={t} className="px-3 py-1.5 text-xs bg-white/20 rounded-full backdrop-blur-sm">{t}</span>
-                    ))}
+                  <p className="text-sm text-gray-400 italic">Systems Architecture · Supply Chain · Scaling · Project Management</p>
+                </div>
+                <div className="lg:col-span-5 relative h-[400px] rounded-[2.5rem] overflow-hidden shadow-elevated">
+                  <Image src="/images/_O1A9885.jpg" alt="Katherine" fill className="object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-brand-purple)]/40 to-transparent" />
+                  <div className="absolute bottom-6 left-6">
+                    <p className="font-heading italic text-2xl text-white">Katherine V.</p>
+                    <p className="text-[10px] uppercase tracking-widest text-white/60 mt-1">360° Strategy</p>
                   </div>
                 </div>
               </div>
 
-              {/* Photo card */}
-              <div className="md:col-span-5 relative rounded-[2rem] overflow-hidden min-h-[350px]">
-                <Image src="/images/_O1A9885.jpg" alt="Katherine" fill className="object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-brand-purple)]/60 to-transparent" />
-                <div className="absolute bottom-8 left-8 z-10">
-                  <p className="font-heading italic text-3xl text-white">Katherine V.</p>
-                  <p className="text-xs uppercase tracking-widest text-white/60 mt-1">360° Strategy</p>
+              {/* Divider */}
+              <div className="flex items-center gap-6">
+                <div className="flex-1 h-[1px] bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
+                <span className="text-[var(--color-brand-pink)] text-xl">✦</span>
+                <div className="flex-1 h-[1px] bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
+              </div>
+
+              {/* Row 2: Digital Marketing — reversed */}
+              <div className="grid lg:grid-cols-12 gap-12 items-center">
+                <div className="lg:col-span-5 relative h-[350px] rounded-[2.5rem] overflow-hidden lg:order-1 order-2">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-brand-pink)] to-[var(--color-brand-purple)] flex items-center justify-center">
+                    <div className="text-center">
+                      <p className="font-heading font-black text-8xl text-white/20">86%</p>
+                      <p className="text-white/60 text-sm mt-2 tracking-widest uppercase">GA4 Certified</p>
+                    </div>
+                    <div className="absolute top-8 left-8 w-20 h-20 rounded-full border border-white/15" />
+                    <div className="absolute bottom-6 right-6 w-12 h-12 rounded-full bg-white/10" />
+                  </div>
                 </div>
-                <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-[var(--color-brand-pink)] flex items-center justify-center z-10">
-                  <span className="text-white text-lg">✦</span>
+                <div className="lg:col-span-7 lg:order-2 order-1">
+                  <div className="flex items-center gap-4 mb-6">
+                    <span className="font-heading text-8xl font-black text-[var(--color-brand-purple)]/10">02</span>
+                    <div className="w-12 h-[2px] bg-[var(--color-brand-purple)]" />
+                  </div>
+                  <h3 className="font-heading italic text-4xl md:text-5xl mb-6">Digital Marketing & Ventas</h3>
+                  <p className="text-gray-500 font-light text-lg leading-relaxed mb-6 max-w-xl">
+                    Full-funnel business strategy y crecimiento comercial. SEO, SEM, Web Analytics.
+                    UX Writing & Microcopy. Content Strategy bilingual (EN/ES).
+                  </p>
+                  <p className="text-sm text-gray-400 italic">SEO/SEM · UX Writing · Content Strategy · GA4 · Full-Funnel</p>
                 </div>
               </div>
 
-              {/* Card 2: Marketing — purple accent */}
-              <div className="md:col-span-5 bg-[var(--color-brand-purple)] text-white p-10 rounded-[2rem] relative overflow-hidden">
-                <div className="absolute -bottom-8 -right-8 w-40 h-40 rounded-full bg-[var(--color-brand-pink)]/30" />
-                <div className="absolute top-4 left-4 w-16 h-16 rounded-full border border-white/10" />
-                <div className="relative z-10">
-                  <p className="text-sm font-bold tracking-[0.2em] uppercase text-white/60 mb-3">02</p>
-                  <h3 className="font-heading italic text-4xl mb-4">Digital Marketing</h3>
-                  <p className="text-white/80 font-light leading-relaxed mb-8">
-                    Full-funnel strategy. SEO, SEM, GA4 Certified (86%). UX Writing & Content Strategy bilingual.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {["SEO/SEM", "UX Writing", "Content Strategy", "GA4"].map(t => (
-                      <span key={t} className="px-3 py-1.5 text-xs bg-white/20 rounded-full">{t}</span>
-                    ))}
+              {/* Divider */}
+              <div className="flex items-center gap-6">
+                <div className="flex-1 h-[1px] bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
+                <span className="text-[var(--color-brand-purple)] text-xl">✦</span>
+                <div className="flex-1 h-[1px] bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
+              </div>
+
+              {/* Row 3: Technical & Leadership */}
+              <div className="grid lg:grid-cols-12 gap-12 items-center">
+                <div className="lg:col-span-7">
+                  <div className="flex items-center gap-4 mb-6">
+                    <span className="font-heading text-8xl font-black text-gray-100">03</span>
+                    <div className="w-12 h-[2px] bg-gray-300" />
                   </div>
+                  <h3 className="font-heading italic text-4xl md:text-5xl mb-6">Habilidades Técnicas & Liderazgo</h3>
+                  <p className="text-gray-500 font-light text-lg leading-relaxed mb-6 max-w-xl">
+                    Resolución analítica de problemas con fundación en Ingeniería Civil. 
+                    Liderazgo de equipos multidisciplinarios. Supervisión de experiencias web y diseño UX. 
+                    Adaptabilidad multicultural en 4 continentes.
+                  </p>
+                  <p className="text-sm text-gray-400 italic">Civil Engineering · Team Leadership · UX Supervision · Multicultural Adaptability</p>
+                </div>
+                <div className="lg:col-span-5 relative h-[350px] rounded-[2.5rem] overflow-hidden shadow-soft border-2 border-gray-100 bg-[var(--color-brand-cream)] flex items-center justify-center">
+                  <div className="text-center relative z-10">
+                    <p className="font-heading italic text-6xl text-gray-200">PMP</p>
+                    <p className="text-[10px] tracking-[0.3em] uppercase font-bold text-gray-400 mt-3">Candidata Oficial</p>
+                    <div className="mt-6 flex gap-3 justify-center">
+                      <span className="px-4 py-1.5 text-xs rounded-full bg-[var(--color-brand-pink-light)] text-[var(--color-brand-pink)] font-semibold">Español — Nativo</span>
+                      <span className="px-4 py-1.5 text-xs rounded-full bg-[var(--color-brand-purple-light)] text-[var(--color-brand-purple)] font-semibold">English — Pro</span>
+                    </div>
+                  </div>
+                  <div className="absolute top-6 right-6 w-16 h-16 rounded-full bg-[var(--color-brand-pink)]/5" />
+                  <div className="absolute bottom-8 left-8 w-20 h-20 rounded-full border border-[var(--color-brand-purple)]/10" />
                 </div>
               </div>
 
-              {/* Card 3: Technical — cream with border */}
-              <div className="md:col-span-7 bg-white p-10 rounded-[2rem] border-2 border-gray-100 relative overflow-hidden group hover:border-[var(--color-brand-purple)]/30 transition-colors">
-                <div className="absolute top-0 right-0 grid grid-cols-4 gap-2 opacity-10 p-6">
-                  {Array.from({ length: 16 }).map((_, i) => (<div key={i} className="w-1.5 h-1.5 rounded-full bg-[var(--color-brand-purple)]" />))}
-                </div>
-                <div className="absolute bottom-4 right-4 w-24 h-24 rounded-full bg-[var(--color-brand-pink)]/5" />
-                <div className="relative z-10">
-                  <p className="text-sm font-bold tracking-[0.2em] uppercase text-[var(--color-brand-purple)] mb-3">03</p>
-                  <h3 className="font-heading italic text-4xl mb-4">Habilidades Técnicas & Liderazgo</h3>
-                  <p className="text-gray-500 font-light leading-relaxed mb-8 max-w-lg">
-                    Resolución analítica con fundación en Ingeniería Civil. Liderazgo multidisciplinario. Supervisión UX. Adaptabilidad multicultural.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {["Civil Engineering", "Team Leadership", "UX Supervision", "Multicultural"].map(t => (
-                      <span key={t} className="px-3 py-1.5 text-xs border border-gray-200 rounded-full text-gray-600 group-hover:border-[var(--color-brand-purple)]/30 transition-colors">{t}</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
