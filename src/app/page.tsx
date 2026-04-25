@@ -4,6 +4,7 @@ import { Marquee } from "@/components/marquee";
 import { Button } from "@/components/ui/button";
 import { FloatingIcons, FloatingAccents } from "@/components/floating-icons";
 import { ScrollReveal } from "@/components/scroll-reveal";
+import FaqAccordion from "@/components/faq-accordion";
 import Image from "next/image";
 
 export default function Page() {
@@ -311,60 +312,59 @@ export default function Page() {
         </section>
       </ScrollReveal>
 
-      {/* CERTIFICATIONS + CTA */}
+      {/* MANIFESTO */}
       <ScrollReveal>
-        <section className="py-32 px-6 md:px-16 relative overflow-hidden">
-          <FloatingAccents />
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full border border-gray-200/30 hidden lg:block" />
+        <section className="py-40 px-6 md:px-16 relative">
+          <div className="max-w-5xl mx-auto text-center">
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-[var(--color-brand-purple)] mb-10">Filosofía</p>
+            <h2 className="font-heading italic text-4xl md:text-6xl lg:text-7xl leading-[1.15] tracking-tight">
+              La mayoría de los problemas de marketing{" "}
+              <br className="hidden md:block" />
+              son en realidad problemas de{" "}
+              <span className="not-italic font-black gradient-text">operaciones</span>{" "}
+              <br className="hidden md:block" />
+              disfrazados.
+            </h2>
+            <p className="text-gray-500 font-light text-xl md:text-2xl leading-relaxed mt-10 max-w-3xl mx-auto">
+              Por eso uso ingeniería para resolverlos. Sistemas antes que tácticas. Datos antes que opiniones. Procesos que escalan sin mí.
+            </p>
+            <a href="#contacto" className="inline-flex items-center gap-3 mt-12 px-10 py-4 rounded-full border-2 border-[var(--color-brand-black)] text-[var(--color-brand-black)] font-bold uppercase tracking-widest text-xs hover:bg-[var(--color-brand-black)] hover:text-white transition-all">
+              Conoce mi método
+              <span className="text-base">→</span>
+            </a>
+          </div>
+        </section>
+      </ScrollReveal>
 
-          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center relative z-10">
-            <div className="relative h-[650px] rounded-[2.5rem] overflow-hidden shadow-elevated hidden lg:block">
-              <div className="absolute -top-4 -left-4 w-full h-full rounded-[2.5rem] border-2 border-[var(--color-brand-purple)]/10 z-0" />
-              <Image src="/images/_O1A9951.jpg" alt="Katherine" fill className="object-cover relative z-10 rounded-[2.5rem]" />
-              <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-white to-transparent z-20" />
+      {/* FAQ */}
+      <ScrollReveal>
+        <section className="py-32 px-6 md:px-16">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-16">
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[var(--color-brand-pink)] mb-6">Preguntas Frecuentes</p>
+              <h2 className="font-heading italic text-4xl md:text-6xl">
+                Lo que normalmente{" "}
+                <span className="not-italic font-black gradient-text">me preguntan.</span>
+              </h2>
             </div>
+            <FaqAccordion />
+          </div>
+        </section>
+      </ScrollReveal>
 
-            <div className="flex flex-col gap-8">
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[var(--color-brand-pink)] mb-2">Formación</p>
-              <h2 className="font-heading italic text-4xl md:text-5xl mb-4">Certificaciones & <span className="not-italic font-black gradient-text">Educación</span></h2>
-
-              <div className="space-y-4">
-                <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-soft relative overflow-hidden">
-                  <div className="absolute top-0 left-0 w-1.5 h-full bg-[var(--color-brand-purple)] rounded-l-2xl" />
-                  <h3 className="font-heading italic text-xl mb-2 pl-4">Máster en Marketing Digital</h3>
-                  <p className="text-xs uppercase tracking-[0.2em] font-bold text-gray-400 pl-4">IMF Smart Education</p>
-                  <span className="inline-block mt-3 ml-4 px-4 py-1.5 bg-[var(--color-brand-purple)] text-white text-xs font-bold rounded-full">GA4 — 86%</span>
-                </div>
-
-                <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-soft relative overflow-hidden">
-                  <div className="absolute top-0 left-0 w-1.5 h-full bg-[var(--color-brand-pink)] rounded-l-2xl" />
-                  <h3 className="font-heading italic text-xl mb-2 pl-4">Máster en Comunicación Digital</h3>
-                  <p className="text-xs uppercase tracking-[0.2em] font-bold text-gray-400 pl-4">U. Católica de Ávila</p>
-                </div>
-
-                <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-soft relative overflow-hidden">
-                  <div className="absolute top-0 left-0 w-1.5 h-full bg-gray-300 rounded-l-2xl" />
-                  <h3 className="font-heading italic text-xl mb-2 pl-4">Ingeniería Civil</h3>
-                  <p className="text-xs uppercase tracking-[0.2em] font-bold text-gray-400 pl-4">Universidad de Medellín</p>
-                </div>
-              </div>
-
-              <div className="flex gap-4 mt-2">
-                <span className="px-5 py-2 rounded-full bg-[var(--color-brand-black)] text-white text-xs font-bold uppercase tracking-widest">Español — Nativo</span>
-                <span className="px-5 py-2 rounded-full border border-gray-300 text-xs font-bold uppercase tracking-widest">English — Professional</span>
-              </div>
-
-              {/* CTA with decorative elements */}
-              <div className="mt-6 p-10 rounded-[2rem] bg-gradient-to-r from-[var(--color-brand-pink)] to-[var(--color-brand-purple)] text-white text-center relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-white/10 -translate-y-1/2 translate-x-1/4" />
-                <div className="absolute bottom-0 left-0 w-24 h-24 rounded-full bg-white/5 translate-y-1/3" />
-                <div className="relative z-10">
-                  <h3 className="font-heading italic text-3xl mb-4">¿Lista para impulsar tu negocio?</h3>
-                  <p className="text-white/80 font-light mb-8">Agenda una consulta estratégica gratuita.</p>
-                  <button className="bg-white text-[var(--color-brand-black)] px-10 py-4 rounded-full font-bold uppercase tracking-widest text-xs hover:shadow-elevated hover:-translate-y-1 transition-all">
-                    Agendar Consulta
-                  </button>
-                </div>
+      {/* FINAL CTA */}
+      <ScrollReveal>
+        <section className="py-20 px-6 md:px-16">
+          <div className="max-w-4xl mx-auto">
+            <div id="contacto" className="p-14 md:p-20 rounded-[2.5rem] bg-gradient-to-r from-[var(--color-brand-pink)] to-[var(--color-brand-purple)] text-white text-center relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-48 h-48 rounded-full bg-white/10 -translate-y-1/2 translate-x-1/4" />
+              <div className="absolute bottom-0 left-0 w-32 h-32 rounded-full bg-white/5 translate-y-1/3" />
+              <div className="relative z-10">
+                <h3 className="font-heading italic text-3xl md:text-4xl mb-4">¿Lista para impulsar tu negocio?</h3>
+                <p className="text-white/80 font-light mb-10 text-lg">Agenda una consulta estratégica gratuita.</p>
+                <button className="bg-white text-[var(--color-brand-black)] px-12 py-5 rounded-full font-bold uppercase tracking-widest text-xs hover:shadow-elevated hover:-translate-y-1 transition-all cursor-pointer">
+                  Agendar Consulta
+                </button>
               </div>
             </div>
           </div>
