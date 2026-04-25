@@ -36,10 +36,7 @@ export default function Page() {
 
         <div className="max-w-7xl mx-auto px-6 md:px-16 w-full relative z-10 grid lg:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col gap-6">
-            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-[var(--color-brand-pink-light)] border border-[var(--color-brand-pink)]/10 w-max">
-              <span className="w-2 h-2 rounded-full bg-[var(--color-brand-pink)] animate-pulse" />
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-brand-pink)]">KT Impulso Empresarial</span>
-            </div>
+
             <h1 className="font-heading text-6xl md:text-7xl lg:text-[6.5rem] leading-[0.92] tracking-tight">
               <span className="italic font-medium">Estrategia</span><br />
               <span className="gradient-text font-black not-italic relative">
@@ -97,17 +94,17 @@ export default function Page() {
       {/* CLIENT LOGOS */}
       <section className="py-24 px-6 md:px-16 bg-white border-y border-gray-100">
         <div className="max-w-7xl mx-auto flex items-center justify-center gap-12 md:gap-20">
-          <p className="text-sm font-bold uppercase tracking-[0.3em] text-gray-400 shrink-0 hidden md:block">Confían en Katherine</p>
-          <div className="w-[1px] h-14 bg-gray-200 hidden md:block" />
+          <p className="text-base font-bold uppercase tracking-[0.3em] text-gray-400 shrink-0 hidden md:block">Confían en Katherine</p>
+          <div className="w-[1px] h-16 bg-gray-200 hidden md:block" />
           {[
             { src: "/images/logo-bound-travel.png", alt: "Bound to Travel" },
             { src: "/images/logo-mango-creative.png", alt: "Mango Creative" },
             { src: "/images/logo-roma-studio.png", alt: "ROMA STUDIO" },
             { src: "/images/logo-lightu.png", alt: "LightU" },
           ].map((logo) => (
-            <Image key={logo.alt} src={logo.src} alt={logo.alt} width={200} height={100} className="object-contain grayscale opacity-40 hover:opacity-90 hover:grayscale-0 transition-all h-20 w-auto" />
+            <Image key={logo.alt} src={logo.src} alt={logo.alt} width={240} height={120} className="object-contain grayscale opacity-40 hover:opacity-90 hover:grayscale-0 transition-all h-28 w-auto" />
           ))}
-          <span className="font-heading italic text-2xl text-gray-300 tracking-wide">BioChange</span>
+          <span className="font-heading italic text-4xl text-gray-300 tracking-wide">BioChange</span>
         </div>
       </section>
 
