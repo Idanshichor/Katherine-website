@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Internal Agent and Raw Files
+.agent/
+agents/
+AGENTS.md
+CLAUDE.md
+Pics/
+/kt-velasquez-website/

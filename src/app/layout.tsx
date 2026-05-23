@@ -1,13 +1,40 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Playfair_Display, Inter, Great_Vibes } from "next/font/google";
 import "./globals.css";
 
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const script = Great_Vibes({ weight: "400", subsets: ["latin"], variable: "--font-script" });
 
 export const metadata: Metadata = {
-  title: "KT Impulso Empresarial | Project Management & Strategy",
-  description: "360° Strategy Specialist bridging Civil Engineering logic with Digital Marketing execution.",
+  metadataBase: new URL("https://ktvelasquez.com"),
+  title: "Katherine Velasquez | Consultoría Estratégica 360",
+  description: "Estratega 360° para fundadores y marcas maduras. Integro estructura de negocio, comunicación y mentalidad para escalar con claridad.",
+  icons: {
+    icon: "/images/KT_LOGO.webp",
+  },
+  openGraph: {
+    title: "Katherine Velasquez | Consultoría Estratégica 360",
+    description: "Estratega 360° para fundadores y marcas maduras. Integro estructura de negocio, comunicación y mentalidad para escalar con claridad.",
+    url: "https://ktvelasquez.com",
+    siteName: "Katherine Velasquez",
+    images: [
+      {
+        url: "/images/KT_Hero.webp",
+        width: 1200,
+        height: 630,
+        alt: "Katherine Velasquez - Consultoría Estratégica 360",
+      },
+    ],
+    locale: "es_CO",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Katherine Velasquez | Consultoría Estratégica 360",
+    description: "Estratega 360° para fundadores y marcas maduras.",
+    images: ["/images/KT_Hero.webp"],
+  },
 };
 
 export default function RootLayout({
@@ -17,7 +44,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="scroll-smooth">
-      <body className={`${playfair.variable} ${inter.variable} antialiased bg-[var(--color-brand-cream)] text-[var(--color-brand-black)]`}>
+      <body className={`${playfair.variable} ${inter.variable} ${script.variable} antialiased bg-[var(--color-brand-cream)] text-[var(--color-brand-black)]`}>
         {children}
       </body>
     </html>

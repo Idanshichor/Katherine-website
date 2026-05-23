@@ -2,16 +2,12 @@
 
 export function Marquee() {
   const items = [
-    "Project Management",
-    "SEO & SEM",
-    "Supply Chain (USA–COL)",
-    "GA4 Certified",
-    "Full-Funnel Strategy",
-    "UX Writing",
-    "Business Operating Systems",
-    "PMP Candidate",
-    "Web Analytics",
-    "Market Expansion",
+    "Mentalidad Ejecutiva",
+    "Estructura de Negocio",
+    "Posicionamiento de Marca",
+    "Estrategia Digital 360",
+    "Visión a Largo Plazo",
+    "Crecimiento Sostenible",
   ];
 
   return (

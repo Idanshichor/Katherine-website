@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 800 600">
+  <!-- Generator: Adobe Illustrator 30.3.0, SVG Export Plug-In . SVG Version: 2.1.3 Build 182)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+      }
+
+      .st1, .st2, .st3, .st4, .st5, .st6, .st7, .st8, .st9 {
+        isolation: isolate;
+      }
+
+      .st1, .st4, .st5 {
+        font-size: 220px;
+      }
+
+      .st1, .st4, .st5, .st7, .st8 {
+        font-family: Inter18pt-Black, 'Inter 18pt';
+        font-weight: 800;
+      }
+
+      .st1, .st8 {
+        fill: #ffb4c8;
+      }
+
+      .st3 {
+        font-size: 32px;
+        letter-spacing: .5em;
+      }
+
+      .st3, .st6, .st9 {
+        fill: #6b7280;
+        font-family: Cairo-Regular, Cairo;
+      }
+
+      .st4 {
+        letter-spacing: 0em;
+      }
+
+      .st4, .st5, .st7 {
+        fill: #1a1a1a;
+      }
+
+      .st6 {
+        font-size: 34px;
+        letter-spacing: .5em;
+      }
+
+      .st7 {
+        font-size: 226.8px;
+      }
+
+      .st8 {
+        font-size: 180px;
+      }
+
+      .st9 {
+        font-size: 28px;
+        letter-spacing: .6em;
+      }
+    </style>
+  </defs>
+  <g>
+    <g class="st2">
+      <text class="st4" transform="translate(34.2 189.9)"><tspan x="0" y="0">KT</tspan></text>
+    </g>
+    <g class="st2">
+      <text class="st1" transform="translate(291.5 189.9)"><tspan x="0" y="0">.</tspan></text>
+    </g>
+    <g class="st2">
+      <text class="st6" transform="translate(44.1 245.7)"><tspan x="0" y="0">VELASQUEZ</tspan></text>
+    </g>
+    <g>
+      <g class="st2">
+        <text class="st5" transform="translate(413.1 193.5)"><tspan x="0" y="0">KT</tspan></text>
+      </g>
+      <g class="st2">
+        <text class="st1" transform="translate(684.4 193.5)"><tspan x="0" y="0">.</tspan></text>
+      </g>
+      <g class="st2">
+        <text class="st3" transform="translate(423 241.1)"><tspan x="0" y="0">VELASQUEZ</tspan></text>
+      </g>
+    </g>
+  </g>
+  <g class="st2">
+    <text class="st5" transform="translate(70.2 468.5)"><tspan x="0" y="0">kt</tspan></text>
+  </g>
+  <g class="st2">
+    <text class="st8" transform="translate(280.6 466.4)"><tspan x="0" y="0">.</tspan></text>
+  </g>
+  <g class="st2">
+    <text class="st3" transform="translate(45.2 521.6)"><tspan x="0" y="0">VELASQUEZ</tspan></text>
+  </g>
+  <g class="st2">
+    <text class="st7" transform="translate(414.2 471.9)"><tspan x="0" y="0">KT</tspan></text>
+  </g>
+  <g class="st2">
+    <text class="st8" transform="translate(685.5 470.1)"><tspan x="0" y="0">.</tspan></text>
+  </g>
+  <g class="st2">
+    <text class="st9" transform="translate(424.1 517.7)"><tspan x="0" y="0">VELASQUEZ</tspan></text>
+  </g>
+  <line class="st0" x1="424.8" y1="734.5" x2="495.5" y2="663.8"/>
+</svg>

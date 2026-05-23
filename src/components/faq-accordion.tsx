@@ -4,24 +4,20 @@ import { useState } from "react";
 
 const faqs = [
   {
-    q: "¿Por qué una ingeniera civil hace marketing digital?",
-    a: "Porque trabajé suficientes proyectos de construcción para entender que sin sistemas, los planes más brillantes se caen. El marketing funciona igual: sin procesos, datos limpios y operaciones detrás, la mejor estrategia se desvanece. La ingeniería me dio el método. El marketing me dio el lenguaje.",
+    q: "¿Para quién NO es esto?",
+    a: "Si estás empezando desde cero o si buscas un coach motivacional, no soy yo. Trabajo con founders que ya tienen un negocio en marcha y necesitan estructura, no inspiración.",
   },
   {
-    q: "¿Con qué tipo de empresas trabajas?",
-    a: "Empresas en transición. Normalmente entre $1M y $20M en facturación, con producto validado pero operaciones improvisadas. Si ya tienes equipo de marketing pero los resultados no escalan, probablemente puedo ayudar. Si todavía estás validando producto, no soy tu mejor opción.",
+    q: "¿Cuánto tiempo tarda en verse resultados?",
+    a: "La claridad llega en la primera sesión. Los resultados medibles, en 60 a 90 días. Pero esto no es magia: depende de qué tan rápido implementas.",
   },
   {
-    q: "¿En qué mercados e idiomas trabajas?",
-    a: "Español nativo, inglés profesional. He gestionado proyectos en USA, Colombia, Europa y Medio Oriente. La adaptación cultural no es un extra, es parte del trabajo.",
+    q: "¿En qué idioma trabajas?",
+    a: "Actualmente en español. Estoy expandiendo a inglés pronto para clientes bilingües.",
   },
   {
-    q: "¿Trabajas como freelance, fraccional o full-time?",
-    a: "Proyectos fraccionales de 3 a 12 meses. Entro como Project Manager o Strategy Lead, construyo el sistema, entreno al equipo y salgo. No me quedo más tiempo del necesario.",
-  },
-  {
-    q: "¿Qué herramientas usas?",
-    a: "GA4, Looker, Ahrefs, Notion, Asana, HubSpot, Figma, Webflow. Pero las herramientas son lo último que decido. Primero el diagnóstico, después el sistema, después la herramienta que lo soporta.",
+    q: "¿Trabajas con cualquier industria?",
+    a: "Trabajo mejor con negocios de servicios, productos digitales y D2C. Si tu negocio es muy técnico o regulado (salud, legal), hablémoslo antes.",
   },
 ];
 
@@ -40,7 +36,7 @@ export default function FaqAccordion() {
             >
               <span
                 className={`font-heading italic text-xl md:text-2xl transition-colors ${
-                  isOpen ? "text-[var(--color-brand-pink)]" : "text-[var(--color-brand-black)] group-hover:text-[var(--color-brand-pink)]"
+                  isOpen ? "text-[var(--color-brand-gold)]" : "text-[var(--color-brand-black)] group-hover:text-[var(--color-brand-gold)]"
                 }`}
               >
                 {faq.q}
@@ -48,7 +44,7 @@ export default function FaqAccordion() {
               <span
                 className={`ml-6 shrink-0 w-8 h-8 rounded-full border flex items-center justify-center text-lg transition-all duration-300 ${
                   isOpen
-                    ? "border-[var(--color-brand-pink)] text-[var(--color-brand-pink)] rotate-45"
+                    ? "border-[var(--color-brand-gold)] text-[var(--color-brand-gold)] rotate-45"
                     : "border-gray-300 text-gray-400 rotate-0"
                 }`}
               >
