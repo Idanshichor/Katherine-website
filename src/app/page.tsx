@@ -17,7 +17,7 @@ export default function Page() {
       <section className="relative w-full min-h-[100svh] flex flex-col justify-start pt-32 pb-6 md:justify-center md:pt-24 md:pb-0 overflow-hidden bg-white">
         {/* Full Background Image */}
         <div className="absolute inset-0 z-0 bg-black">
-          <Image src="/images/KT_Hero.webp" alt="Katherine Velasquez Background" fill className="object-cover object-[82%_40%] md:object-[75%_center]" priority />
+          <Image src="/images/KT_Hero.webp" alt="Katherine Velasquez Background" fill className="object-cover object-[82%_40%] md:object-[75%_center]" priority unoptimized />
           {/* Mobile dark gradient overlay for text legibility */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-transparent md:hidden" />
         </div>
@@ -125,7 +125,7 @@ export default function Page() {
               <div className="absolute inset-0 border border-[var(--color-brand-gold)] top-10 bottom-0 left-0 right-10 z-0 hidden lg:block" />
 
               <div className="relative w-full h-full z-10">
-                <Image src="/images/KTSecondPhoto.webp" alt="Katherine Velasquez" fill className="object-cover object-[center_40%] border-4 border-white shadow-soft" />
+                <Image src="/images/KTSecondPhoto.webp" alt="Katherine Velasquez" fill sizes="(max-width: 768px) 100vw, 50vw" quality={90} className="object-cover object-[center_40%] border-4 border-white shadow-soft" />
               </div>
             </div>
 
