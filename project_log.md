@@ -65,6 +65,8 @@ This log serves as a source of truth for the development, configuration, and des
 ---
 
 ## ⚠️ Guidelines for Future Updates
-1. **Copy Modification:** Do **NOT** modify or change any of the copy on the landing page unless explicitly requested by the user.
-2. **Build Verification:** Always run `npm run build` locally before pushing changes to verify that the TypeScript compiler and Turbopack bundler are completely free of errors.
-3. **Deployment:** Pushing to the `main` branch of the GitHub repository triggers auto-deployment on Vercel.
+1. **Feature Branching:** Do **NOT** push or commit directly to the `main` branch. Create a feature branch (e.g. `feature/name` or `fix/name`) for any edits. This allows Vercel to generate a **Preview Deployment** link to test changes before they go live. Once verified, merge the branch into `main`.
+2. **Copy Modification:** Do **NOT** modify or change any of the copy on the landing page unless explicitly requested by the user.
+3. **Build Verification:** Always run `npm run build` locally before pushing changes to verify that the TypeScript compiler and Turbopack bundler are completely free of errors.
+4. **Deployment:** Pushing or merging to the `main` branch of the GitHub repository triggers the final production deployment on Vercel.
+
