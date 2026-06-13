@@ -1,28 +1,10 @@
-"use client";
-
 import { useState } from "react";
-
-const faqs = [
-  {
-    q: "¿Para quién NO es esto?",
-    a: "Si estás empezando desde cero o si buscas un coach motivacional, no soy yo. Trabajo con founders que ya tienen un negocio en marcha y necesitan estructura, no inspiración.",
-  },
-  {
-    q: "¿Cuánto tiempo tarda en verse resultados?",
-    a: "La claridad llega en la primera sesión. Los resultados medibles, en 60 a 90 días. Pero esto no es magia: depende de qué tan rápido implementas.",
-  },
-  {
-    q: "¿En qué idioma trabajas?",
-    a: "Actualmente en español. Estoy expandiendo a inglés pronto para clientes bilingües.",
-  },
-  {
-    q: "¿Trabajas con cualquier industria?",
-    a: "Trabajo mejor con negocios de servicios, productos digitales y D2C. Si tu negocio es muy técnico o regulado (salud, legal), hablémoslo antes.",
-  },
-];
+import { useLanguage } from "@/context/language-context";
 
 export default function FaqAccordion() {
   const [openIndex, setOpenIndex] = useState(0);
+  const { t } = useLanguage();
+  const faqs = t("faqs") as Array<{ q: string; a: string }>;
 
   return (
     <div className="max-w-3xl mx-auto">

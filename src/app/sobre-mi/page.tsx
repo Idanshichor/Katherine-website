@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/context/language-context";
 
 /* ───── Floating Hearts Component ───── */
 function FloatingHearts() {
@@ -79,6 +80,8 @@ function Sparkles() {
 }
 
 export default function SobreMi() {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen bg-[var(--color-brand-cream)] text-[var(--color-brand-black)] pt-24 relative">
       <FloatingHearts />
@@ -111,9 +114,9 @@ export default function SobreMi() {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="relative z-10"
         >
-          <p className="text-xs uppercase tracking-[0.3em] font-bold text-[var(--color-brand-pink)] mb-8">Katherine & Idan</p>
+          <p className="text-xs uppercase tracking-[0.3em] font-bold text-[var(--color-brand-pink)] mb-8">{t("sobremi.tag")}</p>
           <h1 className="font-heading italic text-6xl md:text-8xl lg:text-9xl leading-[0.95] mb-8 relative">
-            Te amo, creo en <span className="not-italic font-black gradient-text">ti</span>
+            {t("sobremi.title_prefix")} <span className="not-italic font-black gradient-text">{t("sobremi.title_suffix")}</span>
           </h1>
           <motion.div
             className="flex items-center justify-center gap-4 mt-6"
@@ -181,7 +184,7 @@ export default function SobreMi() {
           <div className="relative aspect-[3/2] w-full rounded-[2.5rem] overflow-hidden shadow-elevated">
             <Image
               src="/images/_O1A9704.jpg"
-              alt="Katherine y Idan — Partners in life and strategy"
+              alt={t("sobremi.photo_alt")}
               fill
               className="object-cover object-center"
             />

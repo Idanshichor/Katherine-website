@@ -1,14 +1,8 @@
-"use client";
+import { useLanguage } from "@/context/language-context";
 
 export function Marquee() {
-  const items = [
-    "Mentalidad Ejecutiva",
-    "Estructura de Negocio",
-    "Posicionamiento de Marca",
-    "Estrategia Digital 360",
-    "Visión a Largo Plazo",
-    "Crecimiento Sostenible",
-  ];
+  const { t } = useLanguage();
+  const items = t("marquee") as string[];
 
   return (
     <div className="relative overflow-hidden py-6 bg-[var(--color-brand-black)]">

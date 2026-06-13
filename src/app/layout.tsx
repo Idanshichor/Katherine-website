@@ -37,6 +37,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { LanguageProvider } from "@/context/language-context";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -45,7 +47,9 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth">
       <body className={`${playfair.variable} ${inter.variable} ${script.variable} antialiased bg-[var(--color-brand-cream)] text-[var(--color-brand-black)]`}>
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

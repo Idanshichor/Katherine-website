@@ -1,13 +1,13 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useLanguage } from "@/context/language-context";
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, toggleLanguage, t } = useLanguage();
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-[var(--color-brand-cream)]/90 backdrop-blur-xl border-b border-gray-200 h-20 md:h-24 flex items-center justify-between px-6 md:px-16 transition-all duration-300">
@@ -24,18 +24,35 @@ export function Navbar() {
 
       {/* Desktop Links */}
       <div className="hidden md:flex items-center gap-8 lg:gap-12 text-sm font-semibold tracking-widest uppercase text-gray-600">
-        <Link href="/" className="hover:text-[var(--color-brand-pink)] transition-colors">Inicio</Link>
-        <Link href="/#quien-soy" className="hover:text-[var(--color-brand-purple)] transition-colors">Quién Soy</Link>
-        <Link href="/#metodologia" className="hover:text-[var(--color-brand-pink)] transition-colors">Metodología</Link>
-        <Link href="/#servicios" className="hover:text-[var(--color-brand-purple)] transition-colors">Servicios</Link>
+        <Link href="/" className="hover:text-[var(--color-brand-pink)] transition-colors">{t("nav.inicio")}</Link>
+        <Link href="/#quien-soy" className="hover:text-[var(--color-brand-purple)] transition-colors">{t("nav.sobre_mi")}</Link>
+        <Link href="/#metodologia" className="hover:text-[var(--color-brand-pink)] transition-colors">{t("nav.metodologia")}</Link>
+        <Link href="/#servicios" className="hover:text-[var(--color-brand-purple)] transition-colors">{t("nav.servicios")}</Link>
       </div>
 
-      {/* Contact Button (Desktop) */}
-      <Link href="https://wa.me/573216154870?text=Hola%20Kathe%2C%20Quiero%20hablar%20contigo%20sobre%20mi%20proyecto%20%3A%29" target="_blank" rel="noopener noreferrer" className="hidden md:block">
-        <Button variant="outline" className="rounded-full shrink-0">
-          Contacto
-        </Button>
-      </Link>
+      {/* Desktop Actions */}
+      <div className="hidden md:flex items-center gap-4 lg:gap-6 shrink-0">
+        {/* Sliding Language Toggle */}
+        <button
+          onClick={toggleLanguage}
+          className="flex items-center bg-gray-100 border border-gray-200 rounded-full p-1 transition-all relative w-[68px] h-9 cursor-pointer shadow-inner shrink-0"
+          aria-label="Change language"
+        >
+          <div
+            className={`absolute top-0.5 bottom-0.5 w-[30px] rounded-full bg-[var(--color-brand-black)] transition-all duration-300 ${
+              language === "en" ? "left-[34px]" : "left-1"
+            }`}
+          />
+          <span className={`flex-1 text-[10px] font-black uppercase text-center relative z-10 select-none tracking-widest ${language === "es" ? "text-white" : "text-gray-400"}`}>ES</span>
+          <span className={`flex-1 text-[10px] font-black uppercase text-center relative z-10 select-none tracking-widest ${language === "en" ? "text-white" : "text-gray-400"}`}>EN</span>
+        </button>
+
+        <Link href="https://wa.me/573216154870?text=Hola%20Kathe%2C%20Quiero%20hablar%20contigo%20sobre%20mi%20proyecto%20%3A%29" target="_blank" rel="noopener noreferrer">
+          <Button variant="outline" className="rounded-full shrink-0">
+            {t("nav.contacto")}
+          </Button>
+        </Link>
+      </div>
 
       {/* Mobile Hamburger Toggle */}
       <button 
@@ -50,16 +67,31 @@ export function Navbar() {
       {isMobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-[var(--color-brand-cream)] flex flex-col pt-12 px-6 pb-6 shadow-xl border-t border-gray-100 md:hidden overflow-y-auto" style={{ height: "calc(100vh - 5rem)" }}>
           <div className="flex flex-col gap-8 text-lg font-semibold tracking-widest uppercase text-[var(--color-brand-black)] text-center mb-12">
-            <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>Inicio</Link>
-            <Link href="/#quien-soy" onClick={() => setIsMobileMenuOpen(false)}>Quién Soy</Link>
-            <Link href="/#metodologia" onClick={() => setIsMobileMenuOpen(false)}>Metodología</Link>
-            <Link href="/#servicios" onClick={() => setIsMobileMenuOpen(false)}>Servicios</Link>
+            <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>{t("nav.inicio")}</Link>
+            <Link href="/#quien-soy" onClick={() => setIsMobileMenuOpen(false)}>{t("nav.sobre_mi")}</Link>
+            <Link href="/#metodologia" onClick={() => setIsMobileMenuOpen(false)}>{t("nav.metodologia")}</Link>
+            <Link href="/#servicios" onClick={() => setIsMobileMenuOpen(false)}>{t("nav.servicios")}</Link>
           </div>
           
-          <div className="mt-auto mb-10 flex justify-center">
+          <div className="mt-auto mb-10 flex flex-col gap-6 items-center">
+            {/* Mobile Toggle Language */}
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center bg-gray-100 border border-gray-200 rounded-full p-1 transition-all relative w-[80px] h-10 cursor-pointer shadow-inner shrink-0 animate-fade-in"
+              aria-label="Change language"
+            >
+              <div
+                className={`absolute top-0.5 bottom-0.5 w-[36px] rounded-full bg-[var(--color-brand-black)] transition-all duration-300 ${
+                  language === "en" ? "left-[40px]" : "left-1"
+                }`}
+              />
+              <span className={`flex-1 text-[11px] font-black uppercase text-center relative z-10 select-none tracking-widest ${language === "es" ? "text-white" : "text-gray-400"}`}>ES</span>
+              <span className={`flex-1 text-[11px] font-black uppercase text-center relative z-10 select-none tracking-widest ${language === "en" ? "text-white" : "text-gray-400"}`}>EN</span>
+            </button>
+
             <Link href="https://wa.me/573216154870?text=Hola%20Kathe%2C%20Quiero%20hablar%20contigo%20sobre%20mi%20proyecto%20%3A%29" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)} className="w-full">
               <Button variant="outline" className="rounded-full w-full py-6 text-base tracking-widest border-2">
-                Contacto
+                {t("nav.contacto")}
               </Button>
             </Link>
           </div>
