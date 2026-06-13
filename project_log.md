@@ -7,7 +7,10 @@ This log serves as a source of truth for the development, configuration, and des
 ## 📋 Project Overview
 * **Website:** Katherine Velasquez | Consultoría Estratégica 360 (`https://ktvelasquez.com`)
 * **Tech Stack:** Next.js (with Turbopack/App Router), TailwindCSS / Custom HSL brand styles.
-* **Hosting Platform:** Vercel (auto-deploys from the `main` branch of `github.com/Idanshichor/Katherine-website.git`).
+* **Hosting Platform:** Vercel (Live deployment: `kt-velasquez-website` under Vercel account `katherinevelasquez366@gmail.com`).
+* **Git Repositories & Remotes:**
+  * `origin`: `github.com/Idanshichor/Katherine-website.git` (workspace repository).
+  * `live`: `github.com/Idanshichor/kt-velasquez-website.git` (the live Vercel-linked repository. Deploy by pushing here using `git push live main` or `git push live main --force`).
 * **Domain Registrar:** Hostinger (nameservers pointed to Vercel).
 * **DNS Management:** Managed via Vercel DNS dashboard.
 
