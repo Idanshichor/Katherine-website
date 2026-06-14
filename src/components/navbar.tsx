@@ -54,14 +54,32 @@ export function Navbar() {
         </Link>
       </div>
 
-      {/* Mobile Hamburger Toggle */}
-      <button 
-        className="md:hidden z-50 text-[var(--color-brand-black)] p-2 -mr-2"
-        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        aria-label="Toggle mobile menu"
-      >
-        {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-      </button>
+      {/* Mobile Actions (Language Switch + Hamburger) */}
+      <div className="flex md:hidden items-center gap-3 z-50">
+        {/* Sliding Language Toggle */}
+        <button
+          onClick={toggleLanguage}
+          className="flex items-center bg-gray-100 border border-gray-200 rounded-full p-1 transition-all relative w-[68px] h-9 cursor-pointer shadow-inner shrink-0"
+          aria-label="Change language"
+        >
+          <div
+            className={`absolute top-0.5 bottom-0.5 w-[30px] rounded-full bg-[var(--color-brand-black)] transition-all duration-300 ${
+              language === "en" ? "left-[34px]" : "left-1"
+            }`}
+          />
+          <span className={`flex-1 text-[10px] font-black uppercase text-center relative z-10 select-none tracking-widest ${language === "es" ? "text-white" : "text-gray-400"}`}>ES</span>
+          <span className={`flex-1 text-[10px] font-black uppercase text-center relative z-10 select-none tracking-widest ${language === "en" ? "text-white" : "text-gray-400"}`}>EN</span>
+        </button>
+
+        {/* Hamburger Toggle */}
+        <button 
+          className="text-[var(--color-brand-black)] p-2 -mr-2"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle mobile menu"
+        >
+          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
@@ -74,21 +92,6 @@ export function Navbar() {
           </div>
           
           <div className="mt-auto mb-10 flex flex-col gap-6 items-center">
-            {/* Mobile Toggle Language */}
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center bg-gray-100 border border-gray-200 rounded-full p-1 transition-all relative w-[80px] h-10 cursor-pointer shadow-inner shrink-0 animate-fade-in"
-              aria-label="Change language"
-            >
-              <div
-                className={`absolute top-0.5 bottom-0.5 w-[36px] rounded-full bg-[var(--color-brand-black)] transition-all duration-300 ${
-                  language === "en" ? "left-[40px]" : "left-1"
-                }`}
-              />
-              <span className={`flex-1 text-[11px] font-black uppercase text-center relative z-10 select-none tracking-widest ${language === "es" ? "text-white" : "text-gray-400"}`}>ES</span>
-              <span className={`flex-1 text-[11px] font-black uppercase text-center relative z-10 select-none tracking-widest ${language === "en" ? "text-white" : "text-gray-400"}`}>EN</span>
-            </button>
-
             <Link href="https://wa.me/573216154870?text=Hola%20Kathe%2C%20Quiero%20hablar%20contigo%20sobre%20mi%20proyecto%20%3A%29" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)} className="w-full">
               <Button variant="outline" className="rounded-full w-full py-6 text-base tracking-widest border-2">
                 {t("nav.contacto")}
