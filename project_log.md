@@ -71,7 +71,7 @@ This log serves as a source of truth for the development, configuration, and des
 * **Architecture:** Driven by a React Context Provider (`LanguageProvider`) in [src/context/language-context.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/context/language-context.tsx).
 * **Translation Storage:** Centralized in [src/app/translations.ts](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/translations.ts). It holds copywriter-grade, context-appropriate translations (not literal dictionary lookups).
 * **Toggling & State:**
-  * Interactive sliding pill toggle switches in [src/components/navbar.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/components/navbar.tsx) (desktop header and mobile menu overlay).
+  * Interactive sliding pill toggle switches in [src/components/navbar.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/components/navbar.tsx) (desktop header, and top navigation bar next to the hamburger icon on mobile view).
   * Automatically detects `?lang=en` or `?lang=es` on initialization.
   * Falls back to `localStorage` cached preference, or browser language settings.
   * Smooth, client-side translation of headers, marquee items, forms, FAQs, and testimonials with zero layout shifts or route refreshes.
