@@ -79,6 +79,7 @@ This log serves as a source of truth for the development, configuration, and des
 
 ## 📝 Development Log
 * **2026-06-19:** Updated testimonial author name from "Idan Shichor" to "Pnina Shichor" and role to "Founder, Bound to Travel" (localized for ES/EN) in [src/app/page.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/page.tsx) under the `feature/update-review-author` branch.
+* **2026-06-19:** Deleted the private/personal `sobre-mi` page (`src/app/sobre-mi/page.tsx`) and removed all associated translation strings from `src/app/translations.ts` to prevent public access.
 
 ---
 
