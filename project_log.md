@@ -77,6 +77,9 @@ This log serves as a source of truth for the development, configuration, and des
   * Smooth, client-side translation of headers, marquee items, forms, FAQs, and testimonials with zero layout shifts or route refreshes.
 
 
+## 📝 Development Log
+* **2026-06-19:** Updated testimonial author name from "Idan Shichor" to "Pnina Shichor" and role to "Founder, Bound to Travel" (localized for ES/EN) in [src/app/page.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/page.tsx) under the `feature/update-review-author` branch.
+
 ---
 
 ## ⚠️ Guidelines for Future Updates

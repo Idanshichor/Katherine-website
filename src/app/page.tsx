@@ -23,8 +23,8 @@ export default function Page() {
       text: language === "es"
         ? "Trabajar con Katherine ha sido una experiencia absolutamente increíble. Su metodología, sus estrategias y su mentalidad empresarial son de otro nivel. Gracias a su dirección estratégica, nos ha ayudado a escalar y superar los $250,000 en ventas. Si de verdad hablas en serio sobre hacer crecer tu negocio, Katherine es la estratega que necesitas a tu lado."
         : "Working with Katherine has been an absolutely incredible experience. Her methodology, strategies, and business mindset are on another level. Thanks to her strategic direction, she helped us scale and surpass $250,000 in sales. If you are truly serious about growing your business, Katherine is the strategist you need by your side.",
-      name: "Idan Shichor",
-      role: "CEO, Bound to Travel"
+      name: "Pnina Shichor",
+      role: language === "es" ? "Fundadora, Bound to Travel" : "Founder, Bound to Travel"
     },
     {
       text: language === "es"
