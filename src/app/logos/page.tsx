@@ -1,6 +1,11 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 export default function LogosPage() {
+  if (process.env.NODE_ENV === "production") {
+    notFound();
+  }
+
   return (
     <div className="min-h-screen bg-[var(--color-brand-cream)] text-[var(--color-brand-black)] py-20 px-6">
       <div className="max-w-7xl mx-auto">
