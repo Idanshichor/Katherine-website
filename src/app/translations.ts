@@ -132,12 +132,6 @@ export const translations = {
       placeholder_lastname: "Apellido",
       placeholder_email: "Correo Electrónico"
     },
-    sobremi: {
-      tag: "Katherine & Idan",
-      title_prefix: "Te amo, creo en",
-      title_suffix: "ti",
-      photo_alt: "Katherine y Idan — Partners in life and strategy"
-    },
     faqs: [
       {
         q: "¿Para quién NO es esto?",
@@ -295,12 +289,6 @@ export const translations = {
       placeholder_name: "First Name",
       placeholder_lastname: "Last Name",
       placeholder_email: "Email Address"
-    },
-    sobremi: {
-      tag: "Katherine & Idan",
-      title_prefix: "I love you, I believe in",
-      title_suffix: "you",
-      photo_alt: "Katherine and Idan — Partners in life and strategy"
     },
     faqs: [
       {
