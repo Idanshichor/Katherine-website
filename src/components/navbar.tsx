@@ -25,7 +25,7 @@ export function Navbar() {
       {/* Desktop Links */}
       <div className="hidden md:flex items-center gap-8 lg:gap-12 text-sm font-semibold tracking-widest uppercase text-gray-600">
         <Link href="/" className="hover:text-[var(--color-brand-pink)] transition-colors">{t("nav.inicio")}</Link>
-        <Link href="/#quien-soy" className="hover:text-[var(--color-brand-purple)] transition-colors">{t("nav.sobre_mi")}</Link>
+        <Link href="/sobre-mi" className="hover:text-[var(--color-brand-purple)] transition-colors">{t("nav.sobre_mi")}</Link>
         <Link href="/#metodologia" className="hover:text-[var(--color-brand-pink)] transition-colors">{t("nav.metodologia")}</Link>
         <Link href="/#servicios" className="hover:text-[var(--color-brand-purple)] transition-colors">{t("nav.servicios")}</Link>
         <Link href="/podcast" className="hover:text-[var(--color-brand-pink)] transition-colors">{t("nav.podcast")}</Link>
@@ -87,7 +87,7 @@ export function Navbar() {
         <div className="absolute top-full left-0 w-full bg-[var(--color-brand-cream)] flex flex-col pt-12 px-6 pb-6 shadow-xl border-t border-gray-100 md:hidden overflow-y-auto" style={{ height: "calc(100vh - 5rem)" }}>
           <div className="flex flex-col gap-8 text-lg font-semibold tracking-widest uppercase text-[var(--color-brand-black)] text-center mb-12">
             <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>{t("nav.inicio")}</Link>
-            <Link href="/#quien-soy" onClick={() => setIsMobileMenuOpen(false)}>{t("nav.sobre_mi")}</Link>
+            <Link href="/sobre-mi" onClick={() => setIsMobileMenuOpen(false)}>{t("nav.sobre_mi")}</Link>
             <Link href="/#metodologia" onClick={() => setIsMobileMenuOpen(false)}>{t("nav.metodologia")}</Link>
             <Link href="/#servicios" onClick={() => setIsMobileMenuOpen(false)}>{t("nav.servicios")}</Link>
             <Link href="/podcast" onClick={() => setIsMobileMenuOpen(false)}>{t("nav.podcast")}</Link>
