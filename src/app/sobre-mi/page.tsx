@@ -10,18 +10,6 @@ import Link from "next/link";
 export default function AboutPage() {
   const { language, t } = useLanguage();
 
-  // Travel destinations list for Chapter 6 route visual
-  const destinations = [
-    { es: "Medellín", en: "Medellín" },
-    { es: "Madrid", en: "Madrid" },
-    { es: "India", en: "India" },
-    { es: "Vietnam", en: "Vietnam" },
-    { es: "Tailandia", en: "Thailand" },
-    { es: "Israel", en: "Israel" },
-    { es: "Italia", en: "Italy" },
-    { es: "EE.UU.", en: "USA" }
-  ];
-
   return (
     <div className="min-h-screen bg-[var(--color-brand-cream)] text-[var(--color-brand-black)] overflow-x-hidden">
       <Navbar />
@@ -120,38 +108,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* VISUAL FEATURE: The Marathon Schedule (Interactive day-night split grid) */}
-            <div className="bg-white rounded-[2.5rem] p-8 md:p-12 border border-white shadow-soft max-w-4xl mx-auto mb-16">
-              <h3 className="font-heading text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-8 text-center">
-                {language === "es" ? "DIARIO DE UNA MARATÓN (3 AÑOS EN SIMULTÁNEO)" : "DIARY OF A MARATHON (3 YEARS SIMULTANEOUSLY)"}
-              </h3>
-              
-              <div className="grid md:grid-cols-3 gap-6">
-                {/* Day */}
-                <div className="bg-[var(--color-brand-cream)] p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center text-center">
-                  <span className="w-10 h-10 rounded-full bg-[var(--color-brand-gold-light)] text-[var(--color-brand-gold)] flex items-center justify-center font-bold text-sm mb-4">☀</span>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400 mb-1">{language === "es" ? "Mañana y Tarde" : "Morning & Afternoon"}</span>
-                  <h4 className="font-heading font-bold text-base text-[var(--color-brand-black)] mb-2">{language === "es" ? "Ingeniería Civil" : "Civil Engineering"}</h4>
-                  <p className="text-xs text-gray-500 font-medium leading-relaxed">{language === "es" ? "Estudiando riesgos de precipitación y estructuras." : "Studying rainfall runoff risk and structure modeling."}</p>
-                </div>
 
-                {/* Afternoon */}
-                <div className="bg-[var(--color-brand-cream)] p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center text-center">
-                  <span className="w-10 h-10 rounded-full bg-[var(--color-brand-pink-light)] text-[var(--color-brand-pink)] flex items-center justify-center font-bold text-sm mb-4">✦</span>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400 mb-1">{language === "es" ? "Aplicación Directa" : "Direct Application"}</span>
-                  <h4 className="font-heading font-bold text-base text-[var(--color-brand-black)] mb-2">{language === "es" ? "MBA & Negocios" : "MBA & Businesses"}</h4>
-                  <p className="text-xs text-gray-500 font-medium leading-relaxed">{language === "es" ? "Estudiando y aplicando cada clase a mi tattoo studio y rock shop." : "Studying and immediately applying MBA logic to my store and studio."}</p>
-                </div>
-
-                {/* Night */}
-                <div className="bg-[var(--color-brand-cream)] p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center text-center">
-                  <span className="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-sm mb-4">☽</span>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400 mb-1">{language === "es" ? "Noche" : "Nighttime"}</span>
-                  <h4 className="font-heading font-bold text-base text-[var(--color-brand-black)] mb-2">{language === "es" ? "Bailarina Profesional" : "Professional Dancer"}</h4>
-                  <p className="text-xs text-gray-500 font-medium leading-relaxed">{language === "es" ? "Trabajando en escenarios para financiar mis metas independientes." : "Working on stages to fund my independent financial goals."}</p>
-                </div>
-              </div>
-            </div>
 
             <div className="max-w-4xl mx-auto">
               <p className="font-body text-base md:text-lg leading-relaxed text-gray-700 font-medium border-l-4 border-l-[var(--color-brand-pink)] pl-6">
@@ -296,26 +253,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* VISUAL ROUTE: Emigration timeline map line */}
-            <div className="bg-white rounded-2xl p-6 overflow-x-auto max-w-4xl mx-auto shadow-soft border border-white mt-12">
-              <div className="flex items-center justify-between min-w-[650px] px-4 py-2">
-                {destinations.map((dest, i) => (
-                  <div key={i} className="flex items-center gap-2 group">
-                    <div className="flex flex-col items-center">
-                      <div className="w-6 h-6 rounded-full bg-[var(--color-brand-gold)] text-white flex items-center justify-center text-[10px] font-bold shadow-soft">
-                        {i + 1}
-                      </div>
-                      <span className="text-[10px] font-black uppercase tracking-wider text-gray-500 mt-2 font-body">
-                        {language === "es" ? dest.es : dest.en}
-                      </span>
-                    </div>
-                    {i < destinations.length - 1 && (
-                      <div className="w-10 md:w-16 h-[2px] bg-gray-200" />
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
+
 
           </div>
         </section>
