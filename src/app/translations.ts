@@ -112,8 +112,9 @@ export const translations = {
       cta: "Escuchar Podcast"
     },
     podcastPage: {
-      heroTag: "KT360",
-      heroTitle: "Sin pelos en la lengua",
+      heroTag: "EL PODCAST",
+      heroTitlePart1: "Estrategia 360:",
+      heroTitlePart2: "Sin Pelos en la Lengua",
       heroSubtitle: "El espacio seguro donde las CEOs, empresarias y emprendedoras nos quitamos la máscara corporativa para hablar de la verdad del negocio.",
       manifestoTag: "Manifiesto",
       manifestoP1: "Aquí no venimos a tirar palabras elegantes ni discursos cordiales de LinkedIn que nadie entiende.",
@@ -300,8 +301,9 @@ export const translations = {
       cta: "Listen to Podcast"
     },
     podcastPage: {
-      heroTag: "KT360",
-      heroTitle: "Unfiltered & Honest",
+      heroTag: "THE PODCAST",
+      heroTitlePart1: "360° Strategy:",
+      heroTitlePart2: "Raw & Unfiltered",
       heroSubtitle: "The safe space where CEOs, female business owners, and entrepreneurs take off the corporate mask to talk about the real truth of business.",
       manifestoTag: "Manifesto",
       manifestoP1: "We are not here to throw around fancy words or polite LinkedIn speeches that nobody understands.",

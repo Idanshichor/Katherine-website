@@ -48,62 +48,59 @@ export default function PodcastPage() {
     }
   }
 
-  // Podcast platforms config
+  // Podcast platforms logos config (Grayscale transitioning to brand colors on hover)
   const platforms = [
     {
       name: "Spotify",
-      color: "hover:border-[#1DB954]/50",
-      textColor: "group-hover:text-[#1DB954]",
-      icon: (
-        <svg viewBox="0 0 24 24" className="w-8 h-8 transition-colors text-gray-400 group-hover:text-[#1DB954]" fill="currentColor">
-          <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424c-.18.295-.565.387-.86.207-2.377-1.454-5.37-1.783-8.894-.98-.336.075-.668-.135-.744-.47-.076-.336.135-.668.47-.743 3.856-.88 7.15-.506 9.822 1.13.295.178.387.563.206.856zm1.225-2.72c-.228.368-.713.49-1.08.262-2.716-1.67-6.85-2.15-10.05-1.18-.413.125-.85-.107-.975-.52-.125-.413.107-.85.52-.975 3.66-1.11 8.214-.57 11.323 1.34.368.228.49.713.262 1.08zm.107-2.82c-3.256-1.934-8.632-2.113-11.747-1.167-.5.15-1.023-.13-1.173-.63-.15-.5.13-1.023.63-1.173 3.62-1.098 9.55-.89 13.3 1.34.45.267.6.845.333 1.296-.267.45-.845.6-1.296.333z"/>
+      url: "https://open.spotify.com",
+      logoSvg: (
+        <svg viewBox="0 0 130 32" className="h-8 w-auto fill-gray-400 group-hover:fill-[#1DB954] transition-colors duration-300" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 0C6.27 0 0 6.27 0 14s6.27 14 14 14 14-6.27 14-14S21.73 0 14 0zm6.42 20.22c-.23.37-.73.49-1.1.26-2.95-1.8-6.66-2.2-11.03-1.2-.42.1-.84-.17-.94-.59s.17-.84.59-.94c4.8-1.1 8.9-.62 12.22 1.4.37.23.49.73.26 1.07zm1.71-3.8c-.29.47-.9.62-1.37.33-3.37-2.07-8.5-2.68-12.47-1.47-.53.16-1.09-.14-1.25-.67s.14-1.09.67-1.25c4.54-1.38 10.2-.69 14.1 1.7.47.28.62.9.32 1.36zm.14-3.93C17.7 9.8 11 9.58 7.15 10.75c-.71.21-1.45-.2-1.66-.91-.21-.71.2-.1.91-1.66 4.45-1.35 11.83-1.09 16.5 1.68.64.38.85 1.2.47 1.84s-1.2.85-1.84.47z" />
+          <text x="36" y="21" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="18" letter-spacing="-0.03em">Spotify</text>
         </svg>
-      ),
-      url: "https://open.spotify.com"
+      )
     },
     {
       name: "Apple Podcasts",
-      color: "hover:border-[#872EC4]/50",
-      textColor: "group-hover:text-[#872EC4]",
-      icon: (
-        <svg viewBox="0 0 24 24" className="w-8 h-8 transition-colors text-gray-400 group-hover:text-[#872EC4]" fill="currentColor">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.43c0 .55-.45 1-1 1s-1-.45-1-1v-4.86c0-.55.45-1 1-1s1 .45 1 1v4.86zm-1-6.86c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4.85 4.86c0 .55-.45 1-1 1s-1-.45-1-1v-4.86c0-.55.45-1 1-1s1 .45 1 1v4.86zm1.65-2.43c0-3.03-2.47-5.5-5.5-5.5S6.5 8.97 6.5 12c0 1.25.42 2.4 1.13 3.33.33.44.25 1.07-.19 1.4-.44.33-1.07.25-1.4-.19C5.12 15.34 4.5 13.75 4.5 12c0-4.14 3.36-7.5 7.5-7.5s7.5 3.36 7.5 7.5c0 1.75-.62 3.34-1.54 4.54-.33.44-.96.52-1.4.19-.44-.33-.52-.96-.19-1.4.71-.93 1.13-2.08 1.13-3.33zm-9.35 2.43c0 .55-.45 1-1 1s-1-.45-1-1v-4.86c0-.55.45-1 1-1s1 .45 1 1v4.86z"/>
+      url: "https://podcasts.apple.com",
+      logoSvg: (
+        <svg viewBox="0 0 180 32" className="h-8 w-auto fill-gray-400 group-hover:fill-[#872EC4] transition-colors duration-300" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="14" cy="14" r="3" />
+          <path d="M14 0C6.27 0 0 6.27 0 14s6.27 14 14 14 14-6.27 14-14S21.73 0 14 0zm0 24.5c-5.8 0-10.5-4.7-10.5-10.5S8.2 3.5 14 3.5 24.5 8.2 24.5 14 19.8 24.5 14 24.5z" opacity="0.3" />
+          <path d="M14 6.5C9.86 6.5 6.5 9.86 6.5 14s3.36 7.5 7.5 7.5 7.5-3.36 7.5-7.5S18.14 6.5 14 6.5zm0 11.5c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z" />
+          <text x="36" y="20" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="15" letter-spacing="-0.02em">Apple Podcasts</text>
         </svg>
-      ),
-      url: "https://podcasts.apple.com"
+      )
     },
     {
       name: "YouTube",
-      color: "hover:border-[#FF0000]/50",
-      textColor: "group-hover:text-[#FF0000]",
-      icon: (
-        <svg viewBox="0 0 24 24" className="w-8 h-8 transition-colors text-gray-400 group-hover:text-[#FF0000]" fill="currentColor">
-          <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+      url: "https://youtube.com",
+      logoSvg: (
+        <svg viewBox="0 0 130 32" className="h-8 w-auto fill-gray-400 group-hover:fill-[#FF0000] transition-colors duration-300" xmlns="http://www.w3.org/2000/svg">
+          <path d="M27.97 6.16a3.42 3.42 0 0 0-2.4-2.4C23.46 3.2 14.5 3.2 14.5 3.2s-8.96 0-11.07.56a3.42 3.42 0 0 0-2.4 2.4C.47 8.27.47 12.7.47 12.7s0 4.43.56 8.54a3.42 3.42 0 0 0 2.4 2.4c2.11.56 11.07.56 11.07.56s8.96 0 11.07-.56a3.42 3.42 0 0 0 2.4-2.4c.56-4.11.56-8.54.56-8.54s0-4.43-.56-8.54zM11.66 17.02V8.38l7.59 4.32-7.59 4.32z" />
+          <text x="36" y="21" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="18" letter-spacing="-0.05em">YouTube</text>
         </svg>
-      ),
-      url: "https://youtube.com"
+      )
     },
     {
       name: "Amazon Music",
-      color: "hover:border-[#00A8E8]/50",
-      textColor: "group-hover:text-[#00A8E8]",
-      icon: (
-        <svg viewBox="0 0 24 24" className="w-8 h-8 transition-colors text-gray-400 group-hover:text-[#00A8E8]" fill="currentColor">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.29 14.29c-.39.39-1.02.39-1.41 0L12 14.41l-1.88 1.88c-.39.39-1.02.39-1.41 0-.39-.39-.39-1.02 0-1.41L10.59 13l-1.88-1.88c-.39-.39-.39-1.02 0-1.41s1.02-.39 1.41 0L12 11.59l1.88-1.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41L13.41 13l1.88 1.88c.38.39.38 1.03 0 1.41z"/>
+      url: "https://music.amazon.com",
+      logoSvg: (
+        <svg viewBox="0 0 160 32" className="h-8 w-auto fill-gray-400 group-hover:fill-[#00A8E8] transition-colors duration-300" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.5 2C7.15 2 2 7.15 2 13.5S7.15 25 13.5 25s11.5-5.15 11.5-11.5S19.85 2 13.5 2zm5.9 14.6c-.3.4-.8.6-1.3.6h-2.1c-.8 0-1.5-.7-1.5-1.5v-3.5c0-.8.7-1.5 1.5-1.5h1.9c.5 0 1 .2 1.3.6l1.6 2c.3.4.3 1 0 1.4l-1.4 1.9z" />
+          <text x="36" y="20" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="15" letter-spacing="-0.02em">amazon music</text>
         </svg>
-      ),
-      url: "https://music.amazon.com"
+      )
     },
     {
       name: "Podimo",
-      color: "hover:border-[#15D48B]/50",
-      textColor: "group-hover:text-[#15D48B]",
-      icon: (
-        <svg viewBox="0 0 24 24" className="w-8 h-8 transition-colors text-gray-400 group-hover:text-[#15D48B]" fill="currentColor">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.5h-2v-7h2v7zm4 0h-2v-11h2v11z"/>
+      url: "https://podimo.com",
+      logoSvg: (
+        <svg viewBox="0 0 120 32" className="h-8 w-auto fill-gray-400 group-hover:fill-[#15D48B] transition-colors duration-300" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.5H9v-7h2v7zm4 0h-2v-11h2v11z" />
+          <text x="32" y="21" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="18" letter-spacing="-0.02em">podimo</text>
         </svg>
-      ),
-      url: "https://podimo.com"
+      )
     }
   ];
 
@@ -120,8 +117,9 @@ export default function PodcastPage() {
             <span className="text-xs font-bold uppercase tracking-[0.3em] text-[var(--color-brand-black)] mb-4 bg-[var(--color-brand-pink-light)] w-max px-3 py-1 rounded-full mx-auto md:mx-0">
               {t("podcastPage.heroTag")}
             </span>
-            <h1 className="font-heading italic text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight text-[var(--color-brand-black)] mb-6">
-              {t("podcastPage.heroTitle")}
+            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight text-[var(--color-brand-black)] mb-6">
+              {t("podcastPage.heroTitlePart1")}<br />
+              <span className="italic font-bold text-[var(--color-brand-pink)]">{t("podcastPage.heroTitlePart2")}</span>
             </h1>
             <p className="font-body text-gray-600 text-base md:text-lg leading-relaxed font-medium max-w-xl mx-auto md:mx-0">
               {t("podcastPage.heroSubtitle")}
@@ -148,7 +146,7 @@ export default function PodcastPage() {
         </div>
       </section>
 
-      {/* MANIFESTO / INTRODUCTION BANNER */}
+      {/* MANIFESTO / INTRODUCTION BANNER (Redesigned centered content layout) */}
       <ScrollReveal>
         <section className="py-24 px-6 md:px-16 bg-[var(--color-brand-pink-light)] text-center relative overflow-hidden">
           <div className="max-w-4xl mx-auto">
@@ -160,11 +158,18 @@ export default function PodcastPage() {
               &ldquo;{t("podcastPage.manifestoP1")}&rdquo;
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-10 text-left font-body text-sm md:text-base leading-relaxed text-gray-700 font-medium">
-              <p className="p-6 bg-white/40 backdrop-blur-md rounded-2xl border border-white/50 shadow-soft">
+            {/* Unified spacious centered layout */}
+            <div className="max-w-2xl mx-auto text-left font-body text-base md:text-lg leading-relaxed text-gray-700 font-medium space-y-8 bg-white/60 backdrop-blur-md p-8 md:p-14 rounded-[2.5rem] border border-white/80 shadow-soft relative">
+              <div className="absolute top-6 left-6 text-6xl text-[var(--color-brand-pink)] opacity-10 font-heading leading-none select-none">&ldquo;</div>
+              <div className="absolute bottom-6 right-6 text-6xl text-[var(--color-brand-pink)] opacity-10 font-heading leading-none select-none">&rdquo;</div>
+              
+              <p className="relative z-10">
                 {t("podcastPage.manifestoP2")}
               </p>
-              <p className="p-6 bg-white/40 backdrop-blur-md rounded-2xl border border-white/50 shadow-soft flex items-center">
+              
+              <div className="w-16 h-[2px] bg-[var(--color-brand-gold)] mx-auto opacity-55 my-6" />
+              
+              <p className="relative z-10 text-center italic font-heading text-lg md:text-xl text-[var(--color-brand-black)] bg-[var(--color-brand-pink-light)]/40 p-6 rounded-2xl border border-[var(--color-brand-pink-light)]/50 leading-relaxed">
                 {t("podcastPage.manifestoP3")}
               </p>
             </div>
@@ -225,35 +230,37 @@ export default function PodcastPage() {
         </section>
       </ScrollReveal>
 
-      {/* PLATFORMS STRIP */}
+      {/* PLATFORMS LOGO STRIP (Matching homepage brand strip layout with grayscale hover transitions) */}
       <ScrollReveal>
-        <section className="py-20 px-6 md:px-16 bg-[var(--color-brand-gold-light)] relative overflow-hidden">
-          <div className="max-w-7xl mx-auto text-center">
+        <section className="py-24 px-6 md:px-16 bg-[var(--color-brand-cream)] border-y border-gray-100">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16">
+            <div className="text-center md:text-left shrink-0">
+              <p className="text-sm font-black uppercase tracking-[0.3em] text-[var(--color-brand-black)] mb-1">
+                {t("podcastPage.platformsTitle")}
+              </p>
+              <p className="font-body text-gray-400 text-[10px] font-bold uppercase tracking-wider">
+                {t("podcastPage.platformsSubtitle")}
+              </p>
+            </div>
             
-            <h2 className="font-heading italic text-3xl md:text-4xl text-[var(--color-brand-black)] mb-3">
-              {t("podcastPage.platformsTitle")}
-            </h2>
-            <p className="font-body text-gray-600 text-xs md:text-sm font-semibold tracking-wider uppercase mb-12">
-              {t("podcastPage.platformsSubtitle")}
-            </p>
-
-            <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 max-w-5xl mx-auto">
+            <div className="w-[1px] h-16 bg-gray-200 hidden md:block" />
+            
+            <div className="flex flex-wrap items-center justify-center gap-12 md:gap-14">
               {platforms.map((platform) => (
                 <a 
                   key={platform.name} 
                   href={platform.url} 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`group flex items-center gap-3 bg-white px-6 py-4 rounded-full border border-transparent shadow-soft hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 ${platform.color}`}
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="block hover:-translate-y-1 transition-transform duration-300 group opacity-40 hover:opacity-100 logo-strip"
+                  title={platform.name}
                 >
-                  {platform.icon}
-                  <span className={`font-body text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors ${platform.textColor}`}>
-                    {platform.name}
-                  </span>
+                  <div className="h-8 md:h-10 w-auto flex items-center">
+                    {platform.logoSvg}
+                  </div>
                 </a>
               ))}
             </div>
-
           </div>
         </section>
       </ScrollReveal>
