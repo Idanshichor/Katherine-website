@@ -84,6 +84,7 @@ This log serves as a source of truth for the development, configuration, and des
 * **2026-06-27:** Created a comprehensive [design.md](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/design.md) file documenting the brand colors, typography, layout guidelines, component specs, and animations used throughout the site.
 * **2026-06-27:** Created an interactive [brand-book.html](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/brand-book.html) file to serve as a local, browser-openable style guide and brand book preview.
 * **2026-06-27:** Created the new Podcast page (`/podcast`) under branch `feature/podcast-page`. Implemented full bilingual copy (ES/EN) in `translations.ts`, integrated navigation links into desktop and mobile menus in `navbar.tsx`, linked the homepage podcast section CTA to the new page in `page.tsx`, and added a premium Web3Forms guest application form. Verified local production build compiles successfully.
+* **2026-06-27:** Created the new dedicated bilingual About Me page (`/sobre-mi`) on the same branch. Added comprehensive translations to `translations.ts`, updated navbar desktop/mobile menu links to direct to `/sobre-mi` instead of the homepage anchor `/#quien-soy`, and designed a premium chapter-based visual timeline.
 
 ---
 
