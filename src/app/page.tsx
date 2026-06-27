@@ -9,6 +9,7 @@ import FaqAccordion from "@/components/faq-accordion";
 import Image from "next/image";
 import { Web3Form } from "@/components/web3-form";
 import { useLanguage } from "@/context/language-context";
+import Link from "next/link";
 
 export default function Page() {
   const { language, t } = useLanguage();
@@ -360,9 +361,9 @@ export default function Page() {
                 )}
               </p>
               <div className="flex justify-center md:justify-start">
-                <button className="bg-transparent border-2 border-[var(--color-brand-black)] text-[var(--color-brand-black)] px-10 py-4 rounded-full font-bold uppercase tracking-widest text-[10px] transition-colors cursor-pointer opacity-70 hover:bg-[var(--color-brand-black)] hover:text-white">
+                <Link href="/podcast" className="bg-transparent border-2 border-[var(--color-brand-black)] text-[var(--color-brand-black)] px-10 py-4 rounded-full font-bold uppercase tracking-widest text-[10px] transition-colors cursor-pointer hover:bg-[var(--color-brand-black)] hover:text-white inline-block text-center">
                   {t("podcast.cta")}
-                </button>
+                </Link>
               </div>
             </div>
           </div>

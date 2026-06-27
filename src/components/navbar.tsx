@@ -28,6 +28,7 @@ export function Navbar() {
         <Link href="/#quien-soy" className="hover:text-[var(--color-brand-purple)] transition-colors">{t("nav.sobre_mi")}</Link>
         <Link href="/#metodologia" className="hover:text-[var(--color-brand-pink)] transition-colors">{t("nav.metodologia")}</Link>
         <Link href="/#servicios" className="hover:text-[var(--color-brand-purple)] transition-colors">{t("nav.servicios")}</Link>
+        <Link href="/podcast" className="hover:text-[var(--color-brand-pink)] transition-colors">{t("nav.podcast")}</Link>
       </div>
 
       {/* Desktop Actions */}
@@ -89,6 +90,7 @@ export function Navbar() {
             <Link href="/#quien-soy" onClick={() => setIsMobileMenuOpen(false)}>{t("nav.sobre_mi")}</Link>
             <Link href="/#metodologia" onClick={() => setIsMobileMenuOpen(false)}>{t("nav.metodologia")}</Link>
             <Link href="/#servicios" onClick={() => setIsMobileMenuOpen(false)}>{t("nav.servicios")}</Link>
+            <Link href="/podcast" onClick={() => setIsMobileMenuOpen(false)}>{t("nav.podcast")}</Link>
           </div>
           
           <div className="mt-auto mb-10 flex flex-col gap-6 items-center">

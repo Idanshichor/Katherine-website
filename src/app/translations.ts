@@ -7,7 +7,8 @@ export const translations = {
       sobre_mi: "Quién Soy",
       metodologia: "Metodología",
       servicios: "Servicios",
-      contacto: "Contacto"
+      contacto: "Contacto",
+      podcast: "Podcast"
     },
     hero: {
       consultoria: "Consultoría Estratégica",
@@ -104,11 +105,40 @@ export const translations = {
       error: "Error"
     },
     podcast: {
-      tag: "Próximamente",
+      tag: "Podcast",
       title_p1: "Estrategia 360:",
       title_p2: "El Podcast",
       desc: "Conversaciones honestas, análisis de negocio y herramientas de crecimiento personal para líderes que prefieren la sustancia por encima del hype. A través de historias reales de líderes reales, descubrimos el camino detrás del éxito y la mentalidad necesaria para sostenerlo.",
-      cta: "Disponible Pronto"
+      cta: "Escuchar Podcast"
+    },
+    podcastPage: {
+      heroTag: "KT360",
+      heroTitle: "Sin pelos en la lengua",
+      heroSubtitle: "El espacio seguro donde las CEOs, empresarias y emprendedoras nos quitamos la máscara corporativa para hablar de la verdad del negocio.",
+      manifestoTag: "Manifiesto",
+      manifestoP1: "Aquí no venimos a tirar palabras elegantes ni discursos cordiales de LinkedIn que nadie entiende.",
+      manifestoP2: "Este es un espacio libre y seguro para confesar todas las emociones por las que pasamos las que decidimos salirnos de la carrera de la rata e intentar algo que de verdad nos llene por dentro. Queremos hablar de cómo nos sentimos cuando nos quebramos, cuando cometemos el error que nos lleva a la quiebra, cuando toca empezar de cero... pero también de cómo la estallamos, cómo logramos lo que queríamos y cuáles son nuestros sueños a futuro.",
+      manifestoP3: "Aquí entendemos que el desarrollo del negocio + las estrategias digitales + la mentalidad (del equipo y de la CEO) van de la mano. Sin filtros, como si estuviéramos en la sala de la casa con tu mejor amiga.",
+      valuesTitle: "¿Con qué nos identificamos aquí?",
+      valuesSubtitle: "Para sentarte a tomar un café conmigo, no necesitas ser perfecta. Necesitas ser real. Busco mujeres:",
+      value1Title: "Apasionadas y Soñadoras con Visión",
+      value1Desc: "Que no se conforman y siempre van por más.",
+      value2Title: "Resilientes",
+      value2Desc: "Que saben lo que es caerse y tener los pantalones para levantarse.",
+      value3Title: "Madres Empresarias y Mujeres Reales",
+      value3Desc: "Que balancean la vida, el caos y los negocios con amor propio (o que están en el camino de encontrarse y cuidarse).",
+      platformsTitle: "Escúchanos en tu plataforma favorita",
+      platformsSubtitle: "Nuevos episodios todas las semanas.",
+      ctaTitle: "¿Te identificas y quieres contar tu historia?",
+      ctaSubtitle: "No busco jefes perfectas; busco personas de carne y hueso, del común, dispuestas a inspirar desde la honestidad. Si quieres ser invitada a mi podcast para que nos tomemos un café y hablemos claro:",
+      ctaButton: "Inscríbete aquí para ser invitada",
+      formName: "Nombre completo",
+      formEmail: "Correo electrónico",
+      formSocial: "Redes sociales o Web (Instagram, LinkedIn, etc.)",
+      formStory: "Cuéntanos brevemente tu historia y qué tema te gustaría compartir",
+      formSuccess: "¡Solicitud enviada con éxito! Nos pondremos en contacto contigo.",
+      formSubmitting: "Enviando solicitud...",
+      formError: "Hubo un error al enviar. Por favor, intenta de nuevo."
     },
     testimonials: {
       title: "Lo que dicen las que ya están construyendo con claridad"
@@ -165,7 +195,8 @@ export const translations = {
       sobre_mi: "About Me",
       metodologia: "Methodology",
       servicios: "Services",
-      contacto: "Contact"
+      contacto: "Contact",
+      podcast: "Podcast"
     },
     hero: {
       consultoria: "360° Strategic Consulting",
@@ -262,11 +293,40 @@ export const translations = {
       error: "Error"
     },
     podcast: {
-      tag: "Coming Soon",
+      tag: "Podcast",
       title_p1: "Estrategia 360:",
       title_p2: "The Podcast",
       desc: "Honest conversations, deep-dive business analysis, and growth tools for leaders who prioritize substance over hype. Through real stories of real founders, we explore the mindset and systems required to sustain success.",
-      cta: "Coming Soon"
+      cta: "Listen to Podcast"
+    },
+    podcastPage: {
+      heroTag: "KT360",
+      heroTitle: "Unfiltered & Honest",
+      heroSubtitle: "The safe space where CEOs, female business owners, and entrepreneurs take off the corporate mask to talk about the real truth of business.",
+      manifestoTag: "Manifesto",
+      manifestoP1: "We are not here to throw around fancy words or polite LinkedIn speeches that nobody understands.",
+      manifestoP2: "This is a free and safe space to confess all the emotions we go through when we decide to step out of the rat race and try something that truly fulfills us. We want to talk about how we feel when we break, when we make the mistake that leads to bankruptcy, when we have to start from scratch... but also how we crush it, how we achieved what we wanted, and what our future dreams are.",
+      manifestoP3: "Here we understand that business development + digital strategies + mindset (of both the team and the CEO) go hand in hand. Without filters, as if we were sitting in the living room with your best friend.",
+      valuesTitle: "What do we stand for here?",
+      valuesSubtitle: "To sit down and have a coffee with me, you don't need to be perfect. You need to be real. I look for women who are:",
+      value1Title: "Passionate & Visionary Dreamers",
+      value1Desc: "Who don't settle and are always striving for more.",
+      value2Title: "Resilient",
+      value2Desc: "Who know what it means to fall and have the courage to stand back up.",
+      value3Title: "Business Mothers & Real Women",
+      value3Desc: "Who balance life, chaos, and business with self-love (or are on the path to finding and taking care of themselves).",
+      platformsTitle: "Listen on your favorite platform",
+      platformsSubtitle: "New episodes released weekly.",
+      ctaTitle: "Do you identify with this and want to tell your story?",
+      ctaSubtitle: "I'm not looking for perfect bosses; I look for real, everyday, flesh-and-blood people who are ready to inspire through honesty. If you want to be a guest on my podcast to have coffee and speak clearly:",
+      ctaButton: "Apply here to be a guest",
+      formName: "Full Name",
+      formEmail: "Email Address",
+      formSocial: "Social Media or Website (Instagram, LinkedIn, etc.)",
+      formStory: "Briefly tell us your story and the topic you would like to share",
+      formSuccess: "Application submitted successfully! We will get in touch soon.",
+      formSubmitting: "Submitting application...",
+      formError: "An error occurred. Please try again."
     },
     testimonials: {
       title: "What those building with clarity are saying"
