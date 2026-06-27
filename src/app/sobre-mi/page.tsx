@@ -4,6 +4,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { useLanguage } from "@/context/language-context";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function AboutPage() {
@@ -25,29 +26,51 @@ export default function AboutPage() {
     <div className="min-h-screen bg-[var(--color-brand-cream)] text-[var(--color-brand-black)] overflow-x-hidden">
       <Navbar />
 
-      {/* HERO SECTION */}
-      <section className="relative w-full pt-32 pb-20 md:pt-44 md:pb-28 overflow-hidden bg-white">
-        {/* Abstract design elements to set a premium editorial mood */}
-        <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-[var(--color-brand-pink-light)] opacity-35 blur-3xl z-0" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-[var(--color-brand-gold-light)] opacity-25 blur-3xl z-0" />
+      {/* HERO SECTION (2-column layout featuring Katherine's second photo) */}
+      <section className="relative w-full pt-32 pb-16 md:pt-44 md:pb-24 overflow-hidden bg-[var(--color-brand-pink-light)]">
+        {/* Decorative background blobs */}
+        <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-[var(--color-brand-gold-light)] opacity-35 blur-3xl z-0" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-white opacity-25 blur-3xl z-0" />
 
-        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <span className="text-xs font-bold uppercase tracking-[0.3em] text-[var(--color-brand-black)] mb-6 bg-[var(--color-brand-pink-light)] w-max px-4 py-1.5 rounded-full mx-auto block shadow-soft">
-            {t("aboutPage.heroTag")}
-          </span>
-          <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl leading-[1.1] tracking-tight text-[var(--color-brand-black)] mb-8">
-            {t("aboutPage.heroTitlePart1")}<br />
-            <span className="italic font-bold text-[var(--color-brand-pink)]">{t("aboutPage.heroTitlePart2")}</span>
-          </h1>
-          <p className="font-body text-gray-600 text-lg md:text-2xl leading-relaxed max-w-2xl mx-auto font-medium">
-            {t("aboutPage.heroSubtitle")}
-          </p>
+        <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24 relative z-10 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+          
+          {/* Left: Text Content */}
+          <div className="flex flex-col text-center md:text-left">
+            <span className="text-xs font-bold uppercase tracking-[0.3em] text-[var(--color-brand-black)] mb-6 bg-white w-max px-4 py-1.5 rounded-full mx-auto md:mx-0 shadow-soft">
+              {t("aboutPage.heroTag")}
+            </span>
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-[var(--color-brand-black)] mb-6">
+              {t("aboutPage.heroTitlePart1")}<br />
+              <span className="italic font-bold text-[var(--color-brand-pink)]">{t("aboutPage.heroTitlePart2")}</span>
+            </h1>
+            <p className="font-body text-gray-700 text-base md:text-lg leading-relaxed font-medium max-w-xl mx-auto md:mx-0">
+              {t("aboutPage.heroSubtitle")}
+            </p>
+          </div>
+
+          {/* Right: Katherine Second Photo with offset frame */}
+          <div className="relative h-[350px] md:h-[450px] lg:h-[500px] w-full max-w-[400px] mx-auto flex justify-center">
+            {/* Offset Gold Border Frame */}
+            <div className="absolute inset-0 border border-[var(--color-brand-gold)] top-6 bottom-0 left-0 right-6 z-0 hidden md:block rounded-2xl" />
+            
+            <div className="relative w-full h-full z-10 rounded-[2rem] overflow-hidden shadow-elevated border-4 border-white bg-white">
+              <Image 
+                src="/images/KTSecondPhoto.webp" 
+                alt="Katherine Velasquez" 
+                fill 
+                sizes="(max-width: 768px) 100vw, 400px"
+                className="object-cover object-[center_35%]" 
+                priority
+              />
+            </div>
+          </div>
+
         </div>
       </section>
 
-      {/* CHAPTER 1: RAÍCES E INDEPENDENCIA */}
+      {/* CHAPTER 1: RAÍCES E INDEPENDENCIA (White Background) */}
       <ScrollReveal>
-        <section className="py-24 px-6 md:px-16 bg-[var(--color-brand-cream)]">
+        <section className="py-24 px-6 md:px-16 bg-white">
           <div className="max-w-4xl mx-auto grid md:grid-cols-5 gap-12 items-center">
             
             {/* Year / Chapter Marker */}
@@ -72,15 +95,15 @@ export default function AboutPage() {
         </section>
       </ScrollReveal>
 
-      {/* CHAPTER 2: LA MARATÓN ACADÉMICA */}
+      {/* CHAPTER 2: LA MARATÓN ACADÉMICA (Warm Gold Light Background) */}
       <ScrollReveal>
-        <section className="py-28 px-6 md:px-16 bg-white">
+        <section className="py-28 px-6 md:px-16 bg-[var(--color-brand-gold-light)]">
           <div className="max-w-5xl mx-auto">
             
             <div className="grid md:grid-cols-5 gap-12 items-start mb-16">
               {/* Year / Chapter Marker */}
               <div className="md:col-span-2 flex flex-row md:flex-col gap-4 items-baseline md:items-start lg:sticky lg:top-36">
-                <span className="font-heading text-8xl font-black text-[var(--color-brand-pink)] opacity-30 select-none leading-none">02</span>
+                <span className="font-heading text-8xl font-black text-[var(--color-brand-pink)] opacity-35 select-none leading-none">02</span>
                 <div>
                   <h2 className="font-heading italic text-2xl md:text-3xl text-[var(--color-brand-black)] leading-tight">
                     {t("aboutPage.ch2Title")}
@@ -98,14 +121,14 @@ export default function AboutPage() {
             </div>
 
             {/* VISUAL FEATURE: The Marathon Schedule (Interactive day-night split grid) */}
-            <div className="bg-[var(--color-brand-cream)] rounded-[2.5rem] p-8 md:p-12 border border-gray-100 shadow-soft max-w-4xl mx-auto mb-16">
+            <div className="bg-white rounded-[2.5rem] p-8 md:p-12 border border-white shadow-soft max-w-4xl mx-auto mb-16">
               <h3 className="font-heading text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-8 text-center">
                 {language === "es" ? "DIARIO DE UNA MARATÓN (3 AÑOS EN SIMULTÁNEO)" : "DIARY OF A MARATHON (3 YEARS SIMULTANEOUSLY)"}
               </h3>
               
               <div className="grid md:grid-cols-3 gap-6">
                 {/* Day */}
-                <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center text-center">
+                <div className="bg-[var(--color-brand-cream)] p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center text-center">
                   <span className="w-10 h-10 rounded-full bg-[var(--color-brand-gold-light)] text-[var(--color-brand-gold)] flex items-center justify-center font-bold text-sm mb-4">☀</span>
                   <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400 mb-1">{language === "es" ? "Mañana y Tarde" : "Morning & Afternoon"}</span>
                   <h4 className="font-heading font-bold text-base text-[var(--color-brand-black)] mb-2">{language === "es" ? "Ingeniería Civil" : "Civil Engineering"}</h4>
@@ -113,7 +136,7 @@ export default function AboutPage() {
                 </div>
 
                 {/* Afternoon */}
-                <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center text-center">
+                <div className="bg-[var(--color-brand-cream)] p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center text-center">
                   <span className="w-10 h-10 rounded-full bg-[var(--color-brand-pink-light)] text-[var(--color-brand-pink)] flex items-center justify-center font-bold text-sm mb-4">✦</span>
                   <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400 mb-1">{language === "es" ? "Aplicación Directa" : "Direct Application"}</span>
                   <h4 className="font-heading font-bold text-base text-[var(--color-brand-black)] mb-2">{language === "es" ? "MBA & Negocios" : "MBA & Businesses"}</h4>
@@ -121,7 +144,7 @@ export default function AboutPage() {
                 </div>
 
                 {/* Night */}
-                <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center text-center">
+                <div className="bg-[var(--color-brand-cream)] p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center text-center">
                   <span className="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-sm mb-4">☽</span>
                   <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400 mb-1">{language === "es" ? "Noche" : "Nighttime"}</span>
                   <h4 className="font-heading font-bold text-base text-[var(--color-brand-black)] mb-2">{language === "es" ? "Bailarina Profesional" : "Professional Dancer"}</h4>
@@ -131,7 +154,7 @@ export default function AboutPage() {
             </div>
 
             <div className="max-w-4xl mx-auto">
-              <p className="font-body text-base md:text-lg leading-relaxed text-gray-700 font-medium border-l-4 border-l-[var(--color-brand-gold)] pl-6">
+              <p className="font-body text-base md:text-lg leading-relaxed text-gray-700 font-medium border-l-4 border-l-[var(--color-brand-pink)] pl-6">
                 {t("aboutPage.ch2Text2")}
               </p>
             </div>
@@ -175,14 +198,14 @@ export default function AboutPage() {
         </section>
       </ScrollReveal>
 
-      {/* CHAPTER 4: RESILIENCIA DESDE CERO */}
+      {/* CHAPTER 4: RESILIENCIA DESDE CERO (Soft Pink Light Background) */}
       <ScrollReveal>
-        <section className="py-24 px-6 md:px-16 bg-white">
+        <section className="py-24 px-6 md:px-16 bg-[var(--color-brand-pink-light)]">
           <div className="max-w-4xl mx-auto grid md:grid-cols-5 gap-12 items-center">
             
             {/* Year / Chapter Marker */}
             <div className="md:col-span-2 flex flex-row md:flex-col gap-4 items-baseline md:items-start">
-              <span className="font-heading text-8xl font-black text-[var(--color-brand-gold)] opacity-30 select-none leading-none">04</span>
+              <span className="font-heading text-8xl font-black text-[var(--color-brand-gold)] opacity-35 select-none leading-none">04</span>
               <div>
                 <h2 className="font-heading italic text-2xl md:text-3xl text-[var(--color-brand-black)] leading-tight">
                   {t("aboutPage.ch4Title")}
@@ -193,7 +216,7 @@ export default function AboutPage() {
 
             {/* Content */}
             <div className="md:col-span-3">
-              <p className="font-body text-base md:text-lg leading-relaxed text-gray-700 font-medium bg-[var(--color-brand-pink-light)]/20 p-8 rounded-[2rem] border border-[var(--color-brand-pink-light)]/40">
+              <p className="font-body text-base md:text-lg leading-relaxed text-gray-700 font-medium bg-white p-8 rounded-[2rem] border border-white shadow-soft">
                 {t("aboutPage.ch4Text")}
               </p>
             </div>
@@ -202,9 +225,9 @@ export default function AboutPage() {
         </section>
       </ScrollReveal>
 
-      {/* CHAPTER 5: EMIGRAR DE GOLPE & GESTIÓN DE RIESGO */}
+      {/* CHAPTER 5: EMIGRAR DE GOLPE & GESTIÓN DE RIESGO (White Background) */}
       <ScrollReveal>
-        <section className="py-24 px-6 md:px-16 bg-[var(--color-brand-cream)]">
+        <section className="py-24 px-6 md:px-16 bg-white">
           <div className="max-w-4xl mx-auto">
             
             <div className="grid md:grid-cols-5 gap-12 items-start mb-16">
@@ -228,7 +251,7 @@ export default function AboutPage() {
             </div>
 
             {/* FEATURED QUOTE FRAME (Risk management statement) */}
-            <div className="max-w-3xl mx-auto border-2 border-[var(--color-brand-gold)] bg-white rounded-[2.5rem] p-8 md:p-12 relative shadow-soft text-center my-8">
+            <div className="max-w-3xl mx-auto border-2 border-[var(--color-brand-gold)] bg-[var(--color-brand-cream)] rounded-[2.5rem] p-8 md:p-12 relative shadow-soft text-center my-8">
               <span className="absolute -top-6 left-12 font-heading text-7xl text-[var(--color-brand-gold)] leading-none select-none">&ldquo;</span>
               <p className="font-heading italic text-2xl md:text-3xl text-[var(--color-brand-black)] leading-relaxed relative z-10 px-4 md:px-8">
                 {t("aboutPage.ch5Quote")}
@@ -240,15 +263,15 @@ export default function AboutPage() {
         </section>
       </ScrollReveal>
 
-      {/* CHAPTER 6: LAS CHOCOAVENTURAS Y MANGO CREATIVE */}
+      {/* CHAPTER 6: LAS CHOCOAVENTURAS Y MANGO CREATIVE (Warm Gold Light Background) */}
       <ScrollReveal>
-        <section className="py-24 px-6 md:px-16 bg-white">
+        <section className="py-24 px-6 md:px-16 bg-[var(--color-brand-gold-light)]">
           <div className="max-w-5xl mx-auto">
             
             <div className="grid md:grid-cols-5 gap-12 items-start mb-16">
               {/* Year / Chapter Marker */}
               <div className="md:col-span-2 flex flex-row md:flex-col gap-4 items-baseline md:items-start lg:sticky lg:top-36">
-                <span className="font-heading text-8xl font-black text-[var(--color-brand-gold)] opacity-30 select-none leading-none">06</span>
+                <span className="font-heading text-8xl font-black text-[var(--color-brand-gold)] opacity-35 select-none leading-none">06</span>
                 <div>
                   <h2 className="font-heading italic text-2xl md:text-3xl text-[var(--color-brand-black)] leading-tight">
                     {t("aboutPage.ch6Title")}
@@ -262,11 +285,11 @@ export default function AboutPage() {
                 <p className="font-body text-base md:text-lg leading-relaxed text-gray-700 font-medium">
                   {t("aboutPage.ch6Text1")}
                 </p>
-                <div className="w-12 h-[1px] bg-gray-200" />
+                <div className="w-12 h-[1px] bg-gray-300" />
                 <p className="font-body text-base md:text-lg leading-relaxed text-gray-700 font-medium">
                   {t("aboutPage.ch6Text2")}
                 </p>
-                <div className="w-12 h-[1px] bg-gray-200" />
+                <div className="w-12 h-[1px] bg-gray-300" />
                 <p className="font-body text-base md:text-lg leading-relaxed text-gray-700 font-medium">
                   {t("aboutPage.ch6Text3")}
                 </p>
@@ -274,7 +297,7 @@ export default function AboutPage() {
             </div>
 
             {/* VISUAL ROUTE: Emigration timeline map line */}
-            <div className="bg-[var(--color-brand-cream)] rounded-2xl p-6 overflow-x-auto max-w-4xl mx-auto shadow-sm border border-gray-50 mt-12">
+            <div className="bg-white rounded-2xl p-6 overflow-x-auto max-w-4xl mx-auto shadow-soft border border-white mt-12">
               <div className="flex items-center justify-between min-w-[650px] px-4 py-2">
                 {destinations.map((dest, i) => (
                   <div key={i} className="flex items-center gap-2 group">
@@ -298,9 +321,9 @@ export default function AboutPage() {
         </section>
       </ScrollReveal>
 
-      {/* CHAPTER 7: LA PREGUNTA DE LOS VIAJEROS */}
+      {/* CHAPTER 7: LA PREGUNTA DE LOS VIAJEROS (White Background) */}
       <ScrollReveal>
-        <section className="py-24 px-6 md:px-16 bg-[var(--color-brand-pink-light)]/30">
+        <section className="py-24 px-6 md:px-16 bg-white">
           <div className="max-w-4xl mx-auto grid md:grid-cols-5 gap-12 items-center">
             
             {/* Year / Chapter Marker */}
@@ -321,8 +344,8 @@ export default function AboutPage() {
               </p>
 
               {/* Dialogue Box */}
-              <div className="bg-white rounded-3xl p-6 md:p-8 shadow-soft border border-white/80 max-w-md relative border-l-4 border-l-[var(--color-brand-gold)]">
-                <span className="absolute -top-3 left-6 text-xs font-bold uppercase tracking-wider text-gray-400 bg-[var(--color-brand-cream)] px-2 py-0.5 rounded-full border border-gray-100">
+              <div className="bg-[var(--color-brand-pink-light)]/40 rounded-3xl p-6 md:p-8 shadow-soft border border-[var(--color-brand-pink-light)]/60 max-w-md relative border-l-4 border-l-[var(--color-brand-gold)]">
+                <span className="absolute -top-3 left-6 text-xs font-bold uppercase tracking-wider text-gray-400 bg-white px-2 py-0.5 rounded-full border border-gray-100">
                   {language === "es" ? "Pregunta Típica" : "Typical Question"}
                 </span>
                 <p className="font-heading italic text-lg md:text-xl text-[var(--color-brand-black)] leading-relaxed mt-2">
@@ -339,18 +362,18 @@ export default function AboutPage() {
         </section>
       </ScrollReveal>
 
-      {/* CHAPTER 8: NACE ESTRATEGIA 360 */}
+      {/* CHAPTER 8: NACE ESTRATEGIA 360 (Soft Pink Light Background) */}
       <ScrollReveal>
-        <section className="py-28 px-6 md:px-16 bg-white relative">
+        <section className="py-28 px-6 md:px-16 bg-[var(--color-brand-pink-light)] relative">
           <div className="max-w-4xl mx-auto text-center">
-            <span className="font-heading text-8xl font-black text-[var(--color-brand-gold)] opacity-20 select-none leading-none block mb-6">08</span>
+            <span className="font-heading text-8xl font-black text-[var(--color-brand-gold)] opacity-25 select-none leading-none block mb-6">08</span>
             
             <h2 className="font-heading italic text-3xl md:text-5xl text-[var(--color-brand-black)] mb-10">
               {t("aboutPage.ch8Title")}
             </h2>
             
             {/* Climax Container Card */}
-            <div className="bg-[var(--color-brand-cream)] border-2 border-[var(--color-brand-gold)] rounded-[3rem] p-10 md:p-14 shadow-soft max-w-3xl mx-auto space-y-8">
+            <div className="bg-white border-2 border-[var(--color-brand-gold)] rounded-[3rem] p-10 md:p-14 shadow-soft max-w-3xl mx-auto space-y-8">
               <p className="font-body text-lg md:text-xl leading-relaxed text-gray-800 font-bold max-w-xl mx-auto">
                 {t("aboutPage.ch8Text1")}
               </p>
@@ -372,11 +395,11 @@ export default function AboutPage() {
         </section>
       </ScrollReveal>
 
-      {/* CALL TO ACTION: PERSONAL COFFEE CHAT */}
+      {/* CALL TO ACTION: PERSONAL COFFEE CHAT (Warm Gold Light Background) */}
       <ScrollReveal>
-        <section className="py-28 px-6 md:px-16 bg-[var(--color-brand-cream)] relative overflow-hidden">
+        <section className="py-28 px-6 md:px-16 bg-[var(--color-brand-gold-light)] relative overflow-hidden">
           <div className="absolute top-1/2 -left-24 w-60 h-60 rounded-full bg-[var(--color-brand-pink-light)] opacity-40 blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 -right-24 w-80 h-80 rounded-full bg-[var(--color-brand-gold-light)] opacity-35 blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 -right-24 w-80 h-80 rounded-full bg-white opacity-35 blur-3xl pointer-events-none" />
 
           <div className="max-w-3xl mx-auto relative z-10 text-center">
             
