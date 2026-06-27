@@ -14,7 +14,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-[var(--color-brand-cream)] text-[var(--color-brand-black)] overflow-x-hidden">
       <Navbar />
 
-      {/* HERO SECTION (2-column layout featuring Katherine's second photo) */}
+      {/* HERO SECTION */}
       <section className="relative w-full pt-32 pb-16 md:pt-44 md:pb-24 overflow-hidden bg-[var(--color-brand-pink-light)]">
         {/* Decorative background blobs */}
         <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-[var(--color-brand-gold-light)] opacity-35 blur-3xl z-0" />
@@ -56,41 +56,43 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CHAPTER 1: RAÍCES E INDEPENDENCIA (White Background) */}
+      {/* CHAPTER 1: RAÍCES E INDEPENDENCIA (White Card style) */}
       <ScrollReveal>
-        <section className="py-24 px-6 md:px-16 bg-white">
-          <div className="max-w-4xl mx-auto grid md:grid-cols-5 gap-12 items-center">
-            
-            {/* Year / Chapter Marker */}
-            <div className="md:col-span-2 flex flex-row md:flex-col gap-4 items-baseline md:items-start">
-              <span className="font-heading text-8xl font-black text-[var(--color-brand-gold)] opacity-30 select-none leading-none">01</span>
-              <div>
-                <h2 className="font-heading italic text-2xl md:text-3xl text-[var(--color-brand-black)] leading-tight">
-                  {t("aboutPage.ch1Title")}
-                </h2>
-                <div className="w-12 h-[2px] bg-[var(--color-brand-gold)] mt-4 hidden md:block" />
+        <div className="max-w-6xl mx-auto px-4 my-8">
+          <div className="py-16 md:py-24 px-8 md:px-16 rounded-[3.5rem] bg-white border border-gray-100 shadow-soft relative overflow-hidden">
+            <div className="max-w-4xl mx-auto relative z-10 grid md:grid-cols-5 gap-12 items-center">
+              
+              {/* Year / Chapter Marker */}
+              <div className="md:col-span-2 flex flex-row md:flex-col gap-4 items-baseline md:items-start">
+                <span className="font-heading text-8xl font-black text-[var(--color-brand-gold)] opacity-30 select-none leading-none">01</span>
+                <div>
+                  <h2 className="font-heading italic text-2xl md:text-3xl text-[var(--color-brand-black)] leading-tight">
+                    {t("aboutPage.ch1Title")}
+                  </h2>
+                  <div className="w-12 h-[2px] bg-[var(--color-brand-gold)] mt-4 hidden md:block" />
+                </div>
               </div>
-            </div>
 
-            {/* Content */}
-            <div className="md:col-span-3">
-              <p className="font-body text-base md:text-lg leading-relaxed text-gray-700 font-medium">
-                {t("aboutPage.ch1Text")}
-              </p>
-            </div>
+              {/* Content */}
+              <div className="md:col-span-3">
+                <p className="font-body text-base md:text-lg leading-relaxed text-gray-700 font-medium">
+                  {t("aboutPage.ch1Text")}
+                </p>
+              </div>
 
+            </div>
           </div>
-        </section>
+        </div>
       </ScrollReveal>
 
-      {/* CHAPTER 2: LA MARATÓN ACADÉMICA (Warm Gold Light Background) */}
+      {/* CHAPTER 2: LA MARATÓN ACADÉMICA (Warm Gold Light Card style) */}
       <ScrollReveal>
-        <section className="py-28 px-6 md:px-16 bg-[var(--color-brand-gold-light)]">
-          <div className="max-w-5xl mx-auto">
-            
-            <div className="grid md:grid-cols-5 gap-12 items-start mb-16">
+        <div className="max-w-6xl mx-auto px-4 my-8">
+          <div className="py-16 md:py-24 px-8 md:px-16 rounded-[3.5rem] bg-[var(--color-brand-gold-light)] border border-[var(--color-brand-gold-light)] shadow-soft relative overflow-hidden">
+            <div className="max-w-4xl mx-auto relative z-10 grid md:grid-cols-5 gap-12 items-center">
+              
               {/* Year / Chapter Marker */}
-              <div className="md:col-span-2 flex flex-row md:flex-col gap-4 items-baseline md:items-start lg:sticky lg:top-36">
+              <div className="md:col-span-2 flex flex-row md:flex-col gap-4 items-baseline md:items-start">
                 <span className="font-heading text-8xl font-black text-[var(--color-brand-pink)] opacity-35 select-none leading-none">02</span>
                 <div>
                   <h2 className="font-heading italic text-2xl md:text-3xl text-[var(--color-brand-black)] leading-tight">
@@ -105,91 +107,90 @@ export default function AboutPage() {
                 <p className="font-body text-base md:text-lg leading-relaxed text-gray-700 font-medium">
                   {t("aboutPage.ch2Text1")}
                 </p>
+                <p className="font-body text-base md:text-lg leading-relaxed text-gray-700 font-medium border-l-4 border-l-[var(--color-brand-pink)] pl-6">
+                  {t("aboutPage.ch2Text2")}
+                </p>
               </div>
+
             </div>
-
-
-
-            <div className="max-w-4xl mx-auto">
-              <p className="font-body text-base md:text-lg leading-relaxed text-gray-700 font-medium border-l-4 border-l-[var(--color-brand-pink)] pl-6">
-                {t("aboutPage.ch2Text2")}
-              </p>
-            </div>
-
           </div>
-        </section>
+        </div>
       </ScrollReveal>
 
-      {/* CHAPTER 3: EL CHOQUE Y LA QUIEBRA (Immersive Dark-Mode Banner) */}
+      {/* CHAPTER 3: EL CHOQUE Y LA QUIEBRA (Immersive Dark-Mode Card style) */}
       <ScrollReveal>
-        <section className="py-24 px-6 md:px-16 bg-[var(--color-brand-black)] text-white rounded-[3.5rem] mx-4 md:mx-8 my-8 relative overflow-hidden shadow-2xl border border-gray-900">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[var(--color-brand-pink)]/5 blur-3xl z-0 pointer-events-none" />
-          
-          <div className="max-w-4xl mx-auto relative z-10 grid md:grid-cols-5 gap-12 items-center">
+        <div className="max-w-6xl mx-auto px-4 my-8">
+          <div className="py-16 md:py-24 px-8 md:px-16 rounded-[3.5rem] bg-[var(--color-brand-black)] text-white border border-gray-900 shadow-2xl relative overflow-hidden">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[var(--color-brand-pink)]/5 blur-3xl z-0 pointer-events-none" />
             
-            {/* Title / Chapter */}
-            <div className="md:col-span-2 flex flex-row md:flex-col gap-4 items-baseline md:items-start">
-              <span className="font-heading text-8xl font-black text-[var(--color-brand-pink)] opacity-20 select-none leading-none">03</span>
-              <div>
-                <h2 className="font-heading italic text-2xl md:text-3xl text-white leading-tight">
-                  {t("aboutPage.ch3Title")}
-                </h2>
-                <div className="w-12 h-[2px] bg-[var(--color-brand-pink)] mt-4 hidden md:block" />
-              </div>
-            </div>
-
-            {/* Text & Climax Quote */}
-            <div className="md:col-span-3 space-y-8">
-              <p className="font-body text-base md:text-lg leading-relaxed text-gray-300 font-medium">
-                {t("aboutPage.ch3Text")}
-              </p>
+            <div className="max-w-4xl mx-auto relative z-10 grid md:grid-cols-5 gap-12 items-center">
               
-              <div className="w-full h-[1px] bg-gray-800" />
-              
-              <h3 className="font-heading italic text-3xl md:text-4xl lg:text-5xl text-[var(--color-brand-pink)] leading-[1.1] tracking-tight font-bold">
-                &ldquo;{t("aboutPage.ch3Callout")}&rdquo;
-              </h3>
-            </div>
-
-          </div>
-        </section>
-      </ScrollReveal>
-
-      {/* CHAPTER 4: RESILIENCIA DESDE CERO (Soft Pink Light Background) */}
-      <ScrollReveal>
-        <section className="py-24 px-6 md:px-16 bg-[var(--color-brand-pink-light)]">
-          <div className="max-w-4xl mx-auto grid md:grid-cols-5 gap-12 items-center">
-            
-            {/* Year / Chapter Marker */}
-            <div className="md:col-span-2 flex flex-row md:flex-col gap-4 items-baseline md:items-start">
-              <span className="font-heading text-8xl font-black text-[var(--color-brand-gold)] opacity-35 select-none leading-none">04</span>
-              <div>
-                <h2 className="font-heading italic text-2xl md:text-3xl text-[var(--color-brand-black)] leading-tight">
-                  {t("aboutPage.ch4Title")}
-                </h2>
-                <div className="w-12 h-[2px] bg-[var(--color-brand-gold)] mt-4 hidden md:block" />
+              {/* Title / Chapter */}
+              <div className="md:col-span-2 flex flex-row md:flex-col gap-4 items-baseline md:items-start">
+                <span className="font-heading text-8xl font-black text-[var(--color-brand-pink)] opacity-20 select-none leading-none">03</span>
+                <div>
+                  <h2 className="font-heading italic text-2xl md:text-3xl text-white leading-tight">
+                    {t("aboutPage.ch3Title")}
+                  </h2>
+                  <div className="w-12 h-[2px] bg-[var(--color-brand-pink)] mt-4 hidden md:block" />
+                </div>
               </div>
-            </div>
 
-            {/* Content */}
-            <div className="md:col-span-3">
-              <p className="font-body text-base md:text-lg leading-relaxed text-gray-700 font-medium bg-white p-8 rounded-[2rem] border border-white shadow-soft">
-                {t("aboutPage.ch4Text")}
-              </p>
-            </div>
+              {/* Text & Climax Quote */}
+              <div className="md:col-span-3 space-y-8">
+                <p className="font-body text-base md:text-lg leading-relaxed text-gray-300 font-medium">
+                  {t("aboutPage.ch3Text")}
+                </p>
+                
+                <div className="w-full h-[1px] bg-gray-800" />
+                
+                <h3 className="font-heading italic text-3xl md:text-4xl lg:text-5xl text-[var(--color-brand-pink)] leading-[1.1] tracking-tight font-bold">
+                  &ldquo;{t("aboutPage.ch3Callout")}&rdquo;
+                </h3>
+              </div>
 
+            </div>
           </div>
-        </section>
+        </div>
       </ScrollReveal>
 
-      {/* CHAPTER 5: EMIGRAR DE GOLPE & GESTIÓN DE RIESGO (White Background) */}
+      {/* CHAPTER 4: RESILIENCIA DESDE CERO (Soft Pink Light Card style) */}
       <ScrollReveal>
-        <section className="py-24 px-6 md:px-16 bg-white">
-          <div className="max-w-4xl mx-auto">
-            
-            <div className="grid md:grid-cols-5 gap-12 items-start mb-16">
+        <div className="max-w-6xl mx-auto px-4 my-8">
+          <div className="py-16 md:py-24 px-8 md:px-16 rounded-[3.5rem] bg-[var(--color-brand-pink-light)] border border-[var(--color-brand-pink-light)] shadow-soft relative overflow-hidden">
+            <div className="max-w-4xl mx-auto relative z-10 grid md:grid-cols-5 gap-12 items-center">
+              
               {/* Year / Chapter Marker */}
-              <div className="md:col-span-2 flex flex-row md:flex-col gap-4 items-baseline md:items-start lg:sticky lg:top-36">
+              <div className="md:col-span-2 flex flex-row md:flex-col gap-4 items-baseline md:items-start">
+                <span className="font-heading text-8xl font-black text-[var(--color-brand-gold)] opacity-35 select-none leading-none">04</span>
+                <div>
+                  <h2 className="font-heading italic text-2xl md:text-3xl text-[var(--color-brand-black)] leading-tight">
+                    {t("aboutPage.ch4Title")}
+                  </h2>
+                  <div className="w-12 h-[2px] bg-[var(--color-brand-gold)] mt-4 hidden md:block" />
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="md:col-span-3">
+                <p className="font-body text-base md:text-lg leading-relaxed text-gray-700 font-medium bg-white p-8 rounded-[2rem] border border-white shadow-soft">
+                  {t("aboutPage.ch4Text")}
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </ScrollReveal>
+
+      {/* CHAPTER 5: EMIGRAR DE GOLPE & GESTIÓN DE RIESGO (White Card style) */}
+      <ScrollReveal>
+        <div className="max-w-6xl mx-auto px-4 my-8">
+          <div className="py-16 md:py-24 px-8 md:px-16 rounded-[3.5rem] bg-white border border-gray-100 shadow-soft relative overflow-hidden">
+            <div className="max-w-4xl mx-auto relative z-10 grid md:grid-cols-5 gap-12 items-center">
+              
+              {/* Year / Chapter Marker */}
+              <div className="md:col-span-2 flex flex-row md:flex-col gap-4 items-baseline md:items-start">
                 <span className="font-heading text-8xl font-black text-[var(--color-brand-pink)] opacity-30 select-none leading-none">05</span>
                 <div>
                   <h2 className="font-heading italic text-2xl md:text-3xl text-[var(--color-brand-black)] leading-tight">
@@ -199,35 +200,35 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              {/* Text */}
-              <div className="md:col-span-3">
+              {/* Content */}
+              <div className="md:col-span-3 space-y-8">
                 <p className="font-body text-base md:text-lg leading-relaxed text-gray-700 font-medium">
                   {t("aboutPage.ch5Text")}
                 </p>
+                
+                {/* Quote Block inside Card */}
+                <div className="border-2 border-[var(--color-brand-gold)] bg-[var(--color-brand-cream)] rounded-[2.5rem] p-8 md:p-10 relative shadow-sm text-center">
+                  <span className="absolute -top-4 left-8 font-heading text-6xl text-[var(--color-brand-gold)] leading-none select-none">&ldquo;</span>
+                  <p className="font-heading italic text-xl md:text-2xl text-[var(--color-brand-black)] leading-relaxed relative z-10">
+                    {t("aboutPage.ch5Quote")}
+                  </p>
+                  <span className="absolute -bottom-10 right-8 font-heading text-6xl text-[var(--color-brand-gold)] leading-none select-none">&rdquo;</span>
+                </div>
               </div>
-            </div>
 
-            {/* FEATURED QUOTE FRAME (Risk management statement) */}
-            <div className="max-w-3xl mx-auto border-2 border-[var(--color-brand-gold)] bg-[var(--color-brand-cream)] rounded-[2.5rem] p-8 md:p-12 relative shadow-soft text-center my-8">
-              <span className="absolute -top-6 left-12 font-heading text-7xl text-[var(--color-brand-gold)] leading-none select-none">&ldquo;</span>
-              <p className="font-heading italic text-2xl md:text-3xl text-[var(--color-brand-black)] leading-relaxed relative z-10 px-4 md:px-8">
-                {t("aboutPage.ch5Quote")}
-              </p>
-              <span className="absolute -bottom-12 right-12 font-heading text-7xl text-[var(--color-brand-gold)] leading-none select-none">&rdquo;</span>
             </div>
-
           </div>
-        </section>
+        </div>
       </ScrollReveal>
 
-      {/* CHAPTER 6: LAS CHOCOAVENTURAS Y MANGO CREATIVE (Warm Gold Light Background) */}
+      {/* CHAPTER 6: LAS CHOCOAVENTURAS Y MANGO CREATIVE (Warm Gold Light Card style) */}
       <ScrollReveal>
-        <section className="py-24 px-6 md:px-16 bg-[var(--color-brand-gold-light)]">
-          <div className="max-w-5xl mx-auto">
-            
-            <div className="grid md:grid-cols-5 gap-12 items-start mb-16">
+        <div className="max-w-6xl mx-auto px-4 my-8">
+          <div className="py-16 md:py-24 px-8 md:px-16 rounded-[3.5rem] bg-[var(--color-brand-gold-light)] border border-[var(--color-brand-gold-light)] shadow-soft relative overflow-hidden">
+            <div className="max-w-4xl mx-auto relative z-10 grid md:grid-cols-5 gap-12 items-center">
+              
               {/* Year / Chapter Marker */}
-              <div className="md:col-span-2 flex flex-row md:flex-col gap-4 items-baseline md:items-start lg:sticky lg:top-36">
+              <div className="md:col-span-2 flex flex-row md:flex-col gap-4 items-baseline md:items-start">
                 <span className="font-heading text-8xl font-black text-[var(--color-brand-gold)] opacity-35 select-none leading-none">06</span>
                 <div>
                   <h2 className="font-heading italic text-2xl md:text-3xl text-[var(--color-brand-black)] leading-tight">
@@ -238,104 +239,111 @@ export default function AboutPage() {
               </div>
 
               {/* Multi-paragraph content */}
-              <div className="md:col-span-3 space-y-8">
+              <div className="md:col-span-3 space-y-6">
                 <p className="font-body text-base md:text-lg leading-relaxed text-gray-700 font-medium">
                   {t("aboutPage.ch6Text1")}
                 </p>
-                <div className="w-12 h-[1px] bg-gray-300" />
+                <div className="w-12 h-[1px] bg-gray-300 opacity-60" />
                 <p className="font-body text-base md:text-lg leading-relaxed text-gray-700 font-medium">
                   {t("aboutPage.ch6Text2")}
                 </p>
-                <div className="w-12 h-[1px] bg-gray-300" />
+                <div className="w-12 h-[1px] bg-gray-300 opacity-60" />
                 <p className="font-body text-base md:text-lg leading-relaxed text-gray-700 font-medium">
                   {t("aboutPage.ch6Text3")}
                 </p>
               </div>
+
             </div>
-
-
-
           </div>
-        </section>
+        </div>
       </ScrollReveal>
 
-      {/* CHAPTER 7: LA PREGUNTA DE LOS VIAJEROS (White Background) */}
+      {/* CHAPTER 7: LA PREGUNTA DE LOS VIAJEROS (White Card style) */}
       <ScrollReveal>
-        <section className="py-24 px-6 md:px-16 bg-white">
-          <div className="max-w-4xl mx-auto grid md:grid-cols-5 gap-12 items-center">
-            
-            {/* Year / Chapter Marker */}
-            <div className="md:col-span-2 flex flex-row md:flex-col gap-4 items-baseline md:items-start">
-              <span className="font-heading text-8xl font-black text-[var(--color-brand-pink)] opacity-30 select-none leading-none">07</span>
-              <div>
-                <h2 className="font-heading italic text-2xl md:text-3xl text-[var(--color-brand-black)] leading-tight">
-                  {t("aboutPage.ch7Title")}
-                </h2>
-                <div className="w-12 h-[2px] bg-[var(--color-brand-pink)] mt-4 hidden md:block" />
+        <div className="max-w-6xl mx-auto px-4 my-8">
+          <div className="py-16 md:py-24 px-8 md:px-16 rounded-[3.5rem] bg-white border border-gray-100 shadow-soft relative overflow-hidden">
+            <div className="max-w-4xl mx-auto relative z-10 grid md:grid-cols-5 gap-12 items-center">
+              
+              {/* Year / Chapter Marker */}
+              <div className="md:col-span-2 flex flex-row md:flex-col gap-4 items-baseline md:items-start">
+                <span className="font-heading text-8xl font-black text-[var(--color-brand-pink)] opacity-30 select-none leading-none">07</span>
+                <div>
+                  <h2 className="font-heading italic text-2xl md:text-3xl text-[var(--color-brand-black)] leading-tight">
+                    {t("aboutPage.ch7Title")}
+                  </h2>
+                  <div className="w-12 h-[2px] bg-[var(--color-brand-pink)] mt-4 hidden md:block" />
+                </div>
               </div>
-            </div>
 
-            {/* Messenger-style dialogue block & description */}
-            <div className="md:col-span-3 space-y-8">
-              <p className="font-body text-base md:text-lg leading-relaxed text-gray-700 font-medium">
-                {t("aboutPage.ch7Text1")}
-              </p>
+              {/* Messenger-style dialogue block & description */}
+              <div className="md:col-span-3 space-y-8">
+                <p className="font-body text-base md:text-lg leading-relaxed text-gray-700 font-medium">
+                  {t("aboutPage.ch7Text1")}
+                </p>
 
-              {/* Dialogue Box */}
-              <div className="bg-[var(--color-brand-pink-light)]/40 rounded-3xl p-6 md:p-8 shadow-soft border border-[var(--color-brand-pink-light)]/60 max-w-md relative border-l-4 border-l-[var(--color-brand-gold)]">
-                <span className="absolute -top-3 left-6 text-xs font-bold uppercase tracking-wider text-gray-400 bg-white px-2 py-0.5 rounded-full border border-gray-100">
-                  {language === "es" ? "Pregunta Típica" : "Typical Question"}
-                </span>
-                <p className="font-heading italic text-lg md:text-xl text-[var(--color-brand-black)] leading-relaxed mt-2">
-                  {t("aboutPage.ch7Dialog")}
+                {/* Dialogue Box */}
+                <div className="bg-[var(--color-brand-pink-light)]/40 rounded-3xl p-6 md:p-8 shadow-soft border border-[var(--color-brand-pink-light)]/60 max-w-md relative border-l-4 border-l-[var(--color-brand-gold)]">
+                  <span className="absolute -top-3 left-6 text-xs font-bold uppercase tracking-wider text-gray-400 bg-white px-2 py-0.5 rounded-full border border-gray-100">
+                    {language === "es" ? "Pregunta Típica" : "Typical Question"}
+                  </span>
+                  <p className="font-heading italic text-lg md:text-xl text-[var(--color-brand-black)] leading-relaxed mt-2">
+                    {t("aboutPage.ch7Dialog")}
+                  </p>
+                </div>
+
+                <p className="font-body text-base md:text-lg leading-relaxed text-gray-700 font-medium">
+                  {t("aboutPage.ch7Text2")}
                 </p>
               </div>
 
-              <p className="font-body text-base md:text-lg leading-relaxed text-gray-700 font-medium">
-                {t("aboutPage.ch7Text2")}
-              </p>
             </div>
-
           </div>
-        </section>
+        </div>
       </ScrollReveal>
 
-      {/* CHAPTER 8: NACE ESTRATEGIA 360 (Soft Pink Light Background) */}
+      {/* CHAPTER 8: NACE ESTRATEGIA 360 (Soft Pink Light Card style) */}
       <ScrollReveal>
-        <section className="py-28 px-6 md:px-16 bg-[var(--color-brand-pink-light)] relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="font-heading text-8xl font-black text-[var(--color-brand-gold)] opacity-25 select-none leading-none block mb-6">08</span>
-            
-            <h2 className="font-heading italic text-3xl md:text-5xl text-[var(--color-brand-black)] mb-10">
-              {t("aboutPage.ch8Title")}
-            </h2>
-            
-            {/* Climax Container Card */}
-            <div className="bg-white border-2 border-[var(--color-brand-gold)] rounded-[3rem] p-10 md:p-14 shadow-soft max-w-3xl mx-auto space-y-8">
-              <p className="font-body text-lg md:text-xl leading-relaxed text-gray-800 font-bold max-w-xl mx-auto">
-                {t("aboutPage.ch8Text1")}
-              </p>
+        <div className="max-w-6xl mx-auto px-4 my-8">
+          <div className="py-16 md:py-24 px-8 md:px-16 rounded-[3.5rem] bg-[var(--color-brand-pink-light)] border border-[var(--color-brand-pink-light)] shadow-soft relative overflow-hidden">
+            <div className="max-w-4xl mx-auto relative z-10 grid md:grid-cols-5 gap-12 items-center">
               
-              <div className="w-20 h-[2px] bg-[var(--color-brand-pink)] mx-auto" />
-              
-              <p className="font-body text-base md:text-lg leading-relaxed text-gray-600 font-medium max-w-2xl mx-auto">
-                {t("aboutPage.ch8Text2")}
-              </p>
-
-              <div className="pt-4">
-                <span className="text-xl md:text-2xl font-heading font-black uppercase tracking-[0.2em] text-[var(--color-brand-black)] border-b-2 border-b-[var(--color-brand-gold)] pb-2">
-                  {t("aboutPage.ch8Text3")}
-                </span>
+              {/* Year / Chapter Marker */}
+              <div className="md:col-span-2 flex flex-row md:flex-col gap-4 items-baseline md:items-start">
+                <span className="font-heading text-8xl font-black text-[var(--color-brand-gold)] opacity-25 select-none leading-none">08</span>
+                <div>
+                  <h2 className="font-heading italic text-2xl md:text-3xl text-[var(--color-brand-black)] leading-tight">
+                    {t("aboutPage.ch8Title")}
+                  </h2>
+                  <div className="w-12 h-[2px] bg-[var(--color-brand-gold)] mt-4 hidden md:block" />
+                </div>
               </div>
-            </div>
 
+              {/* Climax Container Card inside Card */}
+              <div className="md:col-span-3">
+                <div className="bg-white border-2 border-[var(--color-brand-gold)] rounded-[2.5rem] p-8 md:p-10 shadow-soft space-y-6">
+                  <p className="font-body text-base md:text-lg leading-relaxed text-gray-800 font-bold">
+                    {t("aboutPage.ch8Text1")}
+                  </p>
+                  <div className="w-16 h-[2px] bg-[var(--color-brand-pink)]" />
+                  <p className="font-body text-sm md:text-base leading-relaxed text-gray-600 font-medium">
+                    {t("aboutPage.ch8Text2")}
+                  </p>
+                  <div className="pt-2">
+                    <span className="text-lg font-heading font-black uppercase tracking-[0.2em] text-[var(--color-brand-black)] border-b-2 border-b-[var(--color-brand-gold)] pb-1">
+                      {t("aboutPage.ch8Text3")}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
-        </section>
+        </div>
       </ScrollReveal>
 
-      {/* CALL TO ACTION: PERSONAL COFFEE CHAT (Warm Gold Light Background) */}
+      {/* CALL TO ACTION: PERSONAL COFFEE CHAT */}
       <ScrollReveal>
-        <section className="py-28 px-6 md:px-16 bg-[var(--color-brand-gold-light)] relative overflow-hidden">
+        <section className="py-24 px-6 md:px-16 bg-[var(--color-brand-gold-light)] relative overflow-hidden">
           <div className="absolute top-1/2 -left-24 w-60 h-60 rounded-full bg-[var(--color-brand-pink-light)] opacity-40 blur-3xl pointer-events-none" />
           <div className="absolute bottom-0 -right-24 w-80 h-80 rounded-full bg-white opacity-35 blur-3xl pointer-events-none" />
 
