@@ -206,7 +206,7 @@ export default function PageClient() {
             <h2 className="font-heading italic text-5xl md:text-7xl leading-tight text-[var(--color-brand-black)] mb-6">
               {t("methodology.title")} <span className="not-italic font-black text-[var(--color-brand-gold)] font-script text-6xl md:text-7xl">{t("methodology.title_accent")}</span>
             </h2>
-            <p className="font-body text-gray-500 font-medium text-lg md:text-xl mb-20 max-w-2xl mx-auto">
+            <p className="font-body text-gray-700 font-medium text-lg md:text-xl mb-20 max-w-2xl mx-auto">
               {t("methodology.desc")}
             </p>
 
@@ -215,25 +215,25 @@ export default function PageClient() {
               <div>
                 <p className="font-heading text-6xl text-[var(--color-brand-gold)] opacity-30 mb-4 font-black">01</p>
                 <h3 className="font-heading text-2xl mb-4 italic font-bold">{t("methodology.p1_title")}</h3>
-                <p className="font-body text-sm leading-relaxed text-gray-600">{t("methodology.p1_desc")}</p>
+                <p className="font-body text-sm leading-relaxed text-gray-700">{t("methodology.p1_desc")}</p>
               </div>
               {/* Pillar 2 */}
               <div>
                 <p className="font-heading text-6xl text-[var(--color-brand-gold)] opacity-30 mb-4 font-black">02</p>
                 <h3 className="font-heading text-2xl mb-4 italic font-bold">{t("methodology.p2_title")}</h3>
-                <p className="font-body text-sm leading-relaxed text-gray-600">{t("methodology.p2_desc")}</p>
+                <p className="font-body text-sm leading-relaxed text-gray-700">{t("methodology.p2_desc")}</p>
               </div>
               {/* Pillar 3 */}
               <div>
                 <p className="font-heading text-6xl text-[var(--color-brand-gold)] opacity-30 mb-4 font-black">03</p>
                 <h3 className="font-heading text-2xl mb-4 italic font-bold">{t("methodology.p3_title")}</h3>
-                <p className="font-body text-sm leading-relaxed text-gray-600">{t("methodology.p3_desc")}</p>
+                <p className="font-body text-sm leading-relaxed text-gray-700">{t("methodology.p3_desc")}</p>
               </div>
               {/* Pillar 4 */}
               <div>
                 <p className="font-heading text-6xl text-[var(--color-brand-gold)] opacity-30 mb-4 font-black">04</p>
                 <h3 className="font-heading text-2xl mb-4 italic font-bold">{t("methodology.p4_title")}</h3>
-                <p className="font-body text-sm leading-relaxed text-gray-600">{t("methodology.p4_desc")}</p>
+                <p className="font-body text-sm leading-relaxed text-gray-700">{t("methodology.p4_desc")}</p>
               </div>
             </div>
           </div>
@@ -253,8 +253,8 @@ export default function PageClient() {
               {/* Tier 1 - Standard */}
               <div className="bg-white p-10 rounded-[2rem] shadow-soft border border-white mt-0 lg:mt-8 mb-0 lg:-mb-8 flex flex-col hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
                 <h3 className="font-heading italic text-3xl mb-2 text-center text-[var(--color-brand-black)]">{t("services.t1_title")}</h3>
-                <p className="text-center font-bold text-sm uppercase tracking-widest text-gray-400 mb-6">{t("services.t1_subtitle")}</p>
-                <p className="font-body text-sm text-gray-600 mb-8 leading-relaxed text-center">
+                <p className="text-center font-bold text-sm uppercase tracking-widest text-gray-500 mb-6">{t("services.t1_subtitle")}</p>
+                <p className="font-body text-sm text-gray-700 mb-8 leading-relaxed text-center">
                   {t("services.t1_desc")}
                 </p>
                 <ul className="space-y-3 mb-10 text-sm font-medium text-gray-700">
@@ -278,7 +278,7 @@ export default function PageClient() {
                 </div>
                 <h3 className="font-heading italic text-3xl mb-1 text-center text-[var(--color-brand-black)]">{t("services.t2_title")}</h3>
                 <p className="text-center font-bold text-sm uppercase tracking-widest text-[var(--color-brand-gold)] mb-6">{t("services.t2_subtitle")}</p>
-                <p className="font-body text-sm text-gray-600 mb-8 leading-relaxed text-center">
+                <p className="font-body text-sm text-gray-700 mb-8 leading-relaxed text-center">
                   {t("services.t2_desc")}
                 </p>
                 <ul className="space-y-3 mb-10 text-sm font-medium text-gray-700">
@@ -298,8 +298,8 @@ export default function PageClient() {
               {/* Tier 3 */}
               <div className="bg-white p-10 rounded-[2rem] shadow-soft border border-white mt-0 lg:mt-8 mb-0 lg:-mb-8 flex flex-col hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
                 <h3 className="font-heading italic text-3xl mb-2 text-center text-[var(--color-brand-black)]">{t("services.t3_title")}</h3>
-                <p className="text-center font-bold text-sm uppercase tracking-widest text-gray-400 mb-6">{t("services.t3_subtitle")}</p>
-                <p className="font-body text-sm text-gray-600 mb-8 leading-relaxed text-center">
+                <p className="text-center font-bold text-sm uppercase tracking-widest text-gray-500 mb-6">{t("services.t3_subtitle")}</p>
+                <p className="font-body text-sm text-gray-700 mb-8 leading-relaxed text-center">
                   {t("services.t3_desc")}
                 </p>
                 <ul className="space-y-3 mb-10 text-sm font-medium text-gray-700">
@@ -382,12 +382,12 @@ export default function PageClient() {
               {testimonials.map((testimonial, i) => (
                 <div key={i} className="bg-[var(--color-brand-cream)] p-10 rounded-[2rem] border border-[var(--color-brand-gold-light)] shadow-soft text-left flex flex-col">
                   <div className="text-[var(--color-brand-gold)] font-heading text-4xl mb-4 leading-none">"</div>
-                  <p className="font-body text-gray-600 leading-relaxed mb-8 flex-grow">
+                  <p className="font-body text-gray-700 leading-relaxed mb-8 flex-grow">
                     {testimonial.text}
                   </p>
                   <div>
                     <p className="font-bold uppercase tracking-widest text-[10px] text-[var(--color-brand-black)]">{testimonial.name}</p>
-                    <p className="text-[10px] text-gray-500 mt-1">{testimonial.role}</p>
+                    <p className="text-[10px] text-gray-600 mt-1">{testimonial.role}</p>
                   </div>
                 </div>
               ))}

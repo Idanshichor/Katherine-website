@@ -122,7 +122,7 @@ export default function PodcastPageClient() {
               {t("podcastPage.heroTitlePart1")}<br />
               <span className="italic font-bold text-[var(--color-brand-pink)]">{t("podcastPage.heroTitlePart2")}</span>
             </h1>
-            <p className="font-body text-gray-600 text-base md:text-lg leading-relaxed font-medium max-w-xl mx-auto md:mx-0">
+            <p className="font-body text-gray-700 text-base md:text-lg leading-relaxed font-medium max-w-xl mx-auto md:mx-0">
               {t("podcastPage.heroSubtitle")}
             </p>
           </div>
@@ -155,7 +155,7 @@ export default function PodcastPageClient() {
               <p className="text-xs font-black uppercase tracking-[0.3em] text-[var(--color-brand-black)] mb-1">
                 {t("podcastPage.platformsTitle")}
               </p>
-              <p className="font-body text-gray-400 text-[10px] font-bold uppercase tracking-wider">
+              <p className="font-body text-gray-500 text-[10px] font-bold uppercase tracking-wider">
                 {t("podcastPage.platformsSubtitle")}
               </p>
             </div>
@@ -186,7 +186,7 @@ export default function PodcastPageClient() {
       <ScrollReveal>
         <section className="py-24 px-6 md:px-16 bg-[var(--color-brand-pink-light)] text-center relative overflow-hidden">
           <div className="max-w-4xl mx-auto">
-            <span className="text-xs font-bold uppercase tracking-[0.3em] text-gray-500 mb-6 block">
+            <span className="text-xs font-bold uppercase tracking-[0.3em] text-gray-700 mb-6 block">
               {t("podcastPage.manifestoTag")}
             </span>
             
@@ -224,7 +224,7 @@ export default function PodcastPageClient() {
               <h2 className="font-heading italic text-4xl md:text-5xl text-[var(--color-brand-black)] leading-[1.1]">
                 {t("podcastPage.valuesTitle")}
               </h2>
-              <p className="font-body text-gray-500 text-sm md:text-base leading-relaxed font-medium">
+              <p className="font-body text-gray-700 text-sm md:text-base leading-relaxed font-medium">
                 {t("podcastPage.valuesSubtitle")}
               </p>
               <div className="w-20 h-[3px] bg-[var(--color-brand-pink)] mx-auto lg:mx-0 mt-2" />
@@ -239,7 +239,7 @@ export default function PodcastPageClient() {
                   <h3 className="font-heading text-xl md:text-2xl mb-3 italic font-bold text-[var(--color-brand-black)]">
                     {t("podcastPage.value1Title")}
                   </h3>
-                  <p className="font-body text-sm md:text-base leading-relaxed text-gray-600 font-medium">
+                  <p className="font-body text-sm md:text-base leading-relaxed text-gray-700 font-medium">
                     {t("podcastPage.value1Desc")}
                   </p>
                 </div>
@@ -252,7 +252,7 @@ export default function PodcastPageClient() {
                   <h3 className="font-heading text-xl md:text-2xl mb-3 italic font-bold text-[var(--color-brand-black)]">
                     {t("podcastPage.value2Title")}
                   </h3>
-                  <p className="font-body text-sm md:text-base leading-relaxed text-gray-600 font-medium">
+                  <p className="font-body text-sm md:text-base leading-relaxed text-gray-700 font-medium">
                     {t("podcastPage.value2Desc")}
                   </p>
                 </div>
@@ -265,7 +265,7 @@ export default function PodcastPageClient() {
                   <h3 className="font-heading text-xl md:text-2xl mb-3 italic font-bold text-[var(--color-brand-black)]">
                     {t("podcastPage.value3Title")}
                   </h3>
-                  <p className="font-body text-sm md:text-base leading-relaxed text-gray-600 font-medium">
+                  <p className="font-body text-sm md:text-base leading-relaxed text-gray-700 font-medium">
                     {t("podcastPage.value3Desc")}
                   </p>
                 </div>
@@ -288,7 +288,7 @@ export default function PodcastPageClient() {
               <h2 className="font-heading italic text-3xl md:text-4xl lg:text-5xl text-[var(--color-brand-black)] mb-6 leading-tight">
                 {t("podcastPage.ctaTitle")}
               </h2>
-              <p className="font-body text-gray-600 text-sm md:text-base leading-relaxed font-medium">
+              <p className="font-body text-gray-700 text-sm md:text-base leading-relaxed font-medium">
                 {t("podcastPage.ctaSubtitle")}
               </p>
             </div>
@@ -303,7 +303,7 @@ export default function PodcastPageClient() {
                   <h3 className="font-heading text-2xl italic font-bold mb-4">
                     {language === "es" ? "¡Gracias por postularte!" : "Thank you for applying!"}
                   </h3>
-                  <p className="font-body text-sm text-gray-600 max-w-md font-medium">
+                  <p className="font-body text-sm text-gray-700 max-w-md font-medium">
                     {t("podcastPage.formSuccess")}
                   </p>
                 </div>
@@ -311,7 +311,7 @@ export default function PodcastPageClient() {
                 <form onSubmit={handleSubmit} className="flex flex-col gap-6">
                   {/* Name Input */}
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="guest_name" className="text-xs font-bold uppercase tracking-wider text-gray-500">
+                    <label htmlFor="guest_name" className="text-xs font-bold uppercase tracking-wider text-gray-600">
                       {t("podcastPage.formName")}
                     </label>
                     <input 
@@ -328,7 +328,7 @@ export default function PodcastPageClient() {
 
                   {/* Email Input */}
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="guest_email" className="text-xs font-bold uppercase tracking-wider text-gray-500">
+                    <label htmlFor="guest_email" className="text-xs font-bold uppercase tracking-wider text-gray-600">
                       {t("podcastPage.formEmail")}
                     </label>
                     <input 
@@ -345,7 +345,7 @@ export default function PodcastPageClient() {
 
                   {/* Social Media URL */}
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="guest_social" className="text-xs font-bold uppercase tracking-wider text-gray-500">
+                    <label htmlFor="guest_social" className="text-xs font-bold uppercase tracking-wider text-gray-600">
                       {t("podcastPage.formSocial")}
                     </label>
                     <input 
@@ -362,7 +362,7 @@ export default function PodcastPageClient() {
 
                   {/* Story / Topic text */}
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="guest_story" className="text-xs font-bold uppercase tracking-wider text-gray-500">
+                    <label htmlFor="guest_story" className="text-xs font-bold uppercase tracking-wider text-gray-600">
                       {t("podcastPage.formStory")}
                     </label>
                     <textarea 
@@ -378,7 +378,7 @@ export default function PodcastPageClient() {
                   </div>
 
                   {/* Privacy Consent Disclaimer */}
-                  <p className="text-[11px] text-gray-400 font-light leading-normal mt-4">
+                  <p className="text-[11px] text-gray-500 font-light leading-normal mt-4">
                     {language === "es" ? (
                       <>
                         Al enviar tu postulación, autorizas el tratamiento de tus datos personales de acuerdo con nuestra{" "}

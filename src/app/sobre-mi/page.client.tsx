@@ -283,7 +283,7 @@ export default function AboutPageClient() {
 
                 {/* Dialogue Box */}
                 <div className="bg-[var(--color-brand-pink-light)]/40 rounded-3xl p-6 md:p-8 shadow-soft border border-[var(--color-brand-pink-light)]/60 max-w-md relative border-l-4 border-l-[var(--color-brand-gold)]">
-                  <span className="absolute -top-3 left-6 text-xs font-bold uppercase tracking-wider text-gray-400 bg-white px-2 py-0.5 rounded-full border border-gray-100">
+                  <span className="absolute -top-3 left-6 text-xs font-bold uppercase tracking-wider text-gray-500 bg-white px-2 py-0.5 rounded-full border border-gray-100">
                     {language === "es" ? "Pregunta Típica" : "Typical Question"}
                   </span>
                   <p className="font-heading italic text-lg md:text-xl text-[var(--color-brand-black)] leading-relaxed mt-2">
@@ -325,7 +325,7 @@ export default function AboutPageClient() {
                     {t("aboutPage.ch8Text1")}
                   </p>
                   <div className="w-16 h-[2px] bg-[var(--color-brand-pink)]" />
-                  <p className="font-body text-sm md:text-base leading-relaxed text-gray-600 font-medium">
+                  <p className="font-body text-sm md:text-base leading-relaxed text-gray-700 font-medium">
                     {t("aboutPage.ch8Text2")}
                   </p>
                   <div className="pt-2">

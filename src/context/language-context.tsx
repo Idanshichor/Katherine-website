@@ -46,14 +46,6 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       setLanguageState(cachedLang as Language);
       return;
     }
-
-    // 3. Detect from browser default language settings
-    const browserLang = navigator.language;
-    if (browserLang.startsWith("en")) {
-      setLanguageState("en");
-    } else {
-      setLanguageState("es");
-    }
   }, []);
 
   // Safe nested key translation resolver
