@@ -65,6 +65,7 @@ export default function Page() {
               <h1 className="order-1 font-heading text-5xl md:text-6xl lg:text-[5.5rem] leading-[0.95] tracking-tight uppercase text-[var(--color-brand-cream)] mt-4 md:mt-0">
                 <span className="block">{t("hero.katherine")}</span>
                 <span className="block">{t("hero.velasquez")}</span>
+                <span className="sr-only">— {t("hero.h1_keyword")}</span>
               </h1>
 
               {/* Hidden on mobile, shown on desktop */}

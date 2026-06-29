@@ -85,6 +85,13 @@ This log serves as a source of truth for the development, configuration, and des
 * **2026-06-27:** Created an interactive [brand-book.html](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/brand-book.html) file to serve as a local, browser-openable style guide and brand book preview.
 * **2026-06-27:** Created the new Podcast page (`/podcast`) under branch `feature/podcast-page`. Implemented full bilingual copy (ES/EN) in `translations.ts`, integrated navigation links into desktop and mobile menus in `navbar.tsx`, linked the homepage podcast section CTA to the new page in `page.tsx`, and added a premium Web3Forms guest application form. Verified local production build compiles successfully.
 * **2026-06-27:** Created the new dedicated bilingual About Me page (`/sobre-mi`) on the same branch. Added comprehensive translations to `translations.ts`, updated navbar desktop/mobile menu links to direct to `/sobre-mi` instead of the homepage anchor `/#quien-soy`, and designed a premium chapter-based visual timeline.
+* **2026-06-29:** Started SEO program. Ran full audit (homepage + `/sobre-mi` + `/podcast`) and produced [SEO-AUDIT.md](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/SEO-AUDIT.md) plus bilingual positioning PDFs for Katherine's approval (located outside this repo). Created branch `feature/seo-phase-1` off `feature/podcast-page`.
+* **2026-06-29:** Phase 1A (invisible SEO fixes, no design change) applied on `feature/seo-phase-1` — `npm run build` clean, all 10 static pages generated:
+  * `src/app/sitemap.ts` — switched to www, removed deprecated `priority`/`changefreq`, now includes `/sobre-mi` and `/podcast` (excludes `/logos` since it `notFound()`s in production). Verified output at `.next/server/app/sitemap.xml.body`.
+  * `src/app/robots.ts` — switched sitemap directive and `host` to www.
+  * `next.config.ts` — added security headers (X-Content-Type-Options, X-Frame-Options, Referrer-Policy, Permissions-Policy, HSTS-preload) on every route, plus a permanent (308) apex → www redirect rule.
+  * `src/app/page.tsx` — added an `sr-only` keyword span inside the existing hero `<h1>` so crawlers see "Consultoría Estratégica 360 para fundadores y marcas en Colombia" without changing the visible design. New `hero.h1_keyword` translation key added in both ES and EN.
+  * Per-page metadata, canonical, and JSON-LD schema **deferred** to Phase 1B because every page is `"use client"` — requires a server-wrapper + client-child refactor (tasks #10-#12 in the SEO audit).
 
 ---
 

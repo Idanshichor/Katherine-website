@@ -1,11 +1,12 @@
-import { MetadataRoute } from 'next'
- 
+import { MetadataRoute } from "next";
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
-      userAgent: '*',
-      allow: '/',
+      userAgent: "*",
+      allow: "/",
     },
-    sitemap: 'https://ktvelasquez.com/sitemap.xml',
-  }
+    sitemap: "https://www.ktvelasquez.com/sitemap.xml",
+    host: "https://www.ktvelasquez.com",
+  };
 }

@@ -15,6 +15,7 @@ export const translations = {
       360: "360",
       katherine: "Katherine",
       velasquez: "Velasquez",
+      h1_keyword: "Consultoría Estratégica 360 para fundadores y marcas en Colombia",
       direccion: "Dirección estratégica para marcas y negocios con visión de futuro.",
       description: "Integro estructura de negocio, estrategia digital y mentalidad ejecutiva para escalar con claridad, sin dejar tu bienestar en el camino.",
       cta: "Hablemos de tu proyecto"
@@ -239,6 +240,7 @@ export const translations = {
       360: "360",
       katherine: "Katherine",
       velasquez: "Velasquez",
+      h1_keyword: "360° Strategic Consulting for Founders and Brands",
       direccion: "Strategic direction for future-oriented brands and businesses.",
       description: "I integrate business structure, digital strategy, and executive mindset to help you scale with clarity—without burning out along the way.",
       cta: "Let's discuss your project"
