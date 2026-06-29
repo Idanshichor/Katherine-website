@@ -44,7 +44,7 @@ export default function PageClient() {
       <section className="relative w-full min-h-[100svh] flex flex-col justify-start pt-32 pb-6 md:justify-center md:pt-24 md:pb-0 overflow-hidden bg-white">
         {/* Full Background Image */}
         <div className="absolute inset-0 z-0 bg-black">
-          <Image src="/images/KT_Hero.webp" alt="Katherine Velasquez Background" fill className="object-cover object-[82%_40%] md:object-[75%_center]" priority unoptimized />
+          <Image src="/images/KT_Hero.webp" alt="Katherine Velasquez Background" fill sizes="100vw" className="object-cover object-[82%_40%] md:object-[75%_center]" priority />
           {/* Mobile dark gradient overlay for text legibility */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-transparent md:hidden" />
         </div>
