@@ -107,8 +107,8 @@ export const translations = {
     },
     podcast: {
       tag: "Podcast",
-      title_p1: "Estrategia 360:",
-      title_p2: "El Podcast",
+      title_p1: "Estrategia 360 -",
+      title_p2: "Sin Pelos en la Lengua",
       desc: "Conversaciones honestas, análisis de negocio y herramientas de crecimiento personal para líderes que prefieren la sustancia por encima del hype. A través de historias reales de líderes reales, descubrimos el camino detrás del éxito y la mentalidad necesaria para sostenerlo.",
       cta: "Escuchar Podcast"
     },

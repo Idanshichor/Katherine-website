@@ -22,7 +22,7 @@ export function Web3Form({
     setStatus("submitting");
 
     const formData = new FormData(e.currentTarget);
-    formData.append("access_key", "7bd1aa94-7d33-4738-b627-5b9378af65d4");
+    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "7bd1aa94-7d33-4738-b627-5b9378af65d4");
     formData.append("subject", subject);
 
     try {

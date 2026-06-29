@@ -92,6 +92,14 @@ This log serves as a source of truth for the development, configuration, and des
   * `next.config.ts` — added security headers (X-Content-Type-Options, X-Frame-Options, Referrer-Policy, Permissions-Policy, HSTS-preload) on every route, plus a permanent (308) apex → www redirect rule.
   * `src/app/page.tsx` — added an `sr-only` keyword span inside the existing hero `<h1>` so crawlers see "Consultoría Estratégica 360 para fundadores y marcas en Colombia" without changing the visible design. New `hero.h1_keyword` translation key added in both ES and EN.
   * Per-page metadata, canonical, and JSON-LD schema **deferred** to Phase 1B because every page is `"use client"` — requires a server-wrapper + client-child refactor (tasks #10-#12 in the SEO audit).
+* **2026-06-29:** Phase 1B (page metadata & structured data refactor) applied on `feature/seo-phase-1` — `npm run build` clean, all pages compile:
+  * Split `/` page into [page.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/page.tsx) (server wrapper with metadata & WebSite/Person graph) and [page.client.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/page.client.tsx) (client component).
+  * Split `/podcast` page into [page.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/podcast/page.tsx) (server wrapper with metadata & PodcastSeries graph) and [page.client.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/podcast/page.client.tsx) (client component).
+  * Split `/sobre-mi` page into [page.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/sobre-mi/page.tsx) (server wrapper with metadata & ProfilePage/BreadcrumbList graph) and [page.client.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/sobre-mi/page.client.tsx) (client component).
+  * Updated the Spanish podcast name across the homepage and `/podcast` to *"Estrategia 360 - Sin Pelos en la Lengua"*.
+  * Updated hero image alt texts on `/podcast` and `/sobre-mi` to be descriptive and keyword-focused.
+  * Environmentalized Web3Forms keys in [web3-form.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/components/web3-form.tsx) and [page.client.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/podcast/page.client.tsx) using `process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`.
+  * Added the Consistency Check rule to [AGENTS.md](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/AGENTS.md) and [project_log.md](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/project_log.md).
 
 ---
 
@@ -102,4 +110,5 @@ This log serves as a source of truth for the development, configuration, and des
 2. **Copy Modification:** Do **NOT** modify or change any of the copy on the landing page unless explicitly requested by the user.
 3. **Build Verification:** Always run `npm run build` locally before pushing changes to verify that the TypeScript compiler and Turbopack bundler are completely free of errors.
 4. **Deployment:** Pushing or merging to the `main` branch of the GitHub repository triggers the final production deployment on Vercel.
+5. **Consistency Check:** Whenever there is a change to something visual that has implications on SEO or other pages, or any text/copy changes that have implications on the rest of the website, or any change with cross-page implications, you MUST always ask the user if you should update it everywhere.
 
