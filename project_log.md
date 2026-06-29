@@ -99,6 +99,9 @@ This log serves as a source of truth for the development, configuration, and des
   * Updated the Spanish podcast name across the homepage and `/podcast` to *"Estrategia 360 - Sin Pelos en la Lengua"*.
   * Updated hero image alt texts on `/podcast` and `/sobre-mi` to be descriptive and keyword-focused.
   * Removed `unoptimized` and added `sizes="100vw"` to the homepage hero `<Image>` component in [page.client.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/page.client.tsx) to improve mobile LCP.
+  * Redesigned the footer in [footer.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/components/footer.tsx) into a 3-column layout featuring contact details, service area coverage, and a link to the new privacy policy page.
+  * Created the new `/privacidad` route with [page.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/privacidad/page.tsx) and [page.client.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/privacidad/page.client.tsx) to display a bilingual privacy policy (complying with Colombia's Law 1581 of 2012).
+  * Updated [sitemap.ts](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/sitemap.ts) to include the new `/privacidad` route.
   * Environmentalized Web3Forms keys in [web3-form.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/components/web3-form.tsx) and [page.client.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/podcast/page.client.tsx) using `process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`.
   * Added the Consistency Check rule to [AGENTS.md](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/AGENTS.md) and [project_log.md](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/project_log.md).
 

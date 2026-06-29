@@ -197,7 +197,11 @@ export const translations = {
       subscribe: "Suscribirse",
       placeholder_name: "Nombre",
       placeholder_lastname: "Apellido",
-      placeholder_email: "Correo Electrónico"
+      placeholder_email: "Correo Electrónico",
+      contact_title: "Contacto & Cobertura",
+      contact_phone: "WhatsApp / Teléfono",
+      service_area: "Bogotá, Colombia & Remoto Internacional",
+      privacy_policy: "Política de Privacidad"
     },
     faqs: [
       {
@@ -422,7 +426,11 @@ export const translations = {
       subscribe: "Subscribe",
       placeholder_name: "First Name",
       placeholder_lastname: "Last Name",
-      placeholder_email: "Email Address"
+      placeholder_email: "Email Address",
+      contact_title: "Contact & Service Area",
+      contact_phone: "WhatsApp / Phone",
+      service_area: "Bogota, Colombia & International Remote",
+      privacy_policy: "Privacy Policy"
     },
     faqs: [
       {
