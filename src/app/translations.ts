@@ -200,7 +200,7 @@ export const translations = {
       placeholder_email: "Correo Electrónico",
       contact_title: "Contacto & Cobertura",
       contact_phone: "WhatsApp / Teléfono",
-      service_area: "Bogotá, Colombia & Remoto Internacional",
+      service_area: "Medellín, Colombia & Remoto Internacional",
       privacy_policy: "Política de Privacidad"
     },
     faqs: [
@@ -429,7 +429,7 @@ export const translations = {
       placeholder_email: "Email Address",
       contact_title: "Contact & Service Area",
       contact_phone: "WhatsApp / Phone",
-      service_area: "Bogota, Colombia & International Remote",
+      service_area: "Medellin, Colombia & International Remote",
       privacy_policy: "Privacy Policy"
     },
     faqs: [

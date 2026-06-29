@@ -28,7 +28,7 @@ export default function PrivacyPageClient() {
                     1. Identificación del Responsable
                   </h2>
                   <p>
-                    Katherine Velasquez (en adelante, "la Responsable"), domiciliada en Bogotá, Colombia, y con canal de contacto a través del número de WhatsApp +57 321 615 4870, es responsable del tratamiento de los datos personales recolectados en este sitio web (<a href="https://www.ktvelasquez.com" className="text-[var(--color-brand-pink)] hover:underline">www.ktvelasquez.com</a>).
+                    Katherine Velasquez (en adelante, "la Responsable"), domiciliada en Medellín, Colombia, y con canal de contacto a través del número de WhatsApp +57 321 615 4870, es responsable del tratamiento de los datos personales recolectados en este sitio web (<a href="https://www.ktvelasquez.com" className="text-[var(--color-brand-pink)] hover:underline">www.ktvelasquez.com</a>).
                   </p>
                 </section>
 
@@ -99,7 +99,7 @@ export default function PrivacyPageClient() {
                     1. Data Controller Identification
                   </h2>
                   <p>
-                    Katherine Velasquez (hereinafter, "the Controller"), located in Bogota, Colombia, and reachable via WhatsApp at +57 321 615 4870, is the controller of the personal data collected on this website (<a href="https://www.ktvelasquez.com" className="text-[var(--color-brand-pink)] hover:underline">www.ktvelasquez.com</a>).
+                    Katherine Velasquez (hereinafter, "the Controller"), located in Medellin, Colombia, and reachable via WhatsApp at +57 321 615 4870, is the controller of the personal data collected on this website (<a href="https://www.ktvelasquez.com" className="text-[var(--color-brand-pink)] hover:underline">www.ktvelasquez.com</a>).
                   </p>
                 </section>
 

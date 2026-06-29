@@ -6,6 +6,7 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 import { useLanguage } from "@/context/language-context";
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function PodcastPageClient() {
   const { language, t } = useLanguage();
@@ -375,6 +376,27 @@ export default function PodcastPageClient() {
                         ${touched.story ? "invalid:border-[#d93025] invalid:bg-[#fce8e6] valid:border-[#188038]" : "border-gray-200"}`}
                     />
                   </div>
+
+                  {/* Privacy Consent Disclaimer */}
+                  <p className="text-[11px] text-gray-400 font-light leading-normal mt-4">
+                    {language === "es" ? (
+                      <>
+                        Al enviar tu postulación, autorizas el tratamiento de tus datos personales de acuerdo con nuestra{" "}
+                        <Link href="/privacidad" className="underline hover:text-[var(--color-brand-pink)] transition-colors">
+                          Política de Privacidad
+                        </Link>
+                        .
+                      </>
+                    ) : (
+                      <>
+                        By submitting your application, you authorize the processing of your personal data in accordance with our{" "}
+                        <Link href="/privacidad" className="underline hover:text-[var(--color-brand-pink)] transition-colors">
+                          Privacy Policy
+                        </Link>
+                        .
+                      </>
+                    )}
+                  </p>
 
                   {/* Submit Button */}
                   <div className="mt-4">
