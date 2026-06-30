@@ -109,7 +109,7 @@ This log serves as a source of truth for the development, configuration, and des
   * Environmentalized Web3Forms keys in [web3-form.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/components/web3-form.tsx) and [page.client.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/podcast/page.client.tsx) using `process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`.
   * Added the Consistency Check rule to [AGENTS.md](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/AGENTS.md) and [project_log.md](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/project_log.md).
 * **2026-06-30:** Typography and FAQ readability improvements applied:
-  * Imported `Alex_Brush` (`--font-script-readable`) from Google Fonts in [layout.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/layout.tsx) for longer cursive texts.
+  * Imported `Playball` (`--font-script-readable`) from Google Fonts in [layout.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/layout.tsx) for longer cursive texts.
   * Added `--font-script-readable` and `--color-brand-purple` (#7244D4) to [globals.css](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/globals.css).
   * Updated [page.client.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/page.client.tsx) to use `font-script-readable` for the hero subtitle.
   * Updated [page.client.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/podcast/page.client.tsx) to use `font-script-readable` and adjusted text sizing for the podcast manifesto quote.

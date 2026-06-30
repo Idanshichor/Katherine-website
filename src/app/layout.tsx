@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter, Great_Vibes, Alex_Brush } from "next/font/google";
+import { Playfair_Display, Inter, Great_Vibes, Playball } from "next/font/google";
 import "./globals.css";
 
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const script = Great_Vibes({ weight: "400", subsets: ["latin"], variable: "--font-script" });
-const scriptReadable = Alex_Brush({ weight: "400", subsets: ["latin"], variable: "--font-script-readable" });
+const scriptReadable = Playball({ weight: "400", subsets: ["latin"], variable: "--font-script-readable" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ktvelasquez.com"),

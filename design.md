@@ -36,7 +36,7 @@ The typography system pairs classic editorial serifs with clean, geometric sans-
    * *Usage:* Explanations, descriptions, button labels, navigation links.
 3. **Primary Script Font (`--font-script`):** `Great Vibes`, cursive.
    * *Usage:* Short decorative accents, personal signature elements, and single-word emphasis in titles (e.g., *“360”*, *“para quienes”*, *“Estrategia”*).
-4. **Readable Script Font (`--font-script-readable`):** `Alex Brush`, cursive.
+4. **Readable Script Font (`--font-script-readable`):** `Playball`, cursive.
    * *Usage:* Longer cursive blocks, full sentences, or phrases where readability is essential (e.g., the hero subtitle *“Dirección estratégica para marcas y negocios con visión de futuro”*, and the podcast manifesto quote *“Aquí no venimos a tirar palabras elegantes...”*).
 
 ### Text Styles

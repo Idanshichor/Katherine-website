@@ -191,7 +191,7 @@ export default function PodcastPageClient() {
             </span>
             
             {/* Fully readable cursive quote */}
-            <h2 className="font-script-readable text-3xl md:text-4xl lg:text-5xl text-[var(--color-brand-black)] mb-12 leading-relaxed max-w-3xl mx-auto font-medium">
+            <h2 className="font-script-readable text-2xl md:text-3xl lg:text-4xl text-[var(--color-brand-black)] mb-12 leading-relaxed max-w-3xl mx-auto font-medium">
               &ldquo;{t("podcastPage.manifestoP1")}&rdquo;
             </h2>
 
