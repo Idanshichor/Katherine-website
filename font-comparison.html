@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparativa de Fuentes Cursivas — Katherine Velasquez</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&family=Great+Vibes&family=Alex+Brush&family=Satisfy&family=Sacramento&family=Cookie&family=Dancing+Script&family=Playball&family=Rochester&family=Marck+Script&family=Parisienne&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-brand-black: #1A1A1A;
+      --color-brand-gold: #EBBF7E;
+      --color-brand-pink-light: #FFDFE8;
+      --color-brand-pink-dark: #E01E79;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FDFBF7;
+      color: var(--color-brand-black);
+    }
+
+    header {
+      background-color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 1px solid #EAEAEA;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      margin: 0 0 10px 0;
+      font-style: italic;
+    }
+
+    header p {
+      color: #666;
+      font-size: 14px;
+      margin: 0;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      margin-bottom: 20px;
+      border-left: 4px solid var(--color-brand-pink-dark);
+      padding-left: 15px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .font-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      overflow: hidden;
+      border: 1px solid #EAEAEA;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .font-info {
+      padding: 15px 20px;
+      background: #FAFAFA;
+      border-bottom: 1px solid #EAEAEA;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .font-name {
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .font-tag {
+      font-size: 11px;
+      background: #EEE;
+      padding: 3px 8px;
+      border-radius: 12px;
+      color: #555;
+      font-weight: 600;
+    }
+
+    /* Hero Preview: Dark Background, Gold Text */
+    .preview-hero {
+      background-color: var(--color-brand-black);
+      color: var(--color-brand-gold);
+      padding: 45px 30px;
+      font-size: 38px;
+      line-height: 1.3;
+      text-align: left;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Podcast Preview: Pink Background, Dark Text */
+    .preview-podcast {
+      background-color: var(--color-brand-pink-light);
+      color: var(--color-brand-black);
+      padding: 45px 30px;
+      font-size: 28px;
+      line-height: 1.5;
+      text-align: center;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Font Styles */
+    .f-great-vibes { font-family: 'Great Vibes', cursive; }
+    .f-alex-brush { font-family: 'Alex Brush', cursive; }
+    .f-satisfy { font-family: 'Satisfy', cursive; }
+    .f-sacramento { font-family: 'Sacramento', cursive; }
+    .f-cookie { font-family: 'Cookie', cursive; }
+    .f-dancing-script { font-family: 'Dancing Script', cursive; }
+    .f-playball { font-family: 'Playball', cursive; }
+    .f-rochester { font-family: 'Rochester', cursive; }
+    .f-marck-script { font-family: 'Marck Script', cursive; }
+    .f-parisienne { font-family: 'Parisienne', cursive; }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Comparativa de Fuentes Cursivas</h1>
+    <p>Revisa cómo se ven las diferentes opciones de fuentes tipográficas cursivas para los dos textos largos del sitio web. El primer bloque simula el Hero (fondo oscuro con texto dorado), y el segundo simula el Manifiesto del Podcast (fondo rosa con texto oscuro).</p>
+  </header>
+
+  <div class="container">
+    
+    <!-- SECTION 1: HERO TEXT -->
+    <div class="section-title">1. Texto del Hero (Fondo Oscuro + Texto Dorado)</div>
+    <div class="grid">
+      
+      <!-- Great Vibes -->
+      <div class="font-card">
+        <div class="font-info">
+          <span class="font-name">Great Vibes</span>
+          <span class="font-tag">Actual (Menos Leíble)</span>
+        </div>
+        <div class="preview-hero f-great-vibes">
+          Dirección estratégica para marcas y negocios con visión de futuro.
+        </div>
+      </div>
+
+      <!-- Alex Brush -->
+      <div class="font-card">
+        <div class="font-info">
+          <span class="font-name">Alex Brush</span>
+          <span class="font-tag">Elegante / Fluida</span>
+        </div>
+        <div class="preview-hero f-alex-brush">
+          Dirección estratégica para marcas y negocios con visión de futuro.
+        </div>
+      </div>
+
+      <!-- Satisfy -->
+      <div class="font-card">
+        <div class="font-info">
+          <span class="font-name">Satisfy</span>
+          <span class="font-tag">Moderna / Pincel</span>
+        </div>
+        <div class="preview-hero f-satisfy" style="font-size: 32px;">
+          Dirección estratégica para marcas y negocios con visión de futuro.
+        </div>
+      </div>
+
+      <!-- Sacramento -->
+      <div class="font-card">
+        <div class="font-info">
+          <span class="font-name">Sacramento</span>
+          <span class="font-tag">Línea Fina / Boutique</span>
+        </div>
+        <div class="preview-hero f-sacramento" style="font-size: 42px;">
+          Dirección estratégica para marcas y negocios con visión de futuro.
+        </div>
+      </div>
+
+      <!-- Cookie -->
+      <div class="font-card">
+        <div class="font-info">
+          <span class="font-name">Cookie</span>
+          <span class="font-tag">Vintage / Muy Leíble</span>
+        </div>
+        <div class="preview-hero f-cookie" style="font-size: 36px;">
+          Dirección estratégica para marcas y negocios con visión de futuro.
+        </div>
+      </div>
+
+      <!-- Playball -->
+      <div class="font-card">
+        <div class="font-info">
+          <span class="font-name">Playball</span>
+          <span class="font-tag">Atlética / Nítida</span>
+        </div>
+        <div class="preview-hero f-playball" style="font-size: 34px;">
+          Dirección estratégica para marcas y negocios con visión de futuro.
+        </div>
+      </div>
+
+      <!-- Rochester -->
+      <div class="font-card">
+        <div class="font-info">
+          <span class="font-name">Rochester</span>
+          <span class="font-tag">Tradicional / Caligráfica</span>
+        </div>
+        <div class="preview-hero f-rochester" style="font-size: 36px;">
+          Dirección estratégica para marcas y negocios con visión de futuro.
+        </div>
+      </div>
+
+      <!-- Marck Script -->
+      <div class="font-card">
+        <div class="font-info">
+          <span class="font-name">Marck Script</span>
+          <span class="font-tag">Manuscrita / Casual</span>
+        </div>
+        <div class="preview-hero f-marck-script" style="font-size: 32px;">
+          Dirección estratégica para marcas y negocios con visión de futuro.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SECTION 2: PODCAST TEXT -->
+    <div class="section-title">2. Manifiesto del Podcast (Fondo Rosa + Texto Oscuro)</div>
+    <div class="grid">
+      
+      <!-- Great Vibes -->
+      <div class="font-card">
+        <div class="font-info">
+          <span class="font-name">Great Vibes</span>
+          <span class="font-tag">Estilo Inicial</span>
+        </div>
+        <div class="preview-podcast f-great-vibes" style="font-size: 34px;">
+          &ldquo;Aquí no venimos a tirar palabras elegantes ni discursos cordiales de LinkedIn que nadie entiende.&rdquo;
+        </div>
+      </div>
+
+      <!-- Alex Brush -->
+      <div class="font-card">
+        <div class="font-info">
+          <span class="font-name">Alex Brush</span>
+          <span class="font-tag">Elegante / Fluida</span>
+        </div>
+        <div class="preview-podcast f-alex-brush" style="font-size: 32px;">
+          &ldquo;Aquí no venimos a tirar palabras elegantes ni discursos cordiales de LinkedIn que nadie entiende.&rdquo;
+        </div>
+      </div>
+
+      <!-- Satisfy -->
+      <div class="font-card">
+        <div class="font-info">
+          <span class="font-name">Satisfy</span>
+          <span class="font-tag">Moderna / Pincel</span>
+        </div>
+        <div class="preview-podcast f-satisfy" style="font-size: 26px;">
+          &ldquo;Aquí no venimos a tirar palabras elegantes ni discursos cordiales de LinkedIn que nadie entiende.&rdquo;
+        </div>
+      </div>
+
+      <!-- Sacramento -->
+      <div class="font-card">
+        <div class="font-info">
+          <span class="font-name">Sacramento</span>
+          <span class="font-tag">Línea Fina / Boutique</span>
+        </div>
+        <div class="preview-podcast f-sacramento" style="font-size: 34px;">
+          &ldquo;Aquí no venimos a tirar palabras elegantes ni discursos cordiales de LinkedIn que nadie entiende.&rdquo;
+        </div>
+      </div>
+
+      <!-- Cookie -->
+      <div class="font-card">
+        <div class="font-info">
+          <span class="font-name">Cookie</span>
+          <span class="font-tag">Vintage / Muy Leíble</span>
+        </div>
+        <div class="preview-podcast f-cookie" style="font-size: 28px;">
+          &ldquo;Aquí no venimos a tirar palabras elegantes ni discursos cordiales de LinkedIn que nadie entiende.&rdquo;
+        </div>
+      </div>
+
+      <!-- Playball -->
+      <div class="font-card">
+        <div class="font-info">
+          <span class="font-name">Playball</span>
+          <span class="font-tag">Atlética / Nítida</span>
+        </div>
+        <div class="preview-podcast f-playball" style="font-size: 26px;">
+          &ldquo;Aquí no venimos a tirar palabras elegantes ni discursos cordiales de LinkedIn que nadie entiende.&rdquo;
+        </div>
+      </div>
+
+      <!-- Rochester -->
+      <div class="font-card">
+        <div class="font-info">
+          <span class="font-name">Rochester</span>
+          <span class="font-tag">Tradicional / Caligráfica</span>
+        </div>
+        <div class="preview-podcast f-rochester" style="font-size: 28px;">
+          &ldquo;Aquí no venimos a tirar palabras elegantes ni discursos cordiales de LinkedIn que nadie entiende.&rdquo;
+        </div>
+      </div>
+
+      <!-- Marck Script -->
+      <div class="font-card">
+        <div class="font-info">
+          <span class="font-name">Marck Script</span>
+          <span class="font-tag">Manuscrita / Casual</span>
+        </div>
+        <div class="preview-podcast f-marck-script" style="font-size: 24px;">
+          &ldquo;Aquí no venimos a tirar palabras elegantes ni discursos cordiales de LinkedIn que nadie entiende.&rdquo;
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

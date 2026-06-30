@@ -113,7 +113,7 @@ This log serves as a source of truth for the development, configuration, and des
   * Added `--font-script-readable` and `--color-brand-purple` (#7244D4) to [globals.css](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/globals.css).
   * Updated [page.client.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/page.client.tsx) to use `font-script-readable` for the hero subtitle.
   * Updated [page.client.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/podcast/page.client.tsx) to use `font-script-readable` and adjusted text sizing for the podcast manifesto quote.
-  * Updated [faq-accordion.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/components/faq-accordion.tsx) to use brand purple (`#7244D4`) for the active state and hover colors (replacing gold for contrast). Darkened the answer text to `text-gray-800` (font-normal) to ensure excellent readability.
+  * Updated [faq-accordion.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/components/faq-accordion.tsx) to use dark brand pink (`#E01E79`) for the active state and hover colors (replacing gold for contrast). Darkened the answer text to `text-gray-800` (font-normal) to ensure excellent readability.
   * Documented the cursive font usage rules in [design.md](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/design.md).
 
 ---
