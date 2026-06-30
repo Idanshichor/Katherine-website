@@ -18,7 +18,7 @@ export default function FaqAccordion() {
             >
               <span
                 className={`font-heading italic text-xl md:text-2xl transition-colors ${
-                  isOpen ? "text-[var(--color-brand-gold)]" : "text-[var(--color-brand-black)] group-hover:text-[var(--color-brand-gold)]"
+                  isOpen ? "text-[var(--color-brand-purple)]" : "text-[var(--color-brand-black)] group-hover:text-[var(--color-brand-purple)]"
                 }`}
               >
                 {faq.q}
@@ -26,8 +26,8 @@ export default function FaqAccordion() {
               <span
                 className={`ml-6 shrink-0 w-8 h-8 rounded-full border flex items-center justify-center text-lg transition-all duration-300 ${
                   isOpen
-                    ? "border-[var(--color-brand-gold)] text-[var(--color-brand-gold)] rotate-45"
-                    : "border-gray-300 text-gray-400 rotate-0"
+                    ? "border-[var(--color-brand-purple)] text-[var(--color-brand-purple)] rotate-45"
+                    : "border-gray-400 text-gray-600 rotate-0"
                 }`}
               >
                 +
@@ -38,7 +38,7 @@ export default function FaqAccordion() {
                 isOpen ? "max-h-[300px] opacity-100 pb-8" : "max-h-0 opacity-0"
               }`}
             >
-              <p className="text-gray-500 font-light text-base leading-relaxed pl-0 md:pl-1 max-w-2xl">
+              <p className="text-gray-800 font-normal text-base leading-relaxed pl-0 md:pl-1 max-w-2xl">
                 {faq.a}
               </p>
             </div>

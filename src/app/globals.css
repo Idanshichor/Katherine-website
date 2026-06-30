@@ -7,10 +7,12 @@
   --color-brand-gold-light: #F5E5CD;
   --color-brand-cream: #FFFFFF;
   --color-brand-black: #1A1A1A;
+  --color-brand-purple: #7244D4;
 
   --font-heading: var(--font-playfair), serif;
   --font-body: var(--font-inter), sans-serif;
   --font-script: var(--font-script), cursive;
+  --font-script-readable: var(--font-script-readable), cursive;
 }
 
 body {

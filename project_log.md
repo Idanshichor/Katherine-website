@@ -108,6 +108,13 @@ This log serves as a source of truth for the development, configuration, and des
   * Optimized text color contrast across all pages to meet WCAG AA standards (4.5:1 ratio), ensuring readability and maximizing Lighthouse Accessibility scores.
   * Environmentalized Web3Forms keys in [web3-form.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/components/web3-form.tsx) and [page.client.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/podcast/page.client.tsx) using `process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`.
   * Added the Consistency Check rule to [AGENTS.md](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/AGENTS.md) and [project_log.md](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/project_log.md).
+* **2026-06-30:** Typography and FAQ readability improvements applied:
+  * Imported `Alex_Brush` (`--font-script-readable`) from Google Fonts in [layout.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/layout.tsx) for longer cursive texts.
+  * Added `--font-script-readable` and `--color-brand-purple` (#7244D4) to [globals.css](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/globals.css).
+  * Updated [page.client.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/page.client.tsx) to use `font-script-readable` for the hero subtitle.
+  * Updated [page.client.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/podcast/page.client.tsx) to use `font-script-readable` and adjusted text sizing for the podcast manifesto quote.
+  * Updated [faq-accordion.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/components/faq-accordion.tsx) to use brand purple (`#7244D4`) for the active state and hover colors (replacing gold for contrast). Darkened the answer text to `text-gray-800` (font-normal) to ensure excellent readability.
+  * Documented the cursive font usage rules in [design.md](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/design.md).
 
 ---
 

@@ -69,7 +69,7 @@ export default function PageClient() {
               </h1>
 
               {/* Hidden on mobile, shown on desktop */}
-              <div className="order-3 md:order-2 font-script text-2xl md:text-[2.25rem] lg:text-[2.75rem] text-[var(--color-brand-gold)] max-w-[500px] leading-tight text-center md:text-left mx-auto md:mx-0 md:-ml-2 mt-2 md:mt-4 hidden md:block">
+              <div className="order-3 md:order-2 font-script-readable text-2xl md:text-[2.25rem] lg:text-[2.75rem] text-[var(--color-brand-gold)] max-w-[500px] leading-tight text-center md:text-left mx-auto md:mx-0 md:-ml-2 mt-2 md:mt-4 hidden md:block">
                 {t("hero.direccion")}
               </div>
 

@@ -34,8 +34,10 @@ The typography system pairs classic editorial serifs with clean, geometric sans-
    * *Usage:* Main titles, section headers, italic highlights.
 2. **Body Font (`--font-body`):** `Inter`, sans-serif.
    * *Usage:* Explanations, descriptions, button labels, navigation links.
-3. **Script Font (`--font-script`):** `Great Vibes`, cursive.
-   * *Usage:* Personal accents, handwriting overlays (e.g., *“Dirección estratégica...”* or *“para quienes”*).
+3. **Primary Script Font (`--font-script`):** `Great Vibes`, cursive.
+   * *Usage:* Short decorative accents, personal signature elements, and single-word emphasis in titles (e.g., *“360”*, *“para quienes”*, *“Estrategia”*).
+4. **Readable Script Font (`--font-script-readable`):** `Alex Brush`, cursive.
+   * *Usage:* Longer cursive blocks, full sentences, or phrases where readability is essential (e.g., the hero subtitle *“Dirección estratégica para marcas y negocios con visión de futuro”*, and the podcast manifesto quote *“Aquí no venimos a tirar palabras elegantes...”*).
 
 ### Text Styles
 * **Main CTA Buttons:** Bold uppercase, tracking-widest (`tracking-widest`), small font size (`text-[10px]` or `text-xs`).
