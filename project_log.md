@@ -115,6 +115,10 @@ This log serves as a source of truth for the development, configuration, and des
   * Updated [page.client.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/podcast/page.client.tsx) to use `font-script-readable` and adjusted text sizing for the podcast manifesto quote.
   * Updated [faq-accordion.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/components/faq-accordion.tsx) to use dark brand pink (`#E01E79`) for the active state and hover colors (replacing gold for contrast). Darkened the answer text to `text-gray-800` (font-normal) to ensure excellent readability.
   * Documented the cursive font usage rules in [design.md](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/design.md).
+* **2026-06-30:** Brand Book creation:
+  * Created the [brand_book](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/brand_book) directory in the project root.
+  * Authored a comprehensive brand manual in Spanish: [manual_de_marca.md](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/brand_book/manual_de_marca.md) and compiled it into a premium PDF [manual_de_marca.pdf](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/brand_book/manual_de_marca.pdf) (using an intermediate [manual_de_marca.html](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/brand_book/manual_de_marca.html) layout with WeasyPrint), covering the brand's philosophy, verbal identity (writing style/copywriting guidelines), visual identity (colors, typography, web effects), and description of photo assets.
+  * Copied the brand logo (`KT_LOGO.webp`, `KT_White_Logo.webp`) and different photos used on the website (`KT_Hero.webp`, `KTSecondPhoto.webp`, `KT_Podcast.webp`) into the [brand_book](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/brand_book) folder.
 
 ---
 
