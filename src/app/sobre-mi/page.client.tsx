@@ -7,6 +7,22 @@ import { useLanguage } from "@/context/language-context";
 import Image from "next/image";
 import Link from "next/link";
 
+const galleryPhotos = [
+  { src: "/images/gallery/KT_Gallery_07.webp", width: 900, height: 1600, alt: "Katherine Velasquez en el Templo Blanco (Wat Rong Khun) de Chiang Rai, Tailandia" },
+  { src: "/images/gallery/KT_Gallery_02.webp", width: 1600, height: 900, alt: "Katherine Velasquez contemplando el río Ganges en Rishikesh, India" },
+  { src: "/images/gallery/KT_Gallery_06.webp", width: 1600, height: 900, alt: "Katherine Velasquez alimentando a un elefante bebé en un santuario en Tailandia" },
+  { src: "/images/gallery/KT_Gallery_05.webp", width: 900, height: 1600, alt: "Detalle de la mano de Katherine Velasquez con arena en la playa" },
+  { src: "/images/gallery/KT_Gallery_03.webp", width: 1600, height: 900, alt: "Retrato de Katherine Velasquez junto al río en las montañas de Rishikesh, India" },
+  { src: "/images/gallery/KT_Gallery_09.webp", width: 1600, height: 900, alt: "Vista panorámica del Templo Blanco de Chiang Rai, Tailandia" },
+  { src: "/images/gallery/KT_Gallery_08.webp", width: 900, height: 1600, alt: "Katherine Velasquez entre los detalles arquitectónicos del Templo Blanco, Tailandia" },
+  { src: "/images/gallery/KT_Gallery_04.webp", width: 1600, height: 900, alt: "Katherine Velasquez celebrando con los brazos abiertos frente al río en India" },
+  { src: "/images/gallery/KT_Gallery_11.webp", width: 1600, height: 900, alt: "Katherine Velasquez descansando en un campo de flores rosadas" },
+  { src: "/images/gallery/KT_Gallery_13.webp", width: 800, height: 1600, alt: "Recuerdo en cámara 360 de Katherine Velasquez en una cascada durante sus viajes" },
+  { src: "/images/gallery/KT_Gallery_10.webp", width: 1600, height: 900, alt: "Katherine Velasquez caminando frente al Templo Blanco de Chiang Rai, Tailandia" },
+  { src: "/images/gallery/KT_Gallery_12.webp", width: 1600, height: 902, alt: "Katherine Velasquez jugando con la perspectiva de una jirafa en un safari" },
+  { src: "/images/gallery/KT_Gallery_01.webp", width: 1600, height: 900, alt: "Katherine Velasquez recorriendo un mercado nocturno durante sus viajes por Asia" },
+];
+
 export default function AboutPageClient() {
   const { language, t } = useLanguage();
 
@@ -42,12 +58,12 @@ export default function AboutPageClient() {
             <div className="absolute inset-0 border border-[var(--color-brand-gold)] top-6 bottom-0 left-0 right-6 z-0 hidden md:block rounded-2xl" />
             
             <div className="relative w-full h-full z-10 rounded-[2rem] overflow-hidden shadow-elevated border-4 border-white bg-white">
-              <Image 
-                src="/images/KTSecondPhoto.webp" 
-                alt="Katherine Velasquez — Estratega 360 e Ingeniera Civil" 
-                fill 
+              <Image
+                src="/images/KT_About_Hero.webp"
+                alt="Katherine Velasquez — Estratega 360 e Ingeniera Civil"
+                fill
                 sizes="(max-width: 768px) 100vw, 400px"
-                className="object-cover object-[center_35%]" 
+                className="object-cover object-[center_25%]"
                 priority
               />
             </div>
@@ -296,6 +312,44 @@ export default function AboutPageClient() {
                 </p>
               </div>
 
+            </div>
+          </div>
+        </div>
+      </ScrollReveal>
+
+      {/* TRAVEL GALLERY: LA VIDA DETRÁS DE LA ESTRATEGIA */}
+      <ScrollReveal>
+        <div className="max-w-6xl mx-auto px-4 my-8">
+          <div className="py-16 md:py-24 px-6 md:px-16 rounded-[3.5rem] bg-white border border-gray-100 shadow-soft relative overflow-hidden">
+            <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16">
+              <span className="text-xs font-bold uppercase tracking-[0.3em] text-[var(--color-brand-black)] mb-6 bg-[var(--color-brand-pink-light)] w-max px-4 py-1.5 rounded-full mx-auto inline-block shadow-soft">
+                {t("aboutPage.galleryTag")}
+              </span>
+              <h2 className="font-heading italic text-3xl md:text-4xl lg:text-5xl text-[var(--color-brand-black)] mb-6 leading-tight">
+                {t("aboutPage.galleryTitle")}
+              </h2>
+              <p className="font-body text-gray-700 text-base md:text-lg leading-relaxed font-medium max-w-2xl mx-auto">
+                {t("aboutPage.gallerySubtitle")}
+              </p>
+              <div className="w-16 h-[2px] bg-[var(--color-brand-gold)] mx-auto mt-8" />
+            </div>
+
+            <div className="columns-2 md:columns-3 gap-3 md:gap-4 [&>div]:mb-3 md:[&>div]:mb-4">
+              {galleryPhotos.map((photo) => (
+                <div
+                  key={photo.src}
+                  className="break-inside-avoid rounded-2xl overflow-hidden shadow-soft border border-gray-100 group"
+                >
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    width={photo.width}
+                    height={photo.height}
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                    className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
