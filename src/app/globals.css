@@ -82,7 +82,7 @@ body {
 
 /* Gallery Marquee Track */
 .gallery-marquee-track {
-  animation: marquee-scroll 70s linear infinite;
+  animation: marquee-scroll 120s linear infinite;
 }
 .gallery-marquee-track:hover {
   animation-play-state: paused;

@@ -345,24 +345,21 @@ export default function AboutPageClient() {
 
             {/* Smooth Infinite Marquee */}
             <div className="relative w-full overflow-hidden py-4">
-              {/* Fade masks for premium look */}
-              <div className="absolute top-0 bottom-0 left-0 w-8 md:w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-              <div className="absolute top-0 bottom-0 right-0 w-8 md:w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+              {/* Fade masks (hidden on mobile, subtle on desktop) */}
+              <div className="hidden sm:block absolute top-0 bottom-0 left-0 w-8 md:w-16 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+              <div className="hidden sm:block absolute top-0 bottom-0 right-0 w-8 md:w-16 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
               <div className="flex gap-4 gallery-marquee-track w-max">
                 {[...galleryPhotos, ...galleryPhotos].map((photo, idx) => (
                   <div
                     key={`${photo.src}-${idx}`}
-                    className="shrink-0 relative rounded-[2rem] overflow-hidden shadow-soft border border-gray-100 group h-[280px] sm:h-[350px] md:h-[420px]"
-                    style={{
-                      aspectRatio: `${photo.width} / ${photo.height}`
-                    }}
+                    className="shrink-0 relative rounded-[2rem] overflow-hidden shadow-soft border border-gray-100 group aspect-[4/5] w-[calc(100vw-5rem)] sm:w-[calc((100vw-4rem)/2)] md:w-[calc((100vw-10rem)/3)] xl:w-[320px] bg-gray-50"
                   >
                     <Image
                       src={photo.src}
                       alt={photo.alt}
                       fill
-                      sizes="(max-width: 768px) 50vw, 33vw"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className={`object-cover transition-transform duration-700 group-hover:scale-105 ${photo.src.endsWith("KT_Gallery_11.webp") ? "object-left" : "object-center"}`}
                     />
                   </div>
