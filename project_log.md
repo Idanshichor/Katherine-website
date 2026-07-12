@@ -119,6 +119,9 @@ This log serves as a source of truth for the development, configuration, and des
   * Created the [brand_book](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/brand_book) directory in the project root.
   * Authored a comprehensive brand manual in Spanish: [manual_de_marca.md](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/brand_book/manual_de_marca.md) and compiled it into a premium PDF [manual_de_marca.pdf](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/brand_book/manual_de_marca.pdf) (using an intermediate [manual_de_marca.html](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/brand_book/manual_de_marca.html) layout with WeasyPrint), covering the brand's philosophy, verbal identity (writing style/copywriting guidelines), visual identity (colors, typography, web effects), and description of photo assets.
   * Copied the brand logo (`KT_LOGO.webp`, `KT_White_Logo.webp`) and different photos used on the website (`KT_Hero.webp`, `KTSecondPhoto.webp`, `KT_Podcast.webp`) into the [brand_book](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/brand_book) folder.
+* **2026-07-12:** Replaced the default Next.js/Vercel favicon with a custom branded favicon:
+  * Converted the high-resolution [KT_LOGO.webp](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/public/images/KT_LOGO.webp) into a transparent square canvas (322x322) and exported it to [favicon.ico](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/favicon.ico) with multi-resolution support (16x16, 32x32, 48x48, 256x256).
+  * This resolves the issue where the default black circle with a white triangle (Vercel logo) was showing in browser tabs.
 
 ---
 
