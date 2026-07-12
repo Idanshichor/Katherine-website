@@ -127,9 +127,10 @@ This log serves as a source of truth for the development, configuration, and des
 * **2026-07-12:** Redesigned the travel gallery on `/sobre-mi` and cleaned up typography:
   * Replaced the static masonry columns grid layout with a premium smooth, continuous, infinite CSS marquee image strip.
   * The marquee is GPU-accelerated, scrolls infinitely with no stops or snapping, and pauses smoothly when hovered.
-  * Preserved the original aspect ratio of each photo dynamically via responsive height controls (`h-[280px] sm:h-[350px] md:h-[420px]`) and aspect ratios, creating a balanced film-strip layout. Removed pagination dots and chevron buttons to simplify the UI.
-  * Added premium blurred edge masks to fade the scrolling images at the left and right borders.
+  * Set a uniform card size (`aspect-[4/5]`) with fixed responsive widths: `w-[360px]` on desktop (displaying exactly 3 cards side-by-side) and `w-[260px]` on mobile (fitting completely on any phone screen without cropping).
   * Removed the visible description overlays on hover, keeping descriptions strictly in the `alt` attribute for SEO values.
+  * Hidden white vignette fade masks on mobile (`hidden sm:block`) and shrunk them on desktop (`w-16`) so they don't cover the images.
+  * Adjusted the scroll duration to a calmer `120s` for a relaxing, smooth flow.
   * Aligned the viewport crop of `KT_Gallery_11.webp` to the left (`object-left`) to frame its subject perfectly.
   * Removed prepended numbers (`01 /`, `02 /`, etc.) from all chapter title translation strings in `translations.ts` (in both ES and EN) to prevent redundant numbering next to the large background number markers.
   * **Updated gallery photos**: Removed 3 old photos and integrated 11 new photos. Automatically optimized the new images (resized to 1600px max long-edge at WebP q78) to maintain fast page load speed, re-sequenced all 21 gallery files (`KT_Gallery_01.webp` to `KT_Gallery_21.webp`), and shuffled their sequence with photos `04`, `07`, and `08` positioned at the very beginning to load first.
