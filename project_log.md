@@ -125,10 +125,11 @@ This log serves as a source of truth for the development, configuration, and des
   * **Podcast page photo:** added [KT_Podcast_Katherine.webp](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/public/images/KT_Podcast_Katherine.webp) (already optimized at 42 KB) to the sticky left column of the "values" section on `/podcast`, with the brand's offset gold frame. The existing hero image `KT_Podcast.webp` was NOT replaced.
   * `npm run build` verified clean (all 11 routes).
 * **2026-07-12:** Redesigned the travel gallery on `/sobre-mi` and cleaned up typography:
-  * Replaced the static masonry columns grid layout with a premium auto-scrolling, hover-pausing React image carousel component.
-  * The carousel is fully responsive: showing 3 cards on desktop, 2 on tablet, and 1 on mobile, using custom aspect-ratio containers (`aspect-[4/5]`) and layout preservation.
-  * Added custom pagination indicator dots and manual chevron controls. Removed the visible text description overlays on hover, keeping descriptions strictly in the `alt` tag for maximum SEO value.
-  * Sped up the autoscrolling timer from 3 seconds to 2 seconds to make the slider more dynamic.
+  * Replaced the static masonry columns grid layout with a premium smooth, continuous, infinite CSS marquee image strip.
+  * The marquee is GPU-accelerated, scrolls infinitely with no stops or snapping, and pauses smoothly when hovered.
+  * Preserved the original aspect ratio of each photo dynamically via responsive height controls (`h-[280px] sm:h-[350px] md:h-[420px]`) and aspect ratios, creating a balanced film-strip layout. Removed pagination dots and chevron buttons to simplify the UI.
+  * Added premium blurred edge masks to fade the scrolling images at the left and right borders.
+  * Removed the visible description overlays on hover, keeping descriptions strictly in the `alt` attribute for SEO values.
   * Aligned the viewport crop of `KT_Gallery_11.webp` to the left (`object-left`) to frame its subject perfectly.
   * Removed prepended numbers (`01 /`, `02 /`, etc.) from all chapter title translation strings in `translations.ts` (in both ES and EN) to prevent redundant numbering next to the large background number markers.
   * **Updated gallery photos**: Removed 3 old photos and integrated 11 new photos. Automatically optimized the new images (resized to 1600px max long-edge at WebP q78) to maintain fast page load speed, re-sequenced all 21 gallery files (`KT_Gallery_01.webp` to `KT_Gallery_21.webp`), and shuffled their sequence with photos `04`, `07`, and `08` positioned at the very beginning to load first.
