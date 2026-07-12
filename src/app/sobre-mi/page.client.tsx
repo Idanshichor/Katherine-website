@@ -6,6 +6,8 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 import { useLanguage } from "@/context/language-context";
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const galleryPhotos = [
   { src: "/images/gallery/KT_Gallery_07.webp", width: 900, height: 1600, alt: "Katherine Velasquez en el Templo Blanco (Wat Rong Khun) de Chiang Rai, Tailandia" },
@@ -25,6 +27,53 @@ const galleryPhotos = [
 
 export default function AboutPageClient() {
   const { language, t } = useLanguage();
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  const [visibleItems, setVisibleItems] = useState(3);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setVisibleItems(1);
+      } else if (window.innerWidth < 1024) {
+        setVisibleItems(2);
+      } else {
+        setVisibleItems(3);
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (isHovered) return;
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => {
+        const maxIndex = galleryPhotos.length - visibleItems;
+        return prev >= maxIndex ? 0 : prev + 1;
+      });
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [isHovered, visibleItems]);
+
+  useEffect(() => {
+    const maxIndex = galleryPhotos.length - visibleItems;
+    if (currentIndex > maxIndex) {
+      setCurrentIndex(maxIndex);
+    }
+  }, [visibleItems, currentIndex]);
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev === 0 ? galleryPhotos.length - visibleItems : prev - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => {
+      const maxIndex = galleryPhotos.length - visibleItems;
+      return prev >= maxIndex ? 0 : prev + 1;
+    });
+  };
 
   return (
     <div className="min-h-screen bg-[var(--color-brand-cream)] text-[var(--color-brand-black)] overflow-x-hidden">
@@ -334,22 +383,85 @@ export default function AboutPageClient() {
               <div className="w-16 h-[2px] bg-[var(--color-brand-gold)] mx-auto mt-8" />
             </div>
 
-            <div className="columns-2 md:columns-3 gap-3 md:gap-4 [&>div]:mb-3 md:[&>div]:mb-4">
-              {galleryPhotos.map((photo) => (
-                <div
-                  key={photo.src}
-                  className="break-inside-avoid rounded-2xl overflow-hidden shadow-soft border border-gray-100 group"
-                >
-                  <Image
-                    src={photo.src}
-                    alt={photo.alt}
-                    width={photo.width}
-                    height={photo.height}
-                    sizes="(max-width: 768px) 50vw, 33vw"
-                    className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+            {/* Carousel Container */}
+            <div 
+              className="relative w-full overflow-hidden px-2 md:px-10 group/carousel"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              {/* Slides Wrapper */}
+              <div 
+                className="flex transition-transform duration-700 ease-out gap-4 w-full"
+                style={{
+                  transform: `translateX(calc(-${currentIndex} * (100% + 1rem) / ${visibleItems}))`
+                }}
+              >
+                {galleryPhotos.map((photo) => (
+                  <div
+                    key={photo.src}
+                    className="shrink-0 relative"
+                    style={{
+                      width: visibleItems === 1 
+                        ? "100%" 
+                        : visibleItems === 2 
+                        ? "calc((100% - 1rem) / 2)" 
+                        : "calc((100% - 2rem) / 3)"
+                    }}
+                  >
+                    <div className="relative rounded-[2rem] overflow-hidden shadow-soft border border-gray-100 group aspect-[4/5] w-full bg-gray-50">
+                      <Image
+                        src={photo.src}
+                        alt={photo.alt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      {/* Caption overlay on hover */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-brand-black)]/85 via-[var(--color-brand-black)]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <p className="text-white text-xs md:text-sm font-medium leading-relaxed font-body">
+                          {photo.alt}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Navigation Arrows */}
+              {galleryPhotos.length > visibleItems && (
+                <>
+                  <button
+                    onClick={handlePrev}
+                    className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/95 text-[var(--color-brand-black)] p-3 rounded-full shadow-soft border border-gray-100 hover:bg-[var(--color-brand-pink-light)] hover:text-[var(--color-brand-pink-dark)] transition-all duration-300 z-20 cursor-pointer -translate-x-2 opacity-0 group-hover/carousel:opacity-100 group-hover/carousel:translate-x-2"
+                    aria-label="Previous slide"
+                  >
+                    <ChevronLeft size={24} />
+                  </button>
+                  <button
+                    onClick={handleNext}
+                    className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/95 text-[var(--color-brand-black)] p-3 rounded-full shadow-soft border border-gray-100 hover:bg-[var(--color-brand-pink-light)] hover:text-[var(--color-brand-pink-dark)] transition-all duration-300 z-20 cursor-pointer translate-x-2 opacity-0 group-hover/carousel:opacity-100 group-hover/carousel:-translate-x-2"
+                    aria-label="Next slide"
+                  >
+                    <ChevronRight size={24} />
+                  </button>
+                </>
+              )}
+
+              {/* Pagination Dots */}
+              <div className="flex justify-center gap-2 mt-8 z-20 relative">
+                {Array.from({ length: galleryPhotos.length - visibleItems + 1 }).map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentIndex(idx)}
+                    className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                      currentIndex === idx 
+                        ? "bg-[var(--color-brand-pink-dark)] w-6" 
+                        : "bg-gray-200 hover:bg-gray-300 w-2"
+                    }`}
+                    aria-label={`Go to slide ${idx + 1}`}
                   />
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>

@@ -124,6 +124,11 @@ This log serves as a source of truth for the development, configuration, and des
   * **Travel gallery:** added a new "La vida detrás de la estrategia" masonry gallery section on `/sobre-mi`, placed between Chapter 07 (La Pregunta de los Viajeros) and Chapter 08, since the 13 photos ([public/images/gallery/](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/public/images/gallery/)) depict the India/Thailand travels narrated in Chapters 06–07. New bilingual keys `aboutPage.galleryTag/galleryTitle/gallerySubtitle` in `translations.ts`; descriptive Spanish alt texts per photo.
   * **Podcast page photo:** added [KT_Podcast_Katherine.webp](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/public/images/KT_Podcast_Katherine.webp) (already optimized at 42 KB) to the sticky left column of the "values" section on `/podcast`, with the brand's offset gold frame. The existing hero image `KT_Podcast.webp` was NOT replaced.
   * `npm run build` verified clean (all 11 routes).
+* **2026-07-12:** Redesigned the travel gallery on `/sobre-mi` and cleaned up typography:
+  * Replaced the static masonry columns grid layout with a premium auto-scrolling, hover-pausing React image carousel component.
+  * The carousel is fully responsive: showing 3 cards on desktop, 2 on tablet, and 1 on mobile, using custom aspect-ratio containers (`aspect-[4/5]`) and layout preservation.
+  * Added custom pagination indicator dots and hover overlays displaying each photo's descriptive text.
+  * Removed prepended numbers (`01 /`, `02 /`, etc.) from all chapter title translation strings in `translations.ts` (in both ES and EN) to prevent redundant numbering next to the large background number markers.
 
 ---
 
