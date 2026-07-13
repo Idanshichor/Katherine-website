@@ -228,6 +228,21 @@ export default function PodcastPageClient() {
                 {t("podcastPage.valuesSubtitle")}
               </p>
               <div className="w-20 h-[3px] bg-[var(--color-brand-pink)] mx-auto lg:mx-0 mt-2" />
+
+              {/* Katherine host photo with offset gold frame */}
+              <div className="relative w-full max-w-[280px] mx-auto lg:mx-0 mt-6">
+                <div className="absolute border border-[var(--color-brand-gold)] rounded-2xl top-5 left-5 -bottom-3 -right-3 z-0 hidden md:block" />
+                <div className="relative z-10 rounded-[2rem] overflow-hidden shadow-elevated border-4 border-white bg-white">
+                  <Image
+                    src="/images/KT_Podcast_Katherine.webp"
+                    alt="Katherine Velasquez, host del podcast Estrategia 360 - Sin Pelos en la Lengua"
+                    width={1024}
+                    height={1536}
+                    sizes="(max-width: 1024px) 280px, 280px"
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              </div>
             </div>
 
             {/* Right Column: Vertical stack of beautiful, interactive border cards */}

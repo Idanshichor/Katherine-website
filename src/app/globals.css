@@ -79,3 +79,11 @@ body {
   filter: grayscale(0%);
   opacity: 1;
 }
+
+/* Gallery Marquee Track */
+.gallery-marquee-track {
+  animation: marquee-scroll 120s linear infinite;
+}
+.gallery-marquee-track:hover {
+  animation-play-state: paused;
+}

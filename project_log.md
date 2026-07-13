@@ -119,13 +119,20 @@ This log serves as a source of truth for the development, configuration, and des
   * Created the [brand_book](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/brand_book) directory in the project root.
   * Authored a comprehensive brand manual in Spanish: [manual_de_marca.md](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/brand_book/manual_de_marca.md) and compiled it into a premium PDF [manual_de_marca.pdf](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/brand_book/manual_de_marca.pdf) (using an intermediate [manual_de_marca.html](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/brand_book/manual_de_marca.html) layout with WeasyPrint), covering the brand's philosophy, verbal identity (writing style/copywriting guidelines), visual identity (colors, typography, web effects), and description of photo assets.
   * Copied the brand logo (`KT_LOGO.webp`, `KT_White_Logo.webp`) and different photos used on the website (`KT_Hero.webp`, `KTSecondPhoto.webp`, `KT_Podcast.webp`) into the [brand_book](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/brand_book) folder.
-* **2026-07-12:** Updated gallery photos: Removed 3 old photos and integrated 11 new photos. Automatically optimized the new images (resized to 1600px max long-edge at WebP q78) to maintain fast page load speed, re-sequenced all 21 gallery files (`KT_Gallery_01.webp` to `KT_Gallery_21.webp`), and shuffled their sequence with photos `04`, `07`, and `08` positioned at the very beginning to load first.
-* **2026-07-12:** Updated FAQs and contact info details:
+* **2026-07-12:** Updated gallery photos & implemented marquee (branch `feature/about-photos-gallery`):
+  * Replaced the static masonry columns grid layout on `/sobre-mi` with a premium smooth, continuous, infinite CSS marquee image strip.
+  * The marquee is GPU-accelerated, scrolls infinitely with no stops or snapping, and pauses smoothly when hovered.
+  * Set a uniform card size (`aspect-[4/5]`) with mathematically calculated responsive widths (`w-[calc(100vw-5rem)]` on mobile, `w-[calc((100vw-4rem)/2)]` on tablet, `w-[calc((100vw-10rem)/3)]` on desktop, `xl:w-[320px]` on large screens). This guarantees that exactly 3 photos are visible side-by-side on desktop, 2 on tablet, and 1 on mobile, fitting perfectly inside the layout.
+  * Removed the visible description overlays on hover, keeping descriptions strictly in the `alt` attribute for SEO values.
+  * Hidden white vignette fade masks on mobile (`hidden sm:block`) and shrunk them on desktop (`w-16`) to avoid covering images.
+  * Adjusted the scroll duration to a calmer `120s` for a relaxing, smooth flow.
+  * Aligned the viewport crop of `KT_Gallery_11.webp` to the left (`object-left`) to frame its subject perfectly.
+  * Optimized and integrated the new photo set: removed 3 old photos and added 11 new photos (resized to 1600px max long-edge at WebP q78), re-sequenced all 21 files (`KT_Gallery_01.webp` to `KT_Gallery_21.webp`), and shuffled their sequence with photos `04`, `07`, and `08` at the very beginning to load first.
+* **2026-07-12:** Updated FAQs and contact info details (branch `feature/update-faq-contact`):
   * Replaced the Spanish FAQs in `translations.ts` with the three new questions specified by the user.
   * Translated the new FAQs to English and updated the English FAQs in `translations.ts` to keep the bilingual versions consistent.
   * Added separate translation keys for WhatsApp and Phone contact labels (`contact_whatsapp`, `contact_phone`).
   * Updated [src/components/footer.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/components/footer.tsx) to list both WhatsApp (+57 321 615 4870) and Phone (+1 949 625 9147) as distinct clickable items under their respective labels.
-  * Branch: `feature/update-faq-contact`. Build verified clean.
 * **2026-07-12:** Replaced the default Next.js/Vercel favicon with a custom branded favicon:
   * Converted the high-resolution [KT_LOGO.webp](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/public/images/KT_LOGO.webp) into a transparent square canvas (322x322) and exported it to [favicon.ico](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/favicon.ico) with multi-resolution support (16x16, 32x32, 48x48, 256x256).
   * This resolves the issue where the default black circle with a white triangle (Vercel logo) was showing in browser tabs.
