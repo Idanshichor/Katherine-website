@@ -136,6 +136,9 @@ This log serves as a source of truth for the development, configuration, and des
 * **2026-07-12:** Replaced the default Next.js/Vercel favicon with a custom branded favicon:
   * Converted the high-resolution [KT_LOGO.webp](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/public/images/KT_LOGO.webp) into a transparent square canvas (322x322) and exported it to [favicon.ico](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/favicon.ico) with multi-resolution support (16x16, 32x32, 48x48, 256x256).
   * This resolves the issue where the default black circle with a white triangle (Vercel logo) was showing in browser tabs.
+* **2026-07-12:** Updated hero subheader labels:
+  * Changed the Spanish consultoria label to `"Consultoría Estratégica 360°"`.
+  * Removed the secondary `"3 6 0"` subheader text from the main hero section of the landing page in both English and Spanish layouts to simplify the presentation.
 
 ---
 
