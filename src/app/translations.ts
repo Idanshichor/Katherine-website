@@ -199,26 +199,23 @@ export const translations = {
       placeholder_lastname: "Apellido",
       placeholder_email: "Correo Electrónico",
       contact_title: "Contacto & Cobertura",
-      contact_phone: "WhatsApp / Teléfono",
+      contact_phone: "Teléfono",
+      contact_whatsapp: "WhatsApp",
       service_area: "Medellín, Colombia & Remoto Internacional",
       privacy_policy: "Política de Privacidad"
     },
     faqs: [
       {
         q: "¿Para quién NO es esto?",
-        a: "Si estás empezando desde cero o si buscas un coach motivacional, no soy yo. Trabajo con founders que ya tienen un negocio en marcha y necesitan estructura, no inspiración."
+        a: "No soy una coach motivacional; mi enfoque está en darte estructura y claridad, no discursos de inspiración. Este espacio no es para ti si prefieres los rodeos o las respuestas maquilladas; me gusta hablar con total transparencia y honestidad sobre lo que tu negocio necesita para crecer."
+      },
+      {
+        q: "¿Recibo proyectos desde cero?",
+        a: "Sí, por supuesto, siempre y cuando ya cuentes con experiencia previa emprendiendo. Si ya conoces la realidad de gestionar un negocio y esta vez quieres fundar con bases sólidas y orden estratégico desde el primer día, eres más que bienvenido."
       },
       {
         q: "¿Cuánto tiempo tarda en verse resultados?",
         a: "La claridad llega en la primera sesión. Los resultados medibles, en 60 a 90 días. Pero esto no es magia: depende de qué tan rápido implementas."
-      },
-      {
-        q: "¿En qué idioma trabajas?",
-        a: "Ofrezco consultoría y desarrollo estrategias tanto en español como en inglés, adaptándome a las necesidades bilingües de tu equipo."
-      },
-      {
-        q: "¿Trabajas con cualquier industria?",
-        a: "Trabajo mejor con negocios de servicios, productos digitales y D2C. Si tu negocio es muy técnico o regulado (salud, legal), hablémoslo antes."
       }
     ],
     marquee: [
@@ -428,26 +425,23 @@ export const translations = {
       placeholder_lastname: "Last Name",
       placeholder_email: "Email Address",
       contact_title: "Contact & Service Area",
-      contact_phone: "WhatsApp / Phone",
+      contact_phone: "Phone",
+      contact_whatsapp: "WhatsApp",
       service_area: "Medellin, Colombia & International Remote",
       privacy_policy: "Privacy Policy"
     },
     faqs: [
       {
         q: "Who is this NOT for?",
-        a: "If you are starting entirely from scratch or looking for a motivational coach, I am not the right fit. I work with founders who already have a running business and need structure, not inspiration."
+        a: "I am not a motivational coach; my focus is on giving you structure and clarity, not inspirational speeches. This space is not for you if you prefer beating around the bush or sugarcoated answers; I like to speak with total transparency and honesty about what your business needs to grow."
+      },
+      {
+        q: "Do I accept projects from scratch?",
+        a: "Yes, of course, as long as you already have prior entrepreneurial experience. If you already know the reality of managing a business and this time you want to build with solid foundations and strategic order from day one, you are more than welcome."
       },
       {
         q: "How long does it take to see results?",
-        a: "Clarity comes in our very first session. Measurable results generally take 60 to 90 days. But there is no magic: it depends on how fast you implement."
-      },
-      {
-        q: "What language do you work in?",
-        a: "I work in both Spanish and English. We can conduct consulting sessions and deliver strategies in either language based on your team's needs."
-      },
-      {
-        q: "Do you work with any industry?",
-        a: "I work best with service businesses, digital products, and D2C brands. If your business is highly technical or heavily regulated (e.g. healthcare, legal), let's discuss it before starting."
+        a: "Clarity comes in the very first session. Measurable results in 60 to 90 days. But this is not magic: it depends on how fast you implement."
       }
     ],
     marquee: [

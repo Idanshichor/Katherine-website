@@ -50,18 +50,31 @@ export function Footer() {
             {t("footer.contact_title")}
           </h3>
           <div className="flex flex-col gap-4 font-light text-sm text-gray-300">
-            <div className="flex flex-col gap-1">
-              <span className="text-xs font-semibold uppercase tracking-wider text-gray-500">
-                {t("footer.contact_phone")}
-              </span>
-              <a 
-                href="https://wa.me/573216154870?text=Hola%20Kathe%2C%20Quiero%20hablar%20contigo%20sobre%20mi%20proyecto%20%3A%29" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-base font-semibold text-[var(--color-brand-gold)] hover:text-white transition-colors"
-              >
-                +57 321 615 4870
-              </a>
+            <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-0.5">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-gray-500">
+                  {t("footer.contact_whatsapp")}
+                </span>
+                <a 
+                  href="https://wa.me/573216154870?text=Hola%20Kathe%2C%20Quiero%20hablar%20contigo%20sobre%20mi%20proyecto%20%3A%29" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-base font-semibold text-[var(--color-brand-gold)] hover:text-white transition-colors"
+                >
+                  +57 321 615 4870
+                </a>
+              </div>
+              <div className="flex flex-col gap-0.5">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-gray-500">
+                  {t("footer.contact_phone")}
+                </span>
+                <a 
+                  href="tel:+19496259147" 
+                  className="text-base font-semibold text-[var(--color-brand-gold)] hover:text-white transition-colors"
+                >
+                  +1 949 625 9147
+                </a>
+              </div>
             </div>
             <div className="flex flex-col gap-1 mt-2">
               <span className="text-xs font-semibold uppercase tracking-wider text-gray-500">
