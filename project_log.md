@@ -135,9 +135,9 @@ This log serves as a source of truth for the development, configuration, and des
 
 
 ## ⚠️ Guidelines for Future Updates
-1. **Feature Branching:** Do **NOT** push or commit directly to the `main` branch. Create a feature branch (e.g. `feature/name` or `fix/name`) for any edits. This allows Vercel to generate a **Preview Deployment** link to test changes before they go live. Once verified, merge the branch into `main`.
+1. **Feature Branching:** Do **NOT** push or commit directly to the `main` branch. Create a feature branch (e.g. `feature/name` or `fix/name`) for any edits. Make sure to push your feature branches to the `live` remote repository (`https://github.com/Idanshichor/kt-velasquez-website.git`) so Vercel can generate a **Preview Deployment** link to test changes before they go live. Once verified, merge the branch into `main` on the `live` repository.
 2. **Copy Modification:** Do **NOT** modify or change any of the copy on the landing page unless explicitly requested by the user.
 3. **Build Verification:** Always run `npm run build` locally before pushing changes to verify that the TypeScript compiler and Turbopack bundler are completely free of errors.
-4. **Deployment:** Pushing or merging to the `main` branch of the GitHub repository triggers the final production deployment on Vercel.
+4. **Deployment:** Pushing or merging to the `main` branch of the `live` remote repository triggers the final production deployment on Vercel.
 5. **Consistency Check:** Whenever there is a change to something visual that has implications on SEO or other pages, or any text/copy changes that have implications on the rest of the website, or any change with cross-page implications, you MUST always ask the user if you should update it everywhere.
 
