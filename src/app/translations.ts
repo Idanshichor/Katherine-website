@@ -11,7 +11,7 @@ export const translations = {
       podcast: "Podcast"
     },
     hero: {
-      consultoria: "Consultoría Estratégica",
+      consultoria: "Consultoría Estratégica 360°",
       360: "360",
       katherine: "Katherine",
       velasquez: "Velasquez",

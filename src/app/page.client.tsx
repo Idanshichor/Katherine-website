@@ -55,8 +55,7 @@ export default function PageClient() {
 
             {/* Top Text Group */}
             <p className="font-heading text-2xl md:text-3xl text-[var(--color-brand-cream)] mb-2 md:mb-0">
-              <span className="italic">{t("hero.consultoria")}</span><br />
-              <span className="font-body not-italic uppercase tracking-[0.2em] text-sm md:text-base font-medium">{t("hero.360")}</span>
+              <span className="italic">{t("hero.consultoria")}</span>
             </p>
 
             {/* Bottom Text Group - pushed down on mobile */}
