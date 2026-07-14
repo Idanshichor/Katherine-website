@@ -148,6 +148,11 @@ This log serves as a source of truth for the development, configuration, and des
   * Renamed and copied the new WebP logo from `public/images/KT.360 B&W.webp` to `public/images/kt-360-bw.webp` (replacing the previous SVG logo concept).
   * Replaced the text titles on the podcast hero with the new WebP logo `/images/kt-360-bw.webp`, wrapped in an `h1` with an `sr-only` span for title text to preserve semantic HTML structure and SEO crawlability.
   * Removed the offset gold border frame behind the podcast hero image to achieve a cleaner look as requested.
+* **2026-07-14:** Updated podcast copywriting to be gender-neutral and inclusive (branch `feature/podcast-gender-neutral`):
+  * Modified `src/app/translations.ts` in Spanish to address both sexes (CEOs, empresarios y emprendedores) and changed "mujeres" to "líderes", "Madres Empresarias y Mujeres Reales" to "Padres Empresarios y Personas Reales", and "jefes perfectas" to "jefes perfectos".
+  * Modified `src/app/translations.ts` in English to remove female-specific qualifiers, changing "female business owners" to "business owners", "women" to "leaders", and "Business Mothers & Real Women" to "Parents & Genuine People".
+  * Updated `/podcast` metadata description and JSON-LD structured schema description in `page.tsx` to match the gender-neutral copy.
+  * Updated Web3Forms email subject line on `/podcast` in `page.client.tsx` to "Nueva Solicitud de Participación - Podcast (KT360)".
 
 ---
 
