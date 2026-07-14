@@ -147,6 +147,7 @@ This log serves as a source of truth for the development, configuration, and des
   * Renamed and copied the new/updated podcast artwork from `public/images/KT Podcast.webp` to `public/images/ktspacepodcast.webp` and set it as the hero image.
   * Renamed and copied the new WebP logo from `public/images/KT.360 B&W.webp` to `public/images/kt-360-bw.webp` (replacing the previous SVG logo concept).
   * Replaced the text titles on the podcast hero with the new WebP logo `/images/kt-360-bw.webp`, wrapped in an `h1` with an `sr-only` span for title text to preserve semantic HTML structure and SEO crawlability.
+  * Removed the offset gold border frame behind the podcast hero image to achieve a cleaner look as requested.
 
 ---
 

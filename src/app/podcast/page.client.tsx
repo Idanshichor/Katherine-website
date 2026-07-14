@@ -115,9 +115,6 @@ export default function PodcastPageClient() {
           
           {/* Hero Image / Podcast Art */}
           <div className="relative h-[350px] md:h-[450px] lg:h-[500px] w-full max-w-[450px] mx-auto flex justify-center">
-            {/* Offset Gold Border Frame */}
-            <div className="absolute inset-0 border border-[var(--color-brand-gold)] top-6 bottom-0 left-0 right-6 z-0 hidden md:block rounded-2xl" />
-            
             <div className="relative w-full h-full z-10 rounded-[2rem] overflow-hidden shadow-elevated border-4 border-white">
               <Image 
                 src="/images/ktspacepodcast.webp" 
