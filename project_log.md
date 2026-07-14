@@ -154,6 +154,9 @@ This log serves as a source of truth for the development, configuration, and des
   * Updated `/podcast` metadata description and JSON-LD structured schema description in `page.tsx` to match the gender-neutral copy.
   * Updated Web3Forms email subject line on `/podcast` in `page.client.tsx` to "Nueva Solicitud de Participación - Podcast (KT360)".
   * Removed the `"Nuevos episodios todas las semanas."` / `"New episodes released weekly."` subtitle from the platforms strip on `/podcast` in both languages and deleted the corresponding translation keys.
+* **2026-07-14:** Updated homepage podcast section image (branch `feature/homepage-podcast-image`):
+  * Swapped `/images/KT_Podcast.webp` for `/images/ktspacepodcast.webp` in [page.client.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/page.client.tsx) to ensure consistency across the entire website.
+  * Optimized image alt text to `"KT.360 - Sin Pelos en la Lengua — Podcast de Katherine Velasquez"` for improved SEO relevance.
 
 ---
 

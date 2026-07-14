@@ -340,7 +340,7 @@ export default function PageClient() {
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Podcast Image */}
             <div className="relative aspect-square md:aspect-[4/5] rounded-[2rem] overflow-hidden shadow-elevated">
-              <Image src="/images/KT_Podcast.webp" alt="KT Podcast" fill className="object-cover" />
+              <Image src="/images/ktspacepodcast.webp" alt="KT.360 - Sin Pelos en la Lengua — Podcast de Katherine Velasquez" fill className="object-cover" />
             </div>
 
             {/* Podcast Content */}
