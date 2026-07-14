@@ -140,7 +140,7 @@ export default function PodcastPageClient() {
                 {t("podcastPage.heroTitlePart1")} {t("podcastPage.heroTitlePart2")}
               </span>
               <Image
-                src="/images/kt-360-bw.svg"
+                src="/images/kt-360-bw.webp"
                 alt="KT.360 - Sin Pelos en la Lengua Podcast Logo"
                 fill
                 priority
