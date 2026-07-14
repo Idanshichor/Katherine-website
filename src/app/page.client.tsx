@@ -346,8 +346,16 @@ export default function PageClient() {
             {/* Podcast Content */}
             <div className="flex flex-col text-center md:text-left">
               <p className="text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-brand-black)] mb-4 opacity-70">{t("podcast.tag")}</p>
-              <h2 className="font-heading italic text-5xl md:text-6xl text-[var(--color-brand-black)] mb-6">
-                {t("podcast.title_p1")}<br />{t("podcast.title_p2")}
+              <h2 className="mb-6 relative w-full max-w-[280px] md:max-w-[340px] aspect-[671/351] mx-auto md:mx-0">
+                <span className="sr-only">
+                  {t("podcast.title_p1")} {t("podcast.title_p2")}
+                </span>
+                <Image
+                  src="/images/kt-360-bw.webp"
+                  alt="KT.360 - Sin Pelos en la Lengua Podcast Logo"
+                  fill
+                  className="object-contain"
+                />
               </h2>
               <p className="font-body text-base text-[var(--color-brand-black)] font-medium mb-10 leading-relaxed max-w-md mx-auto md:mx-0">
                 {language === "es" ? (
