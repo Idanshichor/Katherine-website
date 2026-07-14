@@ -142,6 +142,11 @@ This log serves as a source of truth for the development, configuration, and des
 * **2026-07-13:** Integrated Vercel Analytics (branch `feature/vercel-analytics`):
   * Installed the `@vercel/analytics` package.
   * Added the `<Analytics />` component to the root layout in [layout.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/layout.tsx).
+* **2026-07-14:** Updated podcast page hero layout and assets (branch `feature/podcast-hero-redesign`):
+  * Swapped the grid order of the hero content and the podcast artwork image on `/podcast` so that the image is aligned to the left and text is aligned to the right on desktop.
+  * Renamed and copied the new podcast artwork from `public/images/KT Podcast.webp` to `public/images/ktspacepodcast.webp` and set it as the hero image.
+  * Renamed and copied the new logo from `public/images/KT.360 B&W.svg` to `public/images/kt-360-bw.svg`.
+  * Replaced the text titles on the podcast hero with the new SVG logo `/images/kt-360-bw.svg`, wrapped in an `h1` with an `sr-only` span for title text to preserve semantic HTML structure and SEO crawlability.
 
 ---
 

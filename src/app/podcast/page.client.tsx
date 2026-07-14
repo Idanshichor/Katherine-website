@@ -113,20 +113,6 @@ export default function PodcastPageClient() {
       <section className="relative w-full pt-32 pb-16 md:pt-44 md:pb-24 overflow-hidden bg-[var(--color-brand-pink-light)]">
         <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24 relative z-10 grid md:grid-cols-2 gap-16 items-center">
           
-          {/* Hero Content */}
-          <div className="flex flex-col text-center md:text-left">
-            <span className="text-xs font-bold uppercase tracking-[0.3em] text-[var(--color-brand-black)] mb-4 bg-white w-max px-4 py-1.5 rounded-full mx-auto md:mx-0 shadow-soft">
-              {t("podcastPage.heroTag")}
-            </span>
-            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight text-[var(--color-brand-black)] mb-6">
-              {t("podcastPage.heroTitlePart1")}<br />
-              <span className="italic font-bold text-[var(--color-brand-pink)]">{t("podcastPage.heroTitlePart2")}</span>
-            </h1>
-            <p className="font-body text-gray-700 text-base md:text-lg leading-relaxed font-medium max-w-xl mx-auto md:mx-0">
-              {t("podcastPage.heroSubtitle")}
-            </p>
-          </div>
-
           {/* Hero Image / Podcast Art */}
           <div className="relative h-[350px] md:h-[450px] lg:h-[500px] w-full max-w-[450px] mx-auto flex justify-center">
             {/* Offset Gold Border Frame */}
@@ -134,14 +120,36 @@ export default function PodcastPageClient() {
             
             <div className="relative w-full h-full z-10 rounded-[2rem] overflow-hidden shadow-elevated border-4 border-white">
               <Image 
-                src="/images/KT_Podcast.webp" 
-                alt="Estrategia 360 - Sin Pelos en la Lengua — Podcast de Katherine Velasquez para CEOs y fundadoras" 
+                src="/images/ktspacepodcast.webp" 
+                alt="KT.360 - Sin Pelos en la Lengua — Podcast de Katherine Velasquez para CEOs y fundadoras" 
                 fill 
                 sizes="(max-width: 768px) 100vw, 450px"
                 className="object-cover" 
                 priority
               />
             </div>
+          </div>
+
+          {/* Hero Content */}
+          <div className="flex flex-col text-center md:text-left">
+            <span className="text-xs font-bold uppercase tracking-[0.3em] text-[var(--color-brand-black)] mb-4 bg-white w-max px-4 py-1.5 rounded-full mx-auto md:mx-0 shadow-soft">
+              {t("podcastPage.heroTag")}
+            </span>
+            <h1 className="mb-6 relative w-full max-w-[280px] md:max-w-[340px] aspect-[671/351] mx-auto md:mx-0">
+              <span className="sr-only">
+                {t("podcastPage.heroTitlePart1")} {t("podcastPage.heroTitlePart2")}
+              </span>
+              <Image
+                src="/images/kt-360-bw.svg"
+                alt="KT.360 - Sin Pelos en la Lengua Podcast Logo"
+                fill
+                priority
+                className="object-contain"
+              />
+            </h1>
+            <p className="font-body text-gray-700 text-base md:text-lg leading-relaxed font-medium max-w-xl mx-auto md:mx-0">
+              {t("podcastPage.heroSubtitle")}
+            </p>
           </div>
 
         </div>
