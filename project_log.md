@@ -139,6 +139,9 @@ This log serves as a source of truth for the development, configuration, and des
 * **2026-07-12:** Updated hero subheader labels:
   * Changed the Spanish consultoria label to `"Consultoría Estratégica 360°"`.
   * Removed the secondary `"3 6 0"` subheader text from the main hero section of the landing page in both English and Spanish layouts to simplify the presentation.
+* **2026-07-13:** Integrated Vercel Analytics (branch `feature/vercel-analytics`):
+  * Installed the `@vercel/analytics` package.
+  * Added the `<Analytics />` component to the root layout in [layout.tsx](file:///Users/idanshichor/Documents/App%20Dev/Websites%20/katherine-website/src/app/layout.tsx).
 
 ---
 
