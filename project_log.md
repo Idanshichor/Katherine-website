@@ -153,6 +153,7 @@ This log serves as a source of truth for the development, configuration, and des
   * Modified `src/app/translations.ts` in English to remove female-specific qualifiers, changing "female business owners" to "business owners", "women" to "leaders", and "Business Mothers & Real Women" to "Parents & Genuine People".
   * Updated `/podcast` metadata description and JSON-LD structured schema description in `page.tsx` to match the gender-neutral copy.
   * Updated Web3Forms email subject line on `/podcast` in `page.client.tsx` to "Nueva Solicitud de Participación - Podcast (KT360)".
+  * Removed the `"Nuevos episodios todas las semanas."` / `"New episodes released weekly."` subtitle from the platforms strip on `/podcast` in both languages and deleted the corresponding translation keys.
 
 ---
 

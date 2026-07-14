@@ -157,11 +157,8 @@ export default function PodcastPageClient() {
         <section className="py-16 px-6 md:px-16 bg-white border-y border-gray-100">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
             <div className="text-center md:text-left shrink-0">
-              <p className="text-xs font-black uppercase tracking-[0.3em] text-[var(--color-brand-black)] mb-1">
+              <p className="text-xs font-black uppercase tracking-[0.3em] text-[var(--color-brand-black)]">
                 {t("podcastPage.platformsTitle")}
-              </p>
-              <p className="font-body text-gray-500 text-[10px] font-bold uppercase tracking-wider">
-                {t("podcastPage.platformsSubtitle")}
               </p>
             </div>
             
